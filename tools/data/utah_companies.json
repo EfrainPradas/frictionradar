@@ -1,0 +1,1503 @@
+{
+  "generated_at": "2026-04-11T18:39:35",
+  "source": "wikipedia_categories",
+  "total_candidates": 221,
+  "resolved_domains": 159,
+  "companies_with_domain": [
+    {
+      "rank": 1,
+      "name": "1-800 Contacts",
+      "domain": "1800contacts.com",
+      "industry": "Contact lens, retail",
+      "hq": "Draper, Utah, , U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/1-800_Contacts"
+    },
+    {
+      "rank": 2,
+      "name": "AAPC (healthcare)",
+      "domain": "aapc.com",
+      "industry": null,
+      "hq": "Salt Lake City, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/AAPC_(healthcare)"
+    },
+    {
+      "rank": 3,
+      "name": "ASEA (American company)",
+      "domain": "aseaglobal.com",
+      "industry": null,
+      "hq": "Pleasant Grove, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/ASEA_(American_company)"
+    },
+    {
+      "rank": 4,
+      "name": "Action Target",
+      "domain": "actiontarget.com",
+      "industry": "Manufacturing",
+      "hq": "Provo, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Action_Target"
+    },
+    {
+      "rank": 5,
+      "name": "AdvancedMD",
+      "domain": "advancedmd.com",
+      "industry": "Health informatics, Practice management software, Software as a service",
+      "hq": "South Jordan, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/AdvancedMD"
+    },
+    {
+      "rank": 6,
+      "name": "AgReserves",
+      "domain": "agreserves.com",
+      "industry": "Agriculture",
+      "hq": "Salt Lake City, ,, Utah, 84111, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/AgReserves"
+    },
+    {
+      "rank": 7,
+      "name": "Alpine Air Express",
+      "domain": "alpine-air.com",
+      "industry": null,
+      "hq": "Provo, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Alpine_Air_Express"
+    },
+    {
+      "rank": 8,
+      "name": "Alsco Uniforms",
+      "domain": "alsco.com",
+      "industry": "Linen and uniform-rental services",
+      "hq": "Salt Lake City, (, Utah, ),, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Alsco_Uniforms"
+    },
+    {
+      "rank": 9,
+      "name": "Amano Artisan Chocolate",
+      "domain": "amanochocolate.com",
+      "industry": "Manufacturing",
+      "hq": "Orem, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Amano_Artisan_Chocolate"
+    },
+    {
+      "rank": 10,
+      "name": "America First Credit Union",
+      "domain": "americafirst.com",
+      "industry": "Financial services",
+      "hq": "Riverdale, Utah, , U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/America_First_Credit_Union"
+    },
+    {
+      "rank": 11,
+      "name": "Ancestry.com",
+      "domain": "ancestry.com",
+      "industry": "Genealogy, ,, genetic genealogy, ,, online publishing, ,, software publishing",
+      "hq": "Lehi, Utah, , U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Ancestry.com"
+    },
+    {
+      "rank": 12,
+      "name": "Angel Studios",
+      "domain": "angel.com",
+      "industry": "Entertainment",
+      "hq": "Provo, Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Angel_Studios"
+    },
+    {
+      "rank": 13,
+      "name": "Antarctic Logistics and Expeditions",
+      "domain": "antarctic-logistics.com",
+      "industry": "Logistics; aviation services; adventure travel",
+      "hq": "Salt Lake City, , Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Antarctic_Logistics_and_Expeditions"
+    },
+    {
+      "rank": 14,
+      "name": "Associated Food Stores",
+      "domain": "afstores.com",
+      "industry": "Wholesale Distributor",
+      "hq": "1850 West 2100 South, Salt Lake City, ,, Utah, [, 1, ], United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Associated_Food_Stores"
+    },
+    {
+      "rank": 15,
+      "name": "Authorize.Net",
+      "domain": "authorize.net",
+      "industry": "Internet, ,, Communications",
+      "hq": "Foster City, California, (2007–2010)",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Authorize.Net"
+    },
+    {
+      "rank": 16,
+      "name": "Avalanche Software",
+      "domain": "avalanchesoftware.com",
+      "industry": "Video games",
+      "hq": "Salt Lake City, Utah, ,, US",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Avalanche_Software"
+    },
+    {
+      "rank": 17,
+      "name": "Axial Biotech",
+      "domain": "axialbiotech.com",
+      "industry": null,
+      "hq": "Salt Lake City",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Axial_Biotech"
+    },
+    {
+      "rank": 18,
+      "name": "BYU AdLab",
+      "domain": "byuadlab.com",
+      "industry": "Advertising, &, Marketing",
+      "hq": "Provo, UT, , USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/BYU_AdLab"
+    },
+    {
+      "rank": 19,
+      "name": "Bank of Utah",
+      "domain": "bankofutah.com",
+      "industry": "Banking",
+      "hq": "Ogden, ,, Weber County, ,, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Bank_of_Utah"
+    },
+    {
+      "rank": 20,
+      "name": "Beneficial Financial Group",
+      "domain": "beneficialfinancialgroup.com",
+      "industry": "Insurance, &, Finance",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Beneficial_Financial_Group"
+    },
+    {
+      "rank": 21,
+      "name": "Big Finish Games",
+      "domain": "bigfinishgames.com",
+      "industry": "Video games",
+      "hq": "Salt Lake City, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Big_Finish_Games"
+    },
+    {
+      "rank": 22,
+      "name": "Black Rifle Coffee Company",
+      "domain": "blackriflecoffee.com",
+      "industry": "Retail",
+      "hq": "Salt Lake City, , Utah, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Black_Rifle_Coffee_Company"
+    },
+    {
+      "rank": 23,
+      "name": "Blendtec",
+      "domain": "blendtec.com",
+      "industry": "Consumer goods",
+      "hq": "Orem, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Blendtec"
+    },
+    {
+      "rank": 24,
+      "name": "Blerp",
+      "domain": "blerp.com",
+      "industry": "SaaS, ,, Live streaming, ,, Creator economy",
+      "hq": "Salt Lake City, ,, Utah, , U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Blerp"
+    },
+    {
+      "rank": 25,
+      "name": "Bluehost",
+      "domain": "bluehost.com",
+      "industry": "Web hosting",
+      "hq": "Jacksonville, Florida, , US",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Bluehost"
+    },
+    {
+      "rank": 26,
+      "name": "Boart Longyear",
+      "domain": "boartlongyear.com",
+      "industry": "Mining, services and products",
+      "hq": "Salt Lake City, Utah, ,, USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Boart_Longyear"
+    },
+    {
+      "rank": 27,
+      "name": "Bonneville International",
+      "domain": "bonneville.com",
+      "industry": "Radio broadcasting, Television broadcasting",
+      "hq": "Salt Lake City, ,, Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Bonneville_International"
+    },
+    {
+      "rank": 28,
+      "name": "Bridge Investment Group",
+      "domain": "bridgeig.com",
+      "industry": "Investment management",
+      "hq": "Salt Lake City, ,, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Bridge_Investment_Group"
+    },
+    {
+      "rank": 29,
+      "name": "Browning Arms Company",
+      "domain": "browning.com",
+      "industry": "Firearms, Sports equipment",
+      "hq": "Morgan, , Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Browning_Arms_Company"
+    },
+    {
+      "rank": 30,
+      "name": "C. R. England",
+      "domain": "crengland.com",
+      "industry": "Freight transport, Logistics",
+      "hq": "Salt Lake City, , Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/C._R._England"
+    },
+    {
+      "rank": 31,
+      "name": "Cafe Rio",
+      "domain": "caferio.com",
+      "industry": "Casual dining, Restaurants",
+      "hq": "Salt Lake City, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Cafe_Rio"
+    },
+    {
+      "rank": 32,
+      "name": "Caleb Chapman's Soundhouse",
+      "domain": "ccsoundhouse.com",
+      "industry": "Music and Performance Education",
+      "hq": "Pleasant Grove, Utah, ,, US",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Caleb_Chapman's_Soundhouse"
+    },
+    {
+      "rank": 33,
+      "name": "Callware",
+      "domain": "callware.com",
+      "industry": "Telecommunications, ,, Software",
+      "hq": "Salt Lake City, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Callware"
+    },
+    {
+      "rank": 34,
+      "name": "CancerVax",
+      "domain": "cancervax.com",
+      "industry": "Pharmaceutical",
+      "hq": "Lehi, Utah, ,, USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/CancerVax"
+    },
+    {
+      "rank": 35,
+      "name": "Cedar Fort, Inc.",
+      "domain": "cedarfortbooks.com",
+      "industry": null,
+      "hq": "2373 W. 700 S., Springville, UT, .",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Cedar_Fort,_Inc."
+    },
+    {
+      "rank": 36,
+      "name": "Chem-Dry",
+      "domain": "chemdry.com",
+      "industry": null,
+      "hq": "1683 (2024)",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Chem-Dry"
+    },
+    {
+      "rank": 37,
+      "name": "Christopherson Business Travel",
+      "domain": "cbtravel.com",
+      "industry": "Travel",
+      "hq": "Salt Lake City, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Christopherson_Business_Travel"
+    },
+    {
+      "rank": 38,
+      "name": "Chuck-A-Rama",
+      "domain": "chuck-a-rama.com",
+      "industry": "Restaurants",
+      "hq": "Salt Lake City, Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Chuck-A-Rama"
+    },
+    {
+      "rank": 39,
+      "name": "Church Historian's Press",
+      "domain": "churchhistorianspress.org",
+      "industry": null,
+      "hq": "Salt Lake City, ,, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Church_Historian's_Press"
+    },
+    {
+      "rank": 40,
+      "name": "CircusTrix",
+      "domain": "circustrix.com",
+      "industry": "Recreation",
+      "hq": "Provo, ,, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/CircusTrix"
+    },
+    {
+      "rank": 41,
+      "name": "ClearCenter",
+      "domain": "clearcenter.com",
+      "industry": "Information technology",
+      "hq": "New Zealand",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/ClearCenter"
+    },
+    {
+      "rank": 42,
+      "name": "ColcaSac",
+      "domain": "colcasac.com",
+      "industry": "Protective Equipment, Manufacturing",
+      "hq": "Salt Lake City, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/ColcaSac"
+    },
+    {
+      "rank": 43,
+      "name": "Conoco",
+      "domain": "conoco.com",
+      "industry": "Petroleum",
+      "hq": "Westchase, ,, Houston, , Texas",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Conoco"
+    },
+    {
+      "rank": 44,
+      "name": "Construction Monitor",
+      "domain": "constructionmonitor.com",
+      "industry": "Construction",
+      "hq": "Cedar City, UT",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Construction_Monitor"
+    },
+    {
+      "rank": 45,
+      "name": "Control4",
+      "domain": "control4.com",
+      "industry": "Home automation",
+      "hq": "Lehi, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Control4"
+    },
+    {
+      "rank": 46,
+      "name": "Daily Herald (Utah)",
+      "domain": "heraldextra.com",
+      "industry": null,
+      "hq": "1200 Towne Center Blvd. STE1058, Provo, ,, Utah, 84601, [, 1, ], USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Daily_Herald_(Utah)"
+    },
+    {
+      "rank": 47,
+      "name": "Dayna Communications",
+      "domain": "web.archive.org",
+      "industry": "Computers",
+      "hq": null,
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Dayna_Communications"
+    },
+    {
+      "rank": 48,
+      "name": "Daz 3D",
+      "domain": "daz3d.com",
+      "industry": null,
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Daz_3D"
+    },
+    {
+      "rank": 49,
+      "name": "Degreed",
+      "domain": "degreed.com",
+      "industry": "Workforce upskilling",
+      "hq": "Pleasanton, CA, Salt Lake City, UT",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Degreed"
+    },
+    {
+      "rank": 50,
+      "name": "Deseret Book Company",
+      "domain": "deseretbook.com",
+      "industry": null,
+      "hq": "Salt Lake City, , Utah, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Deseret_Book_Company"
+    },
+    {
+      "rank": 51,
+      "name": "Deseret Digital Media",
+      "domain": "deseretdigital.com",
+      "industry": "New media",
+      "hq": "Salt Lake City, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Deseret_Digital_Media"
+    },
+    {
+      "rank": 52,
+      "name": "Deseret Management Corporation",
+      "domain": "deseretmanagement.com",
+      "industry": "Asset management company",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Deseret_Management_Corporation"
+    },
+    {
+      "rank": 53,
+      "name": "Deseret News",
+      "domain": "deseret.com",
+      "industry": null,
+      "hq": "55 N 300 W, Salt Lake City, , Utah, U.S., [, 1, ]",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Deseret_News"
+    },
+    {
+      "rank": 54,
+      "name": "DevMountain",
+      "domain": "devmountain.com",
+      "industry": null,
+      "hq": null,
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/DevMountain"
+    },
+    {
+      "rank": 55,
+      "name": "DigEplayer",
+      "domain": "burrana.aero",
+      "industry": "Inflight Entertainment",
+      "hq": "Brisbane, Australia, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/DigEplayer"
+    },
+    {
+      "rank": 56,
+      "name": "DigiCert",
+      "domain": "digicert.com",
+      "industry": "Internet security, ,, Public key infrastructure, ,, IoT security",
+      "hq": "Lehi, Utah, , U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/DigiCert"
+    },
+    {
+      "rank": 57,
+      "name": "Disaster Kleenup International",
+      "domain": "dkiservices.com",
+      "industry": "Disaster recovery, and prevention",
+      "hq": "Elk Grove Village, Illinois, (corporate headquarters), ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Disaster_Kleenup_International"
+    },
+    {
+      "rank": 58,
+      "name": "EFileCabinet",
+      "domain": "efilecabinet.com",
+      "industry": "document management software, enterprise content management",
+      "hq": "Lehi, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/EFileCabinet"
+    },
+    {
+      "rank": 59,
+      "name": "Emery Telcom",
+      "domain": "etv.net",
+      "industry": "Telecommunications",
+      "hq": "Orangeville, Utah, , US",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Emery_Telcom"
+    },
+    {
+      "rank": 60,
+      "name": "Empower Playgrounds",
+      "domain": "empowerplaygrounds.org",
+      "industry": null,
+      "hq": "Provo, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Empower_Playgrounds"
+    },
+    {
+      "rank": 61,
+      "name": "EnergySolutions",
+      "domain": "energysolutions.com",
+      "industry": "Nuclear Materials",
+      "hq": "Salt Lake City, ,, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/EnergySolutions"
+    },
+    {
+      "rank": 62,
+      "name": "EquityNet",
+      "domain": "equitynet.com",
+      "industry": "Crowdfunding",
+      "hq": "Salt Lake City, UT, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/EquityNet"
+    },
+    {
+      "rank": 63,
+      "name": "FJ Management",
+      "domain": "fjmgt.com",
+      "industry": "Truck stop, Convenience store, Petroleum, Restaurant",
+      "hq": "Salt Lake City, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/FJ_Management"
+    },
+    {
+      "rank": 64,
+      "name": "Fanzz",
+      "domain": "fanzz.com",
+      "industry": null,
+      "hq": "Salt Lake City, Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Fanzz"
+    },
+    {
+      "rank": 65,
+      "name": "Fibernet Corp.",
+      "domain": "fiber.net",
+      "industry": "Internet service provider, ,, colocation, provider",
+      "hq": "Orem, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Fibernet_Corp."
+    },
+    {
+      "rank": 66,
+      "name": "First Security Corporation",
+      "domain": "web.archive.org",
+      "industry": "Banking",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/First_Security_Corporation"
+    },
+    {
+      "rank": 67,
+      "name": "Fishbowl Inventory",
+      "domain": "fishbowlinventory.com",
+      "industry": "Software",
+      "hq": "Orem, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Fishbowl_Inventory"
+    },
+    {
+      "rank": 68,
+      "name": "GE Healthcare Surgery",
+      "domain": "gehealthcare.com",
+      "industry": "Healthcare",
+      "hq": "Heller International Building, ,, Chicago, , Illinois, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/GE_Healthcare_Surgery"
+    },
+    {
+      "rank": 69,
+      "name": "Goode Ski Technologies",
+      "domain": "goode.com",
+      "industry": "Snow skiing, /, water skiing, equipment",
+      "hq": "Ogden, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Goode_Ski_Technologies"
+    },
+    {
+      "rank": 70,
+      "name": "Grounds for Coffee",
+      "domain": "groundsforcoffee.com",
+      "industry": "Restaurant",
+      "hq": "Ogden, Utah, ,, US",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Grounds_for_Coffee"
+    },
+    {
+      "rank": 71,
+      "name": "GumCo",
+      "domain": "gumco.com",
+      "industry": "Advertising, ,, Marketing",
+      "hq": null,
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/GumCo"
+    },
+    {
+      "rank": 72,
+      "name": "HZO",
+      "domain": "hzo.com",
+      "industry": "Thin film coatings",
+      "hq": "Raleigh, North Carolina, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/HZO"
+    },
+    {
+      "rank": 73,
+      "name": "Harmons",
+      "domain": "harmonsgrocery.com",
+      "industry": "Retail",
+      "hq": "West Valley City, ,, Utah, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Harmons"
+    },
+    {
+      "rank": 74,
+      "name": "Hart Skis",
+      "domain": "hartskis.com",
+      "industry": "Sports equipment",
+      "hq": "Ogden, Utah, ,, USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Hart_Skis"
+    },
+    {
+      "rank": 75,
+      "name": "Heritage Internet Technologies",
+      "domain": "heritagewebsolutions.com",
+      "industry": "Internet technology services",
+      "hq": "Provo, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Heritage_Internet_Technologies"
+    },
+    {
+      "rank": 76,
+      "name": "Heritage Makers",
+      "domain": "heritagemakers.com",
+      "industry": "Scrapbooking",
+      "hq": "Provo, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Heritage_Makers"
+    },
+    {
+      "rank": 77,
+      "name": "InMoment",
+      "domain": "inmoment.com",
+      "industry": "Customer experience, Experience management",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/InMoment"
+    },
+    {
+      "rank": 78,
+      "name": "Infinite Discs",
+      "domain": "infinitediscs.com",
+      "industry": "Disc golf, equipment",
+      "hq": "Logan, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Infinite_Discs"
+    },
+    {
+      "rank": 79,
+      "name": "Instructure",
+      "domain": "instructure.com",
+      "industry": "Educational Technology, Learning Management Systems, Assessment Management Systems, Assessment",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Instructure"
+    },
+    {
+      "rank": 80,
+      "name": "Intermountain Health",
+      "domain": "intermountainhealthcare.org",
+      "industry": "Healthcare",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Intermountain_Health"
+    },
+    {
+      "rank": 81,
+      "name": "International Armoring Corporation",
+      "domain": "armormax.com",
+      "industry": "Manufacturer of armored passenger vehicles",
+      "hq": "Ogden, ,, Utah, ,, USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/International_Armoring_Corporation"
+    },
+    {
+      "rank": 82,
+      "name": "JB's Restaurants",
+      "domain": "web.archive.org",
+      "industry": "Restaurant chain",
+      "hq": "Tempe, Arizona, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/JB's_Restaurants"
+    },
+    {
+      "rank": 83,
+      "name": "Lagoon (amusement park)",
+      "domain": "lagoonpark.com",
+      "industry": null,
+      "hq": "Farmington, , Utah, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Lagoon_(amusement_park)"
+    },
+    {
+      "rank": 84,
+      "name": "Leavitt Group",
+      "domain": "leavitt.com",
+      "industry": "Insurance",
+      "hq": "Cedar City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Leavitt_Group"
+    },
+    {
+      "rank": 85,
+      "name": "Lendio",
+      "domain": "lendio.com",
+      "industry": "Small business loans",
+      "hq": "South Jordan, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Lendio"
+    },
+    {
+      "rank": 86,
+      "name": "Management and Training Corporation",
+      "domain": "mtctrains.com",
+      "industry": "For-profit prison and skills training",
+      "hq": "500 N. Marketplace Drive #100,, Centerville, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Management_and_Training_Corporation"
+    },
+    {
+      "rank": 87,
+      "name": "Mity-Lite",
+      "domain": "mitylite.com",
+      "industry": null,
+      "hq": "Orem, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Mity-Lite"
+    },
+    {
+      "rank": 88,
+      "name": "MokiMobility",
+      "domain": "moki.com",
+      "industry": "Software",
+      "hq": "San Antonio, Texas, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/MokiMobility"
+    },
+    {
+      "rank": 89,
+      "name": "MonaVie",
+      "domain": "monavie.com",
+      "industry": "Multi-level marketing, Food & beverage, Dietary supplements",
+      "hq": "Salt Lake City, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/MonaVie"
+    },
+    {
+      "rank": 90,
+      "name": "Motor Cargo",
+      "domain": "tforcefreight.com",
+      "industry": "Transportation",
+      "hq": "Richmond, Virginia, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Motor_Cargo"
+    },
+    {
+      "rank": 91,
+      "name": "Mountain West Energy",
+      "domain": "mtnwestenergy.com",
+      "industry": "Oil shale industry",
+      "hq": "Highland, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Mountain_West_Energy"
+    },
+    {
+      "rank": 92,
+      "name": "Mstar (Internet service provider)",
+      "domain": "mstar.net",
+      "industry": "Fiber optics, media",
+      "hq": "Murray, Utah, ;, Orem, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Mstar_(Internet_service_provider)"
+    },
+    {
+      "rank": 93,
+      "name": "Murphy Door",
+      "domain": "murphydoor.com",
+      "industry": "Furniture",
+      "hq": "Ogden, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Murphy_Door"
+    },
+    {
+      "rank": 94,
+      "name": "Myrexis",
+      "domain": "myrexis.com",
+      "industry": "Pharmaceuticals",
+      "hq": "Salt Lake City, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Myrexis"
+    },
+    {
+      "rank": 95,
+      "name": "Myriad Genetics",
+      "domain": "myriad.com",
+      "industry": "Healthcare, Molecular Diagnostics, Biotechnology, Precision Medicine",
+      "hq": "Salt Lake City, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Myriad_Genetics"
+    },
+    {
+      "rank": 96,
+      "name": "Nature's Sunshine Products",
+      "domain": "naturessunshine.com",
+      "industry": "nutritional supplements",
+      "hq": "Lehi, ,, Utah, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Nature's_Sunshine_Products"
+    },
+    {
+      "rank": 97,
+      "name": "Neighbor (company)",
+      "domain": "neighbor.com",
+      "industry": "Self storage",
+      "hq": "United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Neighbor_(company)"
+    },
+    {
+      "rank": 98,
+      "name": "NetDocuments",
+      "domain": "netdocuments.com",
+      "industry": "Content Management, ,, Software as a service",
+      "hq": "Lehi, Utah, , USA with offices in, Wokingham, (, London, ) and, Sydney",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/NetDocuments"
+    },
+    {
+      "rank": 99,
+      "name": "NextPage",
+      "domain": "web.archive.org",
+      "industry": "Information Technology",
+      "hq": "Draper, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/NextPage"
+    },
+    {
+      "rank": 100,
+      "name": "Nielsen's Frozen Custard",
+      "domain": "nielsensfrozencustard.com",
+      "industry": "Dessert",
+      "hq": "Bountiful, Utah, [, 1, ]",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Nielsen's_Frozen_Custard"
+    },
+    {
+      "rank": 101,
+      "name": "North American Arms",
+      "domain": "northamericanarms.com",
+      "industry": "Firearms",
+      "hq": "Provo, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/North_American_Arms"
+    },
+    {
+      "rank": 102,
+      "name": "Northplatte Records",
+      "domain": "northplatterecords.com",
+      "industry": null,
+      "hq": "American Fork, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Northplatte_Records"
+    },
+    {
+      "rank": 103,
+      "name": "Novell",
+      "domain": "novell.com",
+      "industry": "Computer software",
+      "hq": "Provo, Utah, Waltham, Massachusetts",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Novell"
+    },
+    {
+      "rank": 104,
+      "name": "Nu Skin Enterprises",
+      "domain": "nuskin.com",
+      "industry": "Multilevel marketing, ,, personal care products",
+      "hq": "Provo, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Nu_Skin_Enterprises"
+    },
+    {
+      "rank": 105,
+      "name": "Omniture",
+      "domain": "omniture.com",
+      "industry": "Web Analytics, Market Research, Online Optimization",
+      "hq": "Lehi, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Omniture"
+    },
+    {
+      "rank": 106,
+      "name": "OpenEdge",
+      "domain": "globalpaymentsintegrated.com",
+      "industry": "Payment processing",
+      "hq": "Lindon,, Utah, , U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/OpenEdge"
+    },
+    {
+      "rank": 107,
+      "name": "Owala (brand)",
+      "domain": "owalalife.com",
+      "industry": null,
+      "hq": null,
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Owala_(brand)"
+    },
+    {
+      "rank": 108,
+      "name": "Parker Migliorini International",
+      "domain": "pmifoods.com",
+      "industry": null,
+      "hq": "Salt Lake City, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Parker_Migliorini_International"
+    },
+    {
+      "rank": 109,
+      "name": "Podium (company)",
+      "domain": "podium.com",
+      "industry": "Software",
+      "hq": "Lehi, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Podium_(company)"
+    },
+    {
+      "rank": 110,
+      "name": "PoliticIt",
+      "domain": "politicit.com",
+      "industry": "Online services",
+      "hq": "Logan, Utah, ,, USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/PoliticIt"
+    },
+    {
+      "rank": 111,
+      "name": "Powdr",
+      "domain": "powdr.com",
+      "industry": null,
+      "hq": "Park City, ,, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Powdr"
+    },
+    {
+      "rank": 112,
+      "name": "PowerQuest",
+      "domain": "powerquest.com",
+      "industry": "Software",
+      "hq": null,
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/PowerQuest"
+    },
+    {
+      "rank": 113,
+      "name": "Qualtrics",
+      "domain": "qualtrics.com",
+      "industry": "Experience management",
+      "hq": "Provo, Utah, and, Seattle, Washington, , U.S",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Qualtrics"
+    },
+    {
+      "rank": 114,
+      "name": "Questar Pipeline",
+      "domain": "questarpipeline.com",
+      "industry": "Natural Gas",
+      "hq": "Salt Lake City, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Questar_Pipeline"
+    },
+    {
+      "rank": 115,
+      "name": "R1 RCM",
+      "domain": "r1rcm.com",
+      "industry": null,
+      "hq": "Murray, Utah, , U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/R1_RCM"
+    },
+    {
+      "rank": 116,
+      "name": "RC Willey Home Furnishings",
+      "domain": "rcwilley.com",
+      "industry": "Retail",
+      "hq": "Salt Lake City, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/RC_Willey_Home_Furnishings"
+    },
+    {
+      "rank": 117,
+      "name": "Red Rock Brewery",
+      "domain": "redrockbrewing.com",
+      "industry": null,
+      "hq": "Salt Lake City, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Red_Rock_Brewery"
+    },
+    {
+      "rank": 118,
+      "name": "Revere Health",
+      "domain": "reverehealth.com",
+      "industry": "Healthcare",
+      "hq": "Provo, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Revere_Health"
+    },
+    {
+      "rank": 119,
+      "name": "Rocky Mountain Pictures",
+      "domain": "rockymtnpictures.com",
+      "industry": "Entertainment",
+      "hq": "Chicago, Illinois, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Rocky_Mountain_Pictures"
+    },
+    {
+      "rank": 120,
+      "name": "Sawtooth Software",
+      "domain": "sawtoothsoftware.com",
+      "industry": "Research Software",
+      "hq": "Provo, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Sawtooth_Software"
+    },
+    {
+      "rank": 121,
+      "name": "Saygus",
+      "domain": "saygus.com",
+      "industry": "Telecommunications equipment",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Saygus"
+    },
+    {
+      "rank": 122,
+      "name": "Scorpion (company)",
+      "domain": "scorpion.co",
+      "industry": "Marketing",
+      "hq": "Lehi, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Scorpion_(company)"
+    },
+    {
+      "rank": 123,
+      "name": "Seagull Book",
+      "domain": "seagullbook.com",
+      "industry": "Chain, bookstore",
+      "hq": "Salt Lake City, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Seagull_Book"
+    },
+    {
+      "rank": 124,
+      "name": "Signature Books",
+      "domain": "signaturebooks.com",
+      "industry": null,
+      "hq": "Salt Lake City, UT",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Signature_Books"
+    },
+    {
+      "rank": 125,
+      "name": "SilencerCo",
+      "domain": "silencerco.com",
+      "industry": "Suppressors, Firearms, Small arms ammunition",
+      "hq": "West Valley City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/SilencerCo"
+    },
+    {
+      "rank": 126,
+      "name": "Sinclair Oil Corporation",
+      "domain": "sinclairoil.com",
+      "industry": "Oil and gasoline",
+      "hq": "Salt Lake City, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Sinclair_Oil_Corporation"
+    },
+    {
+      "rank": 127,
+      "name": "SkyCraft Airplanes",
+      "domain": "skycraftairplanes.com",
+      "industry": "General Aviation",
+      "hq": "Orem, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/SkyCraft_Airplanes"
+    },
+    {
+      "rank": 128,
+      "name": "Skyworks Aeronautics",
+      "domain": "skyworks-aero.com",
+      "industry": "Aviation",
+      "hq": "Chicago, Illinois, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Skyworks_Aeronautics"
+    },
+    {
+      "rank": 129,
+      "name": "Smith's Food and Drug",
+      "domain": "smithsfoodanddrug.com",
+      "industry": "Retail (Grocery & Pharmacy)",
+      "hq": "Salt Lake City, Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Smith's_Food_and_Drug"
+    },
+    {
+      "rank": 130,
+      "name": "Smule",
+      "domain": "smule.com",
+      "industry": "Mobile music apps, Computer software",
+      "hq": "Salt Lake City, Utah, ,, U.S., [, 1, ]",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Smule"
+    },
+    {
+      "rank": 131,
+      "name": "Standard-Examiner",
+      "domain": "standard.net",
+      "industry": null,
+      "hq": "Ogden, ,, Utah, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Standard-Examiner"
+    },
+    {
+      "rank": 132,
+      "name": "Stingray Advertising",
+      "domain": "stingray.com",
+      "industry": "Retail Media",
+      "hq": "13 Roszel Road,  Princeton, New Jersey",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Stingray_Advertising"
+    },
+    {
+      "rank": 133,
+      "name": "Sunn Classic Pictures",
+      "domain": "sunnclassicpictures.com",
+      "industry": "Motion picture / television entertainment",
+      "hq": "Park City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Sunn_Classic_Pictures"
+    },
+    {
+      "rank": 134,
+      "name": "Sunrider",
+      "domain": "sunrider.com",
+      "industry": "Direct selling",
+      "hq": "Torrance, California",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Sunrider"
+    },
+    {
+      "rank": 135,
+      "name": "The Herald Journal",
+      "domain": "hjnews.com",
+      "industry": null,
+      "hq": "1068 W 130 S, Logan, ,, UT, 84323-0487, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/The_Herald_Journal"
+    },
+    {
+      "rank": 136,
+      "name": "The Salt Lake Tribune",
+      "domain": "sltrib.com",
+      "industry": null,
+      "hq": "48 West Market St., Suite 200, Salt Lake City, ,, Utah, 84101, USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/The_Salt_Lake_Tribune"
+    },
+    {
+      "rank": 137,
+      "name": "The Village Bank",
+      "domain": "cachevalleybank.com",
+      "industry": "Finance",
+      "hq": "Saint George, Utah, , USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/The_Village_Bank"
+    },
+    {
+      "rank": 138,
+      "name": "USU Credit Union",
+      "domain": "usuccu.org",
+      "industry": "Financial services",
+      "hq": "Logan, Utah, ,, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/USU_Credit_Union"
+    },
+    {
+      "rank": 139,
+      "name": "Ultra Championship Wrestling-Zero",
+      "domain": "ucwzero.com",
+      "industry": null,
+      "hq": "Salt Lake City, Utah, , United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Ultra_Championship_Wrestling-Zero"
+    },
+    {
+      "rank": 140,
+      "name": "Utah Airways",
+      "domain": "flyutahair.com",
+      "industry": null,
+      "hq": "Ogden, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Utah_Airways"
+    },
+    {
+      "rank": 141,
+      "name": "Utah Community Credit Union",
+      "domain": "uccu.com",
+      "industry": "Financial services",
+      "hq": "Provo, ,, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Utah_Community_Credit_Union"
+    },
+    {
+      "rank": 142,
+      "name": "VIA Motors",
+      "domain": "viamotors.com",
+      "industry": null,
+      "hq": "Orem, Utah, , USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/VIA_Motors"
+    },
+    {
+      "rank": 143,
+      "name": "Vanderhall Motor Works",
+      "domain": "vanderhallusa.com",
+      "industry": "Automotive",
+      "hq": "Provo, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Vanderhall_Motor_Works"
+    },
+    {
+      "rank": 144,
+      "name": "VidAngel",
+      "domain": "vidangel.com",
+      "industry": "Entertainment",
+      "hq": "Lehi, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/VidAngel"
+    },
+    {
+      "rank": 145,
+      "name": "Vidgo",
+      "domain": "vidgotv.com",
+      "industry": "Pay television",
+      "hq": "Salt Lake City, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Vidgo"
+    },
+    {
+      "rank": 146,
+      "name": "Vivint",
+      "domain": "vivint.com",
+      "industry": "Security systems, ,, fire detection, ,, home automation",
+      "hq": "Provo, Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Vivint"
+    },
+    {
+      "rank": 147,
+      "name": "Vivint Solar",
+      "domain": "web.archive.org",
+      "industry": "Renewable energy",
+      "hq": "Lehi, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Vivint_Solar"
+    },
+    {
+      "rank": 148,
+      "name": "Vulcan Tire",
+      "domain": "vulcantire.com",
+      "industry": "Retail",
+      "hq": "Sandy, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Vulcan_Tire"
+    },
+    {
+      "rank": 149,
+      "name": "WW Clyde",
+      "domain": "wwclyde.net",
+      "industry": "Construction",
+      "hq": "Orem, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/WW_Clyde"
+    },
+    {
+      "rank": 150,
+      "name": "Wahoo Studios",
+      "domain": "wahoo.com",
+      "industry": "Video games",
+      "hq": "Orem, Utah, , US",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Wahoo_Studios"
+    },
+    {
+      "rank": 151,
+      "name": "WakeUpNow",
+      "domain": "wakeupnow.com",
+      "industry": null,
+      "hq": "Provo, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/WakeUpNow"
+    },
+    {
+      "rank": 152,
+      "name": "WildWorks",
+      "domain": "wildworks.com",
+      "industry": "Game developer",
+      "hq": "Salt Lake City, Utah, ,, US",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/WildWorks"
+    },
+    {
+      "rank": 153,
+      "name": "Winder Farms",
+      "domain": "winderfarms.com",
+      "industry": null,
+      "hq": null,
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Winder_Farms"
+    },
+    {
+      "rank": 154,
+      "name": "WordPerfect Corporation",
+      "domain": "wordperfect.com",
+      "industry": null,
+      "hq": null,
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/WordPerfect_Corporation"
+    },
+    {
+      "rank": 155,
+      "name": "XMission",
+      "domain": "xmission.com",
+      "industry": "Internet service provider",
+      "hq": "Salt Lake City, ,, Utah, ,, U.S.",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/XMission"
+    },
+    {
+      "rank": 156,
+      "name": "XanGo",
+      "domain": "web.archive.org",
+      "industry": "Multi-level Marketing",
+      "hq": "Lehi, Utah, ,, USA",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/XanGo"
+    },
+    {
+      "rank": 157,
+      "name": "Younique",
+      "domain": "youniqueproducts.com",
+      "industry": "Cosmetics, ,, network marketing",
+      "hq": "Lehi, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Younique"
+    },
+    {
+      "rank": 158,
+      "name": "Zions Bancorporation",
+      "domain": "zionsbancorporation.com",
+      "industry": "Financial services",
+      "hq": "Salt Lake City, Utah, ,, United States",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Zions_Bancorporation"
+    },
+    {
+      "rank": 159,
+      "name": "Zu Audio",
+      "domain": "zuaudio.com",
+      "industry": null,
+      "hq": "Ogden, Utah",
+      "source": "wikipedia",
+      "wiki_url": "https://en.wikipedia.org/wiki/Zu_Audio"
+    }
+  ],
+  "companies_without_domain": [
+    "A Different Drum",
+    "Access Software",
+    "Alaska Interconnection",
+    "American Skiing Company",
+    "Billings Computer",
+    "Billings Energy Corporation",
+    "Bookcraft",
+    "Chair Entertainment",
+    "Challenger Airlines",
+    "CleanFlicks",
+    "Combustion Resources",
+    "Coon Chicken Inn",
+    "Crossroads of the West Gun Shows",
+    "Crown Burgers",
+    "Daynes Music",
+    "Deseret News Publishing Company",
+    "Eat Sleep Play",
+    "Electro Brain",
+    "Ensign Peak Advisors",
+    "Fall Line Studios",
+    "Folio Corporation",
+    "Four Points Media Group",
+    "FranklinCovey",
+    "Grand Central (store)",
+    "Halestorm Entertainment",
+    "IProvo",
+    "Incognito Entertainment",
+    "International Automated Systems",
+    "Jackman Music Corporation",
+    "KWCS-TV",
+    "Ken Garff Automotive Group",
+    "Kennecott Land",
+    "Kennecott Utah Copper",
+    "Kuali",
+    "Lineagen",
+    "LiveView Technologies",
+    "Miche (bag)",
+    "Morris Murdock Travel",
+    "Naartjie (clothing retailer)",
+    "Newspaper Agency Corporation",
+    "Pegasus Music and Video",
+    "Protandim",
+    "Quest Aerospace",
+    "Salt Lake Telegram",
+    "Scan (company)",
+    "Scott & Welch",
+    "ScuttlePad",
+    "Sensory Sweep Studios",
+    "SingleTrac",
+    "Springbar",
+    "Utah Parks Company",
+    "Utah Property Management Associates",
+    "Utah Sugar Company",
+    "UtahAmerican Energy",
+    "Vehix",
+    "Western Electricity Coordinating Council",
+    "Wicat Systems",
+    "Wildwood Enterprises, Inc",
+    "Young Living",
+    "ZCMI",
+    "Zeda Computers",
+    "Überplay"
+  ]
+}

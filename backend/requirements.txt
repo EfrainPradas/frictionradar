@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+pydantic
+pydantic-settings
+requests
+beautifulsoup4
+playwright
+python-dotenv
+
+# dev dependencies
+pytest
+httpx
+supabase

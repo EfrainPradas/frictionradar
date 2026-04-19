@@ -1,0 +1,282 @@
+{
+  "total": 520,
+  "family_counts": {
+    "uncategorized": 427,
+    "operations": 31,
+    "retail": 6,
+    "manufacturing": 4,
+    "supply_chain": 1,
+    "engineering": 5,
+    "it": 4,
+    "hr_people": 7,
+    "healthcare": 6,
+    "construction_trades": 1,
+    "recruiting_talent": 1,
+    "marketing": 14,
+    "product": 1,
+    "data_analytics": 4,
+    "customer_support": 3,
+    "food_service": 1,
+    "sales": 2,
+    "security_safety": 1,
+    "finance": 1
+  },
+  "family_probes": {
+    "operations": {
+      "admin": 1,
+      "assistant": 8,
+      "lead": 6,
+      "specialist": 4,
+      "supervisor": 2,
+      "program": 8,
+      "administrator": 1,
+      "operations": 1
+    },
+    "retail": {
+      "associate": 4,
+      "shift": 1,
+      "store": 1
+    },
+    "manufacturing": {
+      "technician": 3,
+      "welder": 1
+    },
+    "supply_chain": {
+      "driver": 1
+    },
+    "engineering": {
+      "architect": 2,
+      "embedded": 1,
+      "android": 1,
+      "cloud": 1
+    },
+    "it": {
+      "it ": 4
+    },
+    "hr_people": {
+      "people": 5,
+      "employee": 2
+    },
+    "healthcare": {
+      "pharmacy": 2,
+      "medical": 2,
+      "physician": 2
+    },
+    "construction_trades": {
+      "construction": 1
+    },
+    "recruiting_talent": {
+      "talent": 1
+    },
+    "marketing": {
+      "designer": 10,
+      "content": 3,
+      "brand": 1
+    },
+    "product": {
+      "user experience": 1
+    },
+    "data_analytics": {
+      "data": 4
+    },
+    "customer_support": {
+      "customer": 2,
+      "contact center": 1
+    },
+    "food_service": {
+      "kitchen": 1
+    },
+    "sales": {
+      "channel partner": 2
+    },
+    "security_safety": {
+      "safety": 1
+    },
+    "finance": {
+      "revenue": 1
+    }
+  },
+  "samples": {
+    "uncategorized": [
+      "Tips & Tricks",
+      "Who We Are",
+      "7-Eleven, Inc. Supports Local Communities on 7Cares Day",
+      "All Departments All Locations",
+      "Bench scientistsNo-code access to powerful bioinformatics analyses and pipelines",
+      "R&D leadershipReproducible and traceable computational research with no lock-in",
+      "Engineering Services",
+      "Business & Strategy",
+      "7-Eleven, Inc. Celebrates 7Cares Day",
+      "Anesthesia Associates of Kansas City Hybrid (Kansas City, MO, USA)",
+      "SunStone Consulting, LLC Remote",
+      "Job Search Filter",
+      "Metro 10 Miles Check out upcoming events",
+      "Metro 10 Miles Explore our hiring process",
+      "Healthcare Coding & Consulting Services (HCCS) Remote",
+      "SunStone Consulting, LLC Remote",
+      "Internal Medicine Associates of Middle Ga. Forsyth, GA, USA",
+      "Anesthesia Associates of Kansas City Hybrid (Kansas City, MO, USA)",
+      "Student Worker - Rex",
+      "Service Leader",
+      "Cattle Unit Manager",
+      "Harvest Worker - Goole",
+      "Auxiliar de Bodegas",
+      "Carpet and Upholstery Cleaner",
+      "Fortune \u00ae World\u2019s Most Admired Companies\u2122",
+      "Goode Carbon Ventura - Summit",
+      "LIMITED EDITION: STARS AND STRIPES - PRO SERIES",
+      "Goode XTR Pro Regular price $2,190",
+      "Internet of Things",
+      "Developers for Hire",
+      "Forbes\u2019 America\u2019s Best Professional Recruiting Firms",
+      "Engineering",
+      "Internships",
+      "Analista Tribut\u00e1rio S\u00eanior",
+      "Software Engineering",
+      "Field Leader",
+      "Hardware Engineering",
+      "Central Functions Manager",
+      "Leadership",
+      "Resilience and Disaster Recovery Manager",
+      "Job Responsibilities / Tasks",
+      "Be Direct We build trust with candor, care and authenticity.",
+      "Fundz Visa Debit Card",
+      "Visa Debit Card",
+      "RSL Debit Card",
+      "Utah Jazz Debit Card",
+      "RSL Debit Card",
+      "Incident Manager - Engineering",
+      "Saved Jobs (0)",
+      "Search by job title, location, department, category, etc. Search jobs"
+    ],
+    "operations": [
+      "Admin guideAccess our guide for VPC administrators",
+      "Administrative Assistant II",
+      "Certified Applicator & WHS Lead",
+      "Job:Deployment Specialist",
+      "Job:Junior Technical Supervisor",
+      "Patient Access Specialist",
+      "Meet our sustainability program leader",
+      "Lead Management Software",
+      "Lead Technical Artist, Characters",
+      "Internship Program",
+      "Seasons Tea Lounge - Assistant Server",
+      "Daniel Gilmer, New York, NY, USA, Diagnostics Launch Lead, 5 years",
+      "Gilead Internship Program",
+      "Administrative Assistant II (Oakland, CA - US)",
+      "Assistant Manager",
+      "Assistant Manager",
+      "Assistant Manager",
+      "Team Lead Assembler\u88c5\u914d\u9886\u73ed",
+      "Lead the way in AI",
+      "Executive Personal Assistant C-level  ",
+      "Red Hat Certified OpenShift Administrator exam",
+      "Veterans Program Advisory Council",
+      "Assistant Manager",
+      "AI Reputation Specialist",
+      "Associate Health Safety & Environmental Specialist - Ethanol, Iowa",
+      "Summer Internship Program",
+      "Nasdaq Internship Program",
+      "Internship Program",
+      "Alternative Investment Services Core Operations, Officer",
+      "Optical Lab Supervisor",
+      "penske corporate internship program"
+    ],
+    "retail": [
+      "Associate Portal",
+      "Licensed Practical Nurse - Evening Shift",
+      "Associate Artist, Technical",
+      "Manager, Store-in-Store",
+      "EHS Associate",
+      "\u2013 Emily, Senior Associate of Team and Culture"
+    ],
+    "manufacturing": [
+      "Carpet Cleaning Technician",
+      "Carpet / Floor Cleaning Technician",
+      "Radiation Safety Technician 3",
+      "\u710a\u5de5 / Skilled Welder"
+    ],
+    "supply_chain": [
+      "OTR Driver"
+    ],
+    "engineering": [
+      "Solution Architect (.NET, Cloud, AI)",
+      "Embedded security for the Internet of Things (IoT)",
+      "Data Warehousing Architect",
+      "Senior Software Engineer, Android",
+      "Cloud Partner Directory"
+    ],
+    "it": [
+      "IT Engineering & Architecture",
+      "PRO Manageability Tools for IT Administrators",
+      "Summer 2026 IT Development Intern",
+      "IT Engineering & Architecture"
+    ],
+    "hr_people": [
+      "Wow Them We delight our people, customers and communities.",
+      "Do What's Right We care for our people and our conduct.",
+      "Leavitt Legends (Employee Recognition)",
+      "Do What's Right We care for our people and our conduct.",
+      "Wow Them We delight our people, customers and communities.",
+      "NewsLearn about leading-edge innovations and employee and company accolades",
+      "Meet our people"
+    ],
+    "healthcare": [
+      "Community Pharmacy Careers: Where Pharmacists Grow and Make a Difference",
+      "Engineering medical devices of the future",
+      "Physician careers",
+      "Physician careers",
+      "Community Pharmacy Careers: Where Pharmacists Grow and Make a Difference",
+      "Medical & Medical Research"
+    ],
+    "construction_trades": [
+      "Architecture, Engineering, & Construction"
+    ],
+    "recruiting_talent": [
+      "Deloitte: A recognized leader for top talent"
+    ],
+    "marketing": [
+      "My career at Flex: Marcin Jagodda, Senior Designer",
+      "Designer Switches and Outlets",
+      "DESIGNER SERIES",
+      "Department: Content",
+      "Department: Content",
+      "Freelance Brand Design Talent",
+      "Senior Motion Designer",
+      "Editorial & Content",
+      "Designer Spotlight",
+      "PSOC\u2122 1 Code Examples for PSOC\u2122 Designer",
+      "Infineon Designer",
+      "Salesforce Designer",
+      "Protocol Designer",
+      "PSOC\u2122 Designer Archive"
+    ],
+    "product": [
+      "Digital LeadersImprove user experience and increase daily active users"
+    ],
+    "data_analytics": [
+      "Senior Data Management Professional - Company Financials Foundational Support",
+      "Senior Editor (Breaking News, Economic Data & AI)",
+      "AI-native innovations extend Juniper\u2019s data center networking leadership",
+      "For Data Scientists"
+    ],
+    "customer_support": [
+      "Customer StoriesLearn how leading brands grow their business with InMoment",
+      "Contact Center LeadersIdentify call reason and more with multichannel feedback",
+      "Customer & Tech Support"
+    ],
+    "food_service": [
+      "Kitchen Leader"
+    ],
+    "sales": [
+      "Channel Partner Directory",
+      "Channel Partner Directory"
+    ],
+    "security_safety": [
+      "Manager Health Safety Environmental - Ethanol, SD"
+    ],
+    "finance": [
+      "Conifer Health Revenue Management"
+    ]
+  }
+}

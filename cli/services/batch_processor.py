@@ -142,58 +142,65 @@ def _run_pipeline(db, entry: dict[str, Any], all_companies_snapshot: list[dict[s
         pipeline_log.append(f"Collection ERROR: {e}")
         _safe_rollback(db)
 
-    # ── Step 3: careers extraction (Playwright, async → sync bridge) ─
+    # ── Step 3: smart extraction (ATS API → HTTP static → Playwright) ─
     open_positions = None
+    extraction_meta: dict = {}
     try:
-        from app.services.collection_orchestrator import extract_careers_evidence
+        from app.extraction.dispatcher import extract_company
+        from app.extraction.schemas import NormalizedJobsResult
 
-        # If sync collectors found very few signals, Playwright is critical
-        sync_signals_count = collection_meta.get("signals_persisted", 0)
-
-        # Extract careers URL from sync collectors if available
-        known_careers_url = None
-        for c in (collection_meta.get("collectors") or []):
-            if c.get("collector") in ("careers", "dynamic_careers") and c.get("signals", 0) > 0:
-                # Look for the URL in signals
-                from app.models.company_signal import CompanySignal
-                careers_signal = (
-                    db.query(CompanySignal)
-                    .filter(
-                        CompanySignal.company_id == company_id,
-                        CompanySignal.signal_type == "careers_page_found",
-                    )
-                    .first()
-                )
-                if careers_signal and careers_signal.source_url:
-                    known_careers_url = careers_signal.source_url
-                    break
-
-        if sync_signals_count < 3:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            try:
-                open_positions = loop.run_until_complete(
-                    extract_careers_evidence(db, company_id, domain, known_careers_url=known_careers_url)
-                )
-                pipeline_log.append(
-                    f"Playwright extraction: open_positions={open_positions}"
-                )
-            except Exception as e:
-                pipeline_log.append(f"Playwright ERROR: {e}")
-                logger.warning(f"[BatchProcessor] Playwright failed for {domain}: {e}")
-            finally:
-                # Clean up any remaining async resources
-                try:
-                    loop.run_until_complete(loop.shutdown_asyncgens())
-                except Exception:
-                    pass
-                loop.close()
-        else:
-            pipeline_log.append(
-                f"Playwright skipped (sync collectors found {sync_signals_count} signals)"
+        # Detect ATS platform from sync collector signals
+        detected_ats = None
+        for sig in (
+            db.query(CompanySignal)
+            .filter(
+                CompanySignal.company_id == company_id,
+                CompanySignal.signal_type.like("%_board_detected"),
             )
+            .all()
+        ):
+            # Extract platform from signal_type like "greenhouse_board_detected"
+            detected_ats = sig.signal_type.replace("_board_detected", "")
+            break
+
+        # Run the extraction chain: ATS API → HTTP static → Playwright
+        ext_result = extract_company(
+            domain=domain,
+            company_name=name,
+            company_id=company_id,
+            detected_ats_platform=detected_ats,
+        )
+
+        # Log extraction outcome
+        pipeline_log.append(
+            f"Extraction: strategy={ext_result.strategy_used.value} "
+            f"reason={ext_result.reason_code.value} "
+            f"success={ext_result.success} "
+            f"jobs={ext_result.jobs_count} "
+            f"positions={ext_result.open_positions_count} "
+            f"quality={ext_result.evidence_quality} "
+            f"duration={ext_result.duration_ms}ms"
+        )
+        if ext_result.fallback_from:
+            pipeline_log.append(f"  fallback_from={ext_result.fallback_from.value}")
+        if ext_result.error:
+            pipeline_log.append(f"  error={ext_result.error}")
+
+        extraction_meta = {
+            "strategy": ext_result.strategy_used.value,
+            "reason": ext_result.reason_code.value,
+            "success": ext_result.success,
+            "jobs_count": ext_result.jobs_count,
+            "duration_ms": ext_result.duration_ms,
+        }
+
+        # Convert NormalizedJobsResult → signals for the scoring pipeline
+        if ext_result.success:
+            open_positions = ext_result.open_positions_count
+            _persist_extraction_signals(db, company_id, ext_result, pipeline_log)
+
     except Exception as e:
-        pipeline_log.append(f"Playwright setup ERROR: {e}")
+        pipeline_log.append(f"Extraction ERROR: {e}")
         _safe_rollback(db)
 
     # ── Step 4: scoring ─────────────────────────────────────────────
@@ -277,6 +284,7 @@ def _run_pipeline(db, entry: dict[str, Any], all_companies_snapshot: list[dict[s
         "notes": notes,
         "pipeline_log": pipeline_log,
         "collection_meta": collection_meta,
+        "extraction_meta": extraction_meta,
         "updated_at": datetime.now(timezone.utc).isoformat(),
     }
 
@@ -298,6 +306,91 @@ def _run_pipeline(db, entry: dict[str, Any], all_companies_snapshot: list[dict[s
     final["updated_at"] = datetime.now(timezone.utc).isoformat()
 
     return final
+
+
+def _persist_extraction_signals(db, company_id, ext_result, pipeline_log):
+    """Convert NormalizedJobsResult into CompanySignal records.
+
+    Maps extraction output to the signal types that the scoring and
+    evaluation engines already understand.
+    """
+    from app.services.collection_orchestrator import _persist_signals_deduped
+
+    source_type = f"extraction_{ext_result.strategy_used.value}"
+    url = ext_result.careers_url or ""
+    new_signals = []
+
+    # Position count
+    if ext_result.open_positions_count and ext_result.open_positions_count > 0:
+        sig_type = (
+            "high_open_positions_count_detected"
+            if ext_result.open_positions_count >= 100
+            else "open_positions_count_detected"
+        )
+        new_signals.append(CompanySignal(
+            company_id=company_id,
+            source_type=source_type,
+            source_url=url,
+            signal_type=sig_type,
+            signal_text=f"Open positions: {ext_result.open_positions_count}",
+            numeric_value=ext_result.open_positions_count,
+            confidence=ext_result.confidence,
+        ))
+
+    # Job cards count
+    if ext_result.jobs_count > 0:
+        new_signals.append(CompanySignal(
+            company_id=company_id,
+            source_type=source_type,
+            source_url=url,
+            signal_type="job_cards_visible_detected",
+            signal_text=f"Job listings found: {ext_result.jobs_count}",
+            numeric_value=ext_result.jobs_count,
+            confidence=ext_result.confidence,
+        ))
+
+    # Hiring areas
+    area_to_signal = {
+        "retail": "retail", "distribution": "distribution",
+        "manufacturing": "manufacturing", "technology": "technology",
+        "finance": "finance", "operations": "operations",
+        "marketing": "marketing", "sales": "sales",
+        "customer_success": "customer_success", "supply_chain": "supply_chain",
+        "hr_people": "hr_people", "design": "design",
+        "legal": "legal", "healthcare": "healthcare",
+        "engineering": "technology", "product": "technology",
+        "data": "technology", "it": "technology",
+    }
+    seen_areas = set()
+    for area in ext_result.hiring_areas:
+        area_key = area.lower().replace(" ", "_").replace("&", "and")
+        mapped = area_to_signal.get(area_key, area_key)
+        if mapped in seen_areas:
+            continue
+        seen_areas.add(mapped)
+        new_signals.append(CompanySignal(
+            company_id=company_id,
+            source_type=source_type,
+            source_url=url,
+            signal_type=f"{mapped}_hiring_detected",
+            signal_text=f"Hiring area: {area}",
+            confidence=0.8,
+        ))
+
+    # Careers page found
+    if ext_result.careers_url:
+        new_signals.append(CompanySignal(
+            company_id=company_id,
+            source_type=source_type,
+            source_url=ext_result.careers_url,
+            signal_type="careers_page_found",
+            signal_text=f"Careers page: {ext_result.careers_url}",
+            confidence=0.95,
+        ))
+
+    if new_signals:
+        count = _persist_signals_deduped(db, company_id, new_signals)
+        pipeline_log.append(f"  extraction_signals_persisted: {count}")
 
 
 def _excluded_result(entry: dict[str, Any], reason: str) -> dict[str, Any]:

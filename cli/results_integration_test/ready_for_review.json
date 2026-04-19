@@ -1,0 +1,280 @@
+[
+  {
+    "company_name": "1-800 Contacts",
+    "domain": "1800contacts.com",
+    "company_id": "58e4d72e-9b98-45d7-bbfc-5f0d594dfcff",
+    "industry": "Contact lens, retail",
+    "location": "Draper, Utah, , U.S.",
+    "source": "wikipedia",
+    "status": "ready_for_review",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "high",
+    "pain_clarity": "high",
+    "function_concentration": "low",
+    "extraction_coverage": "high",
+    "positioning_readiness": "low",
+    "diagnosis_status": "broad_hiring_pattern_detected",
+    "signals_count": 24,
+    "distinct_signals_count": 24,
+    "open_positions_count": 12,
+    "friction_score": 8.0,
+    "dominant_friction_type": "scaling_strain",
+    "summary": "1-800 Contacts is worth human review, but the dominant pain is not yet isolated enough for precise positioning.",
+    "notes": [
+      "Broad hiring demand detected",
+      "Dominant pain not yet isolated"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 58e4d72e-9b98-45d7-bbfc-5f0d594dfcff",
+      "Collection: completed",
+      "  signals_persisted: 2",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 15 signals (ok)",
+      "  collector ats_public: 2 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 9 signals (ok)",
+      "Extraction: strategy=ats_api reason=known_ats_json_available success=True jobs=12 positions=12 quality=high duration=0ms",
+      "  extraction_signals_persisted: 7",
+      "Scoring: 8.0 (scaling_strain)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: ready_for_review (24 signals)",
+      "QA: pass=True score=high flags=[]",
+      "Tier: tier_2_ready_for_review"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 2,
+      "signals_raw": 26,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 15,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 2,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 9,
+          "status": "ok"
+        }
+      ]
+    },
+    "extraction_meta": {
+      "strategy": "ats_api",
+      "reason": "known_ats_json_available",
+      "success": true,
+      "jobs_count": 12,
+      "duration_ms": 0
+    },
+    "updated_at": "2026-04-14T00:52:19.226771+00:00",
+    "qa_pass": true,
+    "qa_score": "high",
+    "qa_flags": [],
+    "data_quality_status": "high",
+    "target_tier": "tier_2_ready_for_review",
+    "tier_rationale": "not ready for positioning: function_concentration >= moderate",
+    "operational_state": "inspect_human"
+  },
+  {
+    "company_name": "AAPC (healthcare)",
+    "domain": "aapc.com",
+    "company_id": "1f5a1a33-20e9-44c9-b2e7-45c21c2af431",
+    "industry": null,
+    "location": "Salt Lake City, Utah",
+    "source": "wikipedia",
+    "status": "ready_for_review",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "high",
+    "pain_clarity": "high",
+    "function_concentration": "low",
+    "extraction_coverage": "high",
+    "positioning_readiness": "low",
+    "diagnosis_status": "broad_hiring_pattern_detected",
+    "signals_count": 13,
+    "distinct_signals_count": 13,
+    "open_positions_count": 6359,
+    "friction_score": 8.25,
+    "dominant_friction_type": "scaling_strain",
+    "summary": "AAPC (healthcare) is worth human review, but the dominant pain is not yet isolated enough for precise positioning.",
+    "notes": [
+      "Broad hiring demand detected",
+      "Dominant pain not yet isolated"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 1f5a1a33-20e9-44c9-b2e7-45c21c2af431",
+      "Collection: completed",
+      "  signals_persisted: 0",
+      "  collector company_site: 1 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 0 signals (ok)",
+      "  collector newsroom: 1 signals (ok)",
+      "  collector dynamic_careers: 0 signals (ok)",
+      "Extraction: strategy=playwright reason=http_parse_low_confidence success=True jobs=2 positions=None quality=moderate duration=10969ms",
+      "  fallback_from=http_static",
+      "  extraction_signals_persisted: 3",
+      "Scoring: 8.25 (scaling_strain)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: ready_for_review (13 signals)",
+      "QA: pass=True score=high flags=[]",
+      "Tier: tier_2_ready_for_review"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 0,
+      "signals_raw": 2,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    "extraction_meta": {
+      "strategy": "playwright",
+      "reason": "http_parse_low_confidence",
+      "success": true,
+      "jobs_count": 2,
+      "duration_ms": 10969
+    },
+    "updated_at": "2026-04-14T00:52:39.502060+00:00",
+    "qa_pass": true,
+    "qa_score": "high",
+    "qa_flags": [],
+    "data_quality_status": "high",
+    "target_tier": "tier_2_ready_for_review",
+    "tier_rationale": "not ready for positioning: function_concentration >= moderate",
+    "operational_state": "inspect_human"
+  },
+  {
+    "company_name": "ASEA (American company)",
+    "domain": "aseaglobal.com",
+    "company_id": "cf15cd17-c1ef-436b-bf7a-8587e002ab97",
+    "industry": null,
+    "location": "Pleasant Grove, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "ready_for_review",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "high",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "moderate",
+    "positioning_readiness": "low",
+    "diagnosis_status": "broad_hiring_pattern_detected",
+    "signals_count": 13,
+    "distinct_signals_count": 13,
+    "open_positions_count": 0,
+    "friction_score": 8.25,
+    "dominant_friction_type": "scaling_strain",
+    "summary": "ASEA (American company) is worth human review, but the dominant pain is not yet isolated enough for precise positioning.",
+    "notes": [
+      "Broad hiring demand detected",
+      "Dominant pain not yet isolated"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: cf15cd17-c1ef-436b-bf7a-8587e002ab97",
+      "Collection: completed",
+      "  signals_persisted: 0",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 11 signals (ok)",
+      "  collector ats_public: 0 signals (ok)",
+      "  collector newsroom: 2 signals (ok)",
+      "  collector dynamic_careers: 5 signals (ok)",
+      "Extraction: strategy=playwright reason=fallback_from_http_static success=True jobs=0 positions=None quality=limited duration=4008ms",
+      "  fallback_from=http_static",
+      "  extraction_signals_persisted: 0",
+      "Scoring: 8.25 (scaling_strain)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: ready_for_review (13 signals)",
+      "QA: pass=True score=high flags=[]",
+      "Tier: tier_2_ready_for_review"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 0,
+      "signals_raw": 18,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 11,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 2,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 5,
+          "status": "ok"
+        }
+      ]
+    },
+    "extraction_meta": {
+      "strategy": "playwright",
+      "reason": "fallback_from_http_static",
+      "success": true,
+      "jobs_count": 0,
+      "duration_ms": 4008
+    },
+    "updated_at": "2026-04-14T00:52:53.235754+00:00",
+    "qa_pass": true,
+    "qa_score": "high",
+    "qa_flags": [],
+    "data_quality_status": "high",
+    "target_tier": "tier_2_ready_for_review",
+    "tier_rationale": "not ready for positioning: pain_clarity >= moderate",
+    "operational_state": "inspect_human"
+  }
+]

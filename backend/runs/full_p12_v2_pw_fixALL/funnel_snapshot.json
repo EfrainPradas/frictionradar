@@ -1,0 +1,144 @@
+{
+  "generated_at": "2026-04-17T15:58:04.415326+00:00",
+  "total_companies": 1293,
+  "errors": 0,
+  "diagnostic_state_distribution": {
+    "broad_hiring_pattern_detected": 1216,
+    "ready_for_positioning": 20,
+    "insufficient_evidence": 18,
+    "specific_pain_emerging": 39
+  },
+  "eligible_positioning_full": 59,
+  "eligible_positioning_conditional": 6,
+  "eligible_positioning_total": 65,
+  "sample_full": [
+    [
+      "Degreed",
+      "ready_for_positioning",
+      4,
+      0.5
+    ],
+    [
+      "BMC Software",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Aetna",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Fishbowl Inventory",
+      "specific_pain_emerging",
+      15,
+      0.4
+    ],
+    [
+      "Active Power",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Agile Software Corporation",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "EnergySolutions",
+      "ready_for_positioning",
+      12,
+      0.5
+    ],
+    [
+      "Myriad Genetics",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Leavitt Group",
+      "ready_for_positioning",
+      8,
+      1.0
+    ],
+    [
+      "GE Healthcare Surgery",
+      "ready_for_positioning",
+      4,
+      1.0
+    ],
+    [
+      "Bank of Utah",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "InMoment",
+      "ready_for_positioning",
+      5,
+      0.6
+    ],
+    [
+      "Bloomberg L.P.",
+      "specific_pain_emerging",
+      5,
+      0.4
+    ],
+    [
+      "Bechtel",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Caterpillar",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ]
+  ],
+  "sample_conditional": [
+    [
+      "Stingray Advertising",
+      "broad_hiring_pattern_detected",
+      19,
+      0.37
+    ],
+    [
+      "1-800 Contacts",
+      "broad_hiring_pattern_detected",
+      26,
+      0.38
+    ],
+    [
+      "Nike",
+      "broad_hiring_pattern_detected",
+      26,
+      0.5
+    ],
+    [
+      "ScienceSoft",
+      "broad_hiring_pattern_detected",
+      7,
+      0.43
+    ],
+    [
+      "Roberhalf",
+      "broad_hiring_pattern_detected",
+      25,
+      0.64
+    ],
+    [
+      "AgReserves",
+      "broad_hiring_pattern_detected",
+      12,
+      0.5
+    ]
+  ]
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Positioning Heatmap</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fafafa; color: #111; margin: 0; padding: 24px;
+}
+h1 { margin: 0 0 4px 0; font-size: 22px; }
+h2 { margin: 28px 0 12px 0; font-size: 16px; font-weight: 600; }
+h2 .total { color: #6b7280; font-weight: 400; font-size: 13px; margin-left: 6px; }
+.meta { color: #6b7280; font-size: 13px; margin-bottom: 8px; }
+.legend { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: #374151; margin: 12px 0 0 0; }
+.legend .bar {
+  display: inline-block; width: 140px; height: 10px; border-radius: 4px;
+  background: linear-gradient(to right, hsl(120,70%,60%), hsl(60,70%,60%), hsl(0,70%,60%));
+}
+.scroll { overflow-x: auto; padding-bottom: 8px; }
+table.heatmap { border-collapse: separate; border-spacing: 2px; }
+table.heatmap th, table.heatmap td {
+  min-width: 70px; height: 60px; text-align: center; vertical-align: middle;
+  font-size: 12px; padding: 4px; border-radius: 4px;
+}
+table.heatmap th { background: transparent; color: #374151; font-weight: 500; }
+table.heatmap th.rowhead { text-align: right; padding-right: 10px; white-space: nowrap; }
+table.heatmap thead th { height: 110px; vertical-align: bottom; }
+table.heatmap .rot {
+  display: inline-block; transform: rotate(-35deg); transform-origin: left bottom;
+  white-space: nowrap; font-size: 11px;
+}
+table.heatmap td { cursor: help; transition: transform .08s ease; }
+table.heatmap td:hover { transform: scale(1.05); outline: 2px solid #111; }
+table.heatmap td.empty { cursor: default; }
+.count { font-size: 16px; font-weight: 600; line-height: 1.1; }
+.score { font-size: 11px; opacity: .85; margin-top: 2px; }
+.empty.message { color: #9ca3af; font-style: italic; }
+footer { margin-top: 32px; color: #9ca3af; font-size: 11px; }
+</style>
+</head>
+<body>
+<h1>Positioning Heatmap</h1>
+<div class="meta">Generado: 2026-04-17T19:46:41.851881+00:00 &middot; Empresas elegibles: 35</div>
+<div class="legend">
+  <span>Menos empresas</span>
+  <span class="bar"></span>
+  <span>Más empresas</span>
+  <span style="margin-left:16px;color:#6b7280">Color = conteo &middot; Número grande = conteo &middot; Número pequeño = score promedio &middot; Hover = empresas</span>
+</div>
+<section><h2>Función × Fricción dominante <span class="total">(n=35)</span></h2><div class="scroll"><table class="heatmap"><thead><tr><th></th><th><span class="rot">scaling_strain</span></th><th><span class="rot">process_inefficiency</span></th><th><span class="rot">reporting_fragmentation</span></th><th><span class="rot">customer_experience_friction</span></th><th><span class="rot">tooling_inconsistency</span></th></tr></thead><tbody><tr><th class="rowhead">engineering</th><td style="background:hsl(0, 70%, 60%);color:#fff" title="engineering × scaling_strain
+Empresas: 6
+Score promedio: 12.42
+AMD, Degreed, Embarcadero Technologies, Red Hat, ScienceSoft, Tahitian Noni"><div class="count">6</div><div class="score">12.4</div></td><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(80, 70%, 60%);color:#111" title="engineering × reporting_fragmentation
+Empresas: 2
+Score promedio: 10.12
+CrowdStrike, Semiconductor Cypress"><div class="count">2</div><div class="score">10.1</div></td><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(100, 70%, 60%);color:#111" title="engineering × tooling_inconsistency
+Empresas: 1
+Score promedio: 8.75
+Caterpillar"><div class="count">1</div><div class="score">8.8</div></td></tr><tr><th class="rowhead">analytics</th><td style="background:hsl(80, 70%, 60%);color:#111" title="analytics × scaling_strain
+Empresas: 2
+Score promedio: 14.50
+RC Willey Home Furnishings, Salesforce"><div class="count">2</div><div class="score">14.5</div></td><td style="background:hsl(100, 70%, 60%);color:#111" title="analytics × process_inefficiency
+Empresas: 1
+Score promedio: 12.25
+Juniper Networks"><div class="count">1</div><div class="score">12.2</div></td><td style="background:hsl(60, 70%, 60%);color:#111" title="analytics × reporting_fragmentation
+Empresas: 3
+Score promedio: 9.67
+Bloomberg L.P., InMoment, MassMutual"><div class="count">3</div><div class="score">9.7</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">operations</th><td style="background:hsl(80, 70%, 60%);color:#111" title="operations × scaling_strain
+Empresas: 2
+Score promedio: 13.00
+Chipotle Mexicano A La Parrilla, Pall Corporation"><div class="count">2</div><div class="score">13.0</div></td><td style="background:hsl(40, 70%, 60%);color:#fff" title="operations × process_inefficiency
+Empresas: 4
+Score promedio: 10.06
+AAPC (healthcare), Cerberus Capital Management, EnergySolutions, Opengear"><div class="count">4</div><div class="score">10.1</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">supply_chain</th><td style="background:hsl(40, 70%, 60%);color:#fff" title="supply_chain × scaling_strain
+Empresas: 4
+Score promedio: 10.06
+Aetna, CVS Health, Dick&#x27;s Sporting Goods, Flex LTD"><div class="count">4</div><div class="score">10.1</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">customer_support</th><td style="background:hsl(80, 70%, 60%);color:#111" title="customer_support × scaling_strain
+Empresas: 2
+Score promedio: 11.75
+DXC Technology, Electronic Data Systems"><div class="count">2</div><div class="score">11.8</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">sales</th><td style="background:hsl(100, 70%, 60%);color:#111" title="sales × scaling_strain
+Empresas: 1
+Score promedio: 11.00
+Metro by T-Mobile"><div class="count">1</div><div class="score">11.0</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(100, 70%, 60%);color:#111" title="sales × customer_experience_friction
+Empresas: 1
+Score promedio: 5.75
+MILLION VENTURES LLC"><div class="count">1</div><div class="score">5.8</div></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">finance</th><td style="background:hsl(100, 70%, 60%);color:#111" title="finance × scaling_strain
+Empresas: 1
+Score promedio: 9.25
+AdvancedMD"><div class="count">1</div><div class="score">9.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">food_service</th><td style="background:hsl(100, 70%, 60%);color:#111" title="food_service × scaling_strain
+Empresas: 1
+Score promedio: 11.00
+Jamba"><div class="count">1</div><div class="score">11.0</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">healthcare</th><td style="background:hsl(100, 70%, 60%);color:#111" title="healthcare × scaling_strain
+Empresas: 1
+Score promedio: 9.50
+Intermountain Health"><div class="count">1</div><div class="score">9.5</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">hr</th><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(100, 70%, 60%);color:#111" title="hr × process_inefficiency
+Empresas: 1
+Score promedio: 7.25
+Leavitt Group"><div class="count">1</div><div class="score">7.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">marketing</th><td style="background:hsl(100, 70%, 60%);color:#111" title="marketing × scaling_strain
+Empresas: 1
+Score promedio: 11.25
+HubSpot"><div class="count">1</div><div class="score">11.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">product</th><td style="background:hsl(100, 70%, 60%);color:#111" title="product × scaling_strain
+Empresas: 1
+Score promedio: 7.25
+Fishbowl Inventory"><div class="count">1</div><div class="score">7.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr></tbody></table></div></section><section><h2>Arquetipo × Fricción dominante <span class="total">(n=35)</span></h2><div class="scroll"><table class="heatmap"><thead><tr><th></th><th><span class="rot">scaling_strain</span></th><th><span class="rot">process_inefficiency</span></th><th><span class="rot">reporting_fragmentation</span></th><th><span class="rot">customer_experience_friction</span></th><th><span class="rot">tooling_inconsistency</span></th></tr></thead><tbody><tr><th class="rowhead">Engineering Reliability Builder</th><td style="background:hsl(0, 70%, 60%);color:#fff" title="Engineering Reliability Builder × scaling_strain
+Empresas: 6
+Score promedio: 12.42
+AMD, Degreed, Embarcadero Technologies, Red Hat, ScienceSoft, Tahitian Noni"><div class="count">6</div><div class="score">12.4</div></td><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(80, 70%, 60%);color:#111" title="Engineering Reliability Builder × reporting_fragmentation
+Empresas: 2
+Score promedio: 10.12
+CrowdStrike, Semiconductor Cypress"><div class="count">2</div><div class="score">10.1</div></td><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(100, 70%, 60%);color:#111" title="Engineering Reliability Builder × tooling_inconsistency
+Empresas: 1
+Score promedio: 8.75
+Caterpillar"><div class="count">1</div><div class="score">8.8</div></td></tr><tr><th class="rowhead">Data-to-Decisions Specialist</th><td style="background:hsl(80, 70%, 60%);color:#111" title="Data-to-Decisions Specialist × scaling_strain
+Empresas: 2
+Score promedio: 14.50
+RC Willey Home Furnishings, Salesforce"><div class="count">2</div><div class="score">14.5</div></td><td style="background:hsl(100, 70%, 60%);color:#111" title="Data-to-Decisions Specialist × process_inefficiency
+Empresas: 1
+Score promedio: 12.25
+Juniper Networks"><div class="count">1</div><div class="score">12.2</div></td><td style="background:hsl(60, 70%, 60%);color:#111" title="Data-to-Decisions Specialist × reporting_fragmentation
+Empresas: 3
+Score promedio: 9.67
+Bloomberg L.P., InMoment, MassMutual"><div class="count">3</div><div class="score">9.7</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Operational Clarity Builder</th><td style="background:hsl(80, 70%, 60%);color:#111" title="Operational Clarity Builder × scaling_strain
+Empresas: 2
+Score promedio: 13.00
+Chipotle Mexicano A La Parrilla, Pall Corporation"><div class="count">2</div><div class="score">13.0</div></td><td style="background:hsl(40, 70%, 60%);color:#fff" title="Operational Clarity Builder × process_inefficiency
+Empresas: 4
+Score promedio: 10.06
+AAPC (healthcare), Cerberus Capital Management, EnergySolutions, Opengear"><div class="count">4</div><div class="score">10.1</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Supply Chain Visibility Specialist</th><td style="background:hsl(40, 70%, 60%);color:#fff" title="Supply Chain Visibility Specialist × scaling_strain
+Empresas: 4
+Score promedio: 10.06
+Aetna, CVS Health, Dick&#x27;s Sporting Goods, Flex LTD"><div class="count">4</div><div class="score">10.1</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Customer Retention Strategist</th><td style="background:hsl(80, 70%, 60%);color:#111" title="Customer Retention Strategist × scaling_strain
+Empresas: 2
+Score promedio: 11.75
+DXC Technology, Electronic Data Systems"><div class="count">2</div><div class="score">11.8</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Revenue Engine Builder</th><td style="background:hsl(100, 70%, 60%);color:#111" title="Revenue Engine Builder × scaling_strain
+Empresas: 1
+Score promedio: 11.00
+Metro by T-Mobile"><div class="count">1</div><div class="score">11.0</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(100, 70%, 60%);color:#111" title="Revenue Engine Builder × customer_experience_friction
+Empresas: 1
+Score promedio: 5.75
+MILLION VENTURES LLC"><div class="count">1</div><div class="score">5.8</div></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Clinical Operations Stabilizer</th><td style="background:hsl(100, 70%, 60%);color:#111" title="Clinical Operations Stabilizer × scaling_strain
+Empresas: 1
+Score promedio: 9.50
+Intermountain Health"><div class="count">1</div><div class="score">9.5</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Financial Operations Architect</th><td style="background:hsl(100, 70%, 60%);color:#111" title="Financial Operations Architect × scaling_strain
+Empresas: 1
+Score promedio: 9.25
+AdvancedMD"><div class="count">1</div><div class="score">9.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Growth and Performance Marketer</th><td style="background:hsl(100, 70%, 60%);color:#111" title="Growth and Performance Marketer × scaling_strain
+Empresas: 1
+Score promedio: 11.25
+HubSpot"><div class="count">1</div><div class="score">11.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Kitchen Operations Steadier</th><td style="background:hsl(100, 70%, 60%);color:#111" title="Kitchen Operations Steadier × scaling_strain
+Empresas: 1
+Score promedio: 11.00
+Jamba"><div class="count">1</div><div class="score">11.0</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">People Operations Architect</th><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(100, 70%, 60%);color:#111" title="People Operations Architect × process_inefficiency
+Empresas: 1
+Score promedio: 7.25
+Leavitt Group"><div class="count">1</div><div class="score">7.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">Product Clarity Driver</th><td style="background:hsl(100, 70%, 60%);color:#111" title="Product Clarity Driver × scaling_strain
+Empresas: 1
+Score promedio: 7.25
+Fishbowl Inventory"><div class="count">1</div><div class="score">7.2</div></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td><td class="empty" style="background:#f3f4f6"></td></tr></tbody></table></div></section><section><h2>Función × Gate <span class="total">(n=35)</span></h2><div class="scroll"><table class="heatmap"><thead><tr><th></th><th><span class="rot">full</span></th><th><span class="rot">conditional</span></th></tr></thead><tbody><tr><th class="rowhead">engineering</th><td style="background:hsl(60, 70%, 60%);color:#111" title="engineering × full
+Empresas: 3
+Score promedio: 12.08
+AMD, Degreed, ScienceSoft"><div class="count">3</div><div class="score">12.1</div></td><td style="background:hsl(0, 70%, 60%);color:#fff" title="engineering × conditional
+Empresas: 6
+Score promedio: 11.21
+Caterpillar, CrowdStrike, Embarcadero Technologies, Red Hat, Semiconductor Cypress, Tahitian Noni"><div class="count">6</div><div class="score">11.2</div></td></tr><tr><th class="rowhead">analytics</th><td style="background:hsl(60, 70%, 60%);color:#111" title="analytics × full
+Empresas: 3
+Score promedio: 11.58
+InMoment, Juniper Networks, RC Willey Home Furnishings"><div class="count">3</div><div class="score">11.6</div></td><td style="background:hsl(60, 70%, 60%);color:#111" title="analytics × conditional
+Empresas: 3
+Score promedio: 11.83
+Bloomberg L.P., MassMutual, Salesforce"><div class="count">3</div><div class="score">11.8</div></td></tr><tr><th class="rowhead">operations</th><td style="background:hsl(40, 70%, 60%);color:#fff" title="operations × full
+Empresas: 4
+Score promedio: 11.69
+AAPC (healthcare), Cerberus Capital Management, Chipotle Mexicano A La Parrilla, Pall Corporation"><div class="count">4</div><div class="score">11.7</div></td><td style="background:hsl(80, 70%, 60%);color:#111" title="operations × conditional
+Empresas: 2
+Score promedio: 9.75
+EnergySolutions, Opengear"><div class="count">2</div><div class="score">9.8</div></td></tr><tr><th class="rowhead">supply_chain</th><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(40, 70%, 60%);color:#fff" title="supply_chain × conditional
+Empresas: 4
+Score promedio: 10.06
+Aetna, CVS Health, Dick&#x27;s Sporting Goods, Flex LTD"><div class="count">4</div><div class="score">10.1</div></td></tr><tr><th class="rowhead">customer_support</th><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(80, 70%, 60%);color:#111" title="customer_support × conditional
+Empresas: 2
+Score promedio: 11.75
+DXC Technology, Electronic Data Systems"><div class="count">2</div><div class="score">11.8</div></td></tr><tr><th class="rowhead">sales</th><td style="background:hsl(100, 70%, 60%);color:#111" title="sales × full
+Empresas: 1
+Score promedio: 11.00
+Metro by T-Mobile"><div class="count">1</div><div class="score">11.0</div></td><td style="background:hsl(100, 70%, 60%);color:#111" title="sales × conditional
+Empresas: 1
+Score promedio: 5.75
+MILLION VENTURES LLC"><div class="count">1</div><div class="score">5.8</div></td></tr><tr><th class="rowhead">finance</th><td style="background:hsl(100, 70%, 60%);color:#111" title="finance × full
+Empresas: 1
+Score promedio: 9.25
+AdvancedMD"><div class="count">1</div><div class="score">9.2</div></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">food_service</th><td style="background:hsl(100, 70%, 60%);color:#111" title="food_service × full
+Empresas: 1
+Score promedio: 11.00
+Jamba"><div class="count">1</div><div class="score">11.0</div></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">healthcare</th><td style="background:hsl(100, 70%, 60%);color:#111" title="healthcare × full
+Empresas: 1
+Score promedio: 9.50
+Intermountain Health"><div class="count">1</div><div class="score">9.5</div></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">hr</th><td style="background:hsl(100, 70%, 60%);color:#111" title="hr × full
+Empresas: 1
+Score promedio: 7.25
+Leavitt Group"><div class="count">1</div><div class="score">7.2</div></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">marketing</th><td style="background:hsl(100, 70%, 60%);color:#111" title="marketing × full
+Empresas: 1
+Score promedio: 11.25
+HubSpot"><div class="count">1</div><div class="score">11.2</div></td><td class="empty" style="background:#f3f4f6"></td></tr><tr><th class="rowhead">product</th><td class="empty" style="background:#f3f4f6"></td><td style="background:hsl(100, 70%, 60%);color:#111" title="product × conditional
+Empresas: 1
+Score promedio: 7.25
+Fishbowl Inventory"><div class="count">1</div><div class="score">7.2</div></td></tr></tbody></table></div></section>
+<footer>Fuente: positioning_audit.json &middot; Render stdlib-only &middot; Hover sobre cada celda para ver empresas</footer>
+</body>
+</html>

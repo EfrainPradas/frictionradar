@@ -1,0 +1,3238 @@
+[
+  {
+    "company_name": "AgReserves",
+    "domain": "agreserves.com",
+    "company_id": "314cb9de-e058-4c88-9fdb-f4ee5fc8afd1",
+    "industry": "Agriculture",
+    "location": "Salt Lake City, ,, Utah, 84111, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "medium",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 1.5,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 314cb9de-e058-4c88-9fdb-f4ee5fc8afd1",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 4 signals (ok)",
+      "  collector ats_public: 0 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 2 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 1.5 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: medium)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 6,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 4,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 2,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:23:19.421550+00:00"
+  },
+  {
+    "company_name": "Amano Artisan Chocolate",
+    "domain": "amanochocolate.com",
+    "company_id": "39062ce4-fb6d-4165-a782-5e4277787c5d",
+    "industry": "Manufacturing",
+    "location": "Orem, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 39062ce4-fb6d-4165-a782-5e4277787c5d",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:24:05.049656+00:00"
+  },
+  {
+    "company_name": "Beneficial Financial Group",
+    "domain": "beneficialfinancialgroup.com",
+    "company_id": "c362156c-5289-4f05-9b6a-dfa1f25a2841",
+    "industry": "Insurance, &, Finance",
+    "location": "Salt Lake City, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: c362156c-5289-4f05-9b6a-dfa1f25a2841",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:25:04.000983+00:00"
+  },
+  {
+    "company_name": "Blerp",
+    "domain": "blerp.com",
+    "company_id": "9ba4a266-02bd-4ff5-aece-8f05959205bd",
+    "industry": "SaaS, ,, Live streaming, ,, Creator economy",
+    "location": "Salt Lake City, ,, Utah, , U.S.",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 9ba4a266-02bd-4ff5-aece-8f05959205bd",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:31:35.717395+00:00"
+  },
+  {
+    "company_name": "Bluehost",
+    "domain": "bluehost.com",
+    "company_id": "d2fb0fcd-e4a4-43b8-91cc-f0b223e9aec9",
+    "industry": "Web hosting",
+    "location": "Jacksonville, Florida, , US",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "medium",
+    "hiring_pressure": "low",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 2,
+    "distinct_signals_count": 2,
+    "open_positions_count": 0,
+    "friction_score": 1.5,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: d2fb0fcd-e4a4-43b8-91cc-f0b223e9aec9",
+      "Collection: completed",
+      "  signals_persisted: 2",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 2 signals (ok)",
+      "  collector ats_public: 0 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 1 signals (ok)",
+      "Playwright extraction: open_positions=None",
+      "Scoring: 1.5 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: medium)",
+      "Final status: needs_recollection (2 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 2,
+      "signals_raw": 3,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 2,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 1,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:33:13.591288+00:00"
+  },
+  {
+    "company_name": "Chuck-A-Rama",
+    "domain": "chuck-a-rama.com",
+    "company_id": "d2efc55e-4b29-48d9-a8fa-0ee527978410",
+    "industry": "Restaurants",
+    "location": "Salt Lake City, Utah, ,, U.S.",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: d2efc55e-4b29-48d9-a8fa-0ee527978410",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:35:38.393051+00:00"
+  },
+  {
+    "company_name": "CircusTrix",
+    "domain": "circustrix.com",
+    "company_id": "839b863c-86b3-4a65-a6ad-d67184fc3445",
+    "industry": "Recreation",
+    "location": "Provo, ,, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 839b863c-86b3-4a65-a6ad-d67184fc3445",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:46:37.211926+00:00"
+  },
+  {
+    "company_name": "ClearCenter",
+    "domain": "clearcenter.com",
+    "company_id": "80316907-10be-411e-98ce-b1bc6c06c139",
+    "industry": "Information technology",
+    "location": "New Zealand",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 80316907-10be-411e-98ce-b1bc6c06c139",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:47:31.291359+00:00"
+  },
+  {
+    "company_name": "ColcaSac",
+    "domain": "colcasac.com",
+    "company_id": "ac95236f-df71-47d7-bec5-fa19be6f1745",
+    "industry": "Protective Equipment, Manufacturing",
+    "location": "Salt Lake City, ,, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: ac95236f-df71-47d7-bec5-fa19be6f1745",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:48:15.443666+00:00"
+  },
+  {
+    "company_name": "DevMountain",
+    "domain": "devmountain.com",
+    "company_id": "b437f895-fde2-4f81-9ee5-7dd6d174af12",
+    "industry": null,
+    "location": null,
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: b437f895-fde2-4f81-9ee5-7dd6d174af12",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:49:52.498593+00:00"
+  },
+  {
+    "company_name": "Disaster Kleenup International",
+    "domain": "dkiservices.com",
+    "company_id": "6a9a0313-5ef0-41bc-b876-e01bf0fc7dae",
+    "industry": "Disaster recovery, and prevention",
+    "location": "Elk Grove Village, Illinois, (corporate headquarters), ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 6a9a0313-5ef0-41bc-b876-e01bf0fc7dae",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T02:51:44.950228+00:00"
+  },
+  {
+    "company_name": "EFileCabinet",
+    "domain": "efilecabinet.com",
+    "company_id": "c84d4e15-ceef-4d76-ac79-67cf1563bac3",
+    "industry": "document management software, enterprise content management",
+    "location": "Lehi, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: c84d4e15-ceef-4d76-ac79-67cf1563bac3",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:13:09.117978+00:00"
+  },
+  {
+    "company_name": "Fanzz",
+    "domain": "fanzz.com",
+    "company_id": "acd36929-96d7-453c-a429-62358a20daed",
+    "industry": null,
+    "location": "Salt Lake City, Utah, ,, U.S.",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: acd36929-96d7-453c-a429-62358a20daed",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:23:34.320759+00:00"
+  },
+  {
+    "company_name": "Hart Skis",
+    "domain": "hartskis.com",
+    "company_id": "5ce0c071-4d91-4d4a-a00f-f05755348ea7",
+    "industry": "Sports equipment",
+    "location": "Ogden, Utah, ,, USA",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 5ce0c071-4d91-4d4a-a00f-f05755348ea7",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:26:17.493046+00:00"
+  },
+  {
+    "company_name": "Heritage Internet Technologies",
+    "domain": "heritagewebsolutions.com",
+    "company_id": "b3f4192a-f382-44ab-99d5-715fea14c6c5",
+    "industry": "Internet technology services",
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: b3f4192a-f382-44ab-99d5-715fea14c6c5",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:35:54.019761+00:00"
+  },
+  {
+    "company_name": "Heritage Makers",
+    "domain": "heritagemakers.com",
+    "company_id": "b3b85b8e-0752-40a6-a406-3c2c09deeef7",
+    "industry": "Scrapbooking",
+    "location": "Provo, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: b3b85b8e-0752-40a6-a406-3c2c09deeef7",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:46:29.958855+00:00"
+  },
+  {
+    "company_name": "Infinite Discs",
+    "domain": "infinitediscs.com",
+    "company_id": "dccafa69-98a3-460d-bf48-82c0a956929d",
+    "industry": "Disc golf, equipment",
+    "location": "Logan, Utah, , United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: dccafa69-98a3-460d-bf48-82c0a956929d",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:49:01.477767+00:00"
+  },
+  {
+    "company_name": "Motor Cargo",
+    "domain": "tforcefreight.com",
+    "company_id": "36fd16db-96e7-4b6a-a6bf-ad66a96a1390",
+    "industry": "Transportation",
+    "location": "Richmond, Virginia, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 36fd16db-96e7-4b6a-a6bf-ad66a96a1390",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:49:49.300498+00:00"
+  },
+  {
+    "company_name": "Mountain West Energy",
+    "domain": "mtnwestenergy.com",
+    "company_id": "65191660-6bc0-49ad-aa57-3a6244a481d6",
+    "industry": "Oil shale industry",
+    "location": "Highland, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 65191660-6bc0-49ad-aa57-3a6244a481d6",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:50:01.715179+00:00"
+  },
+  {
+    "company_name": "Mstar (Internet service provider)",
+    "domain": "mstar.net",
+    "company_id": "8619db09-b320-42e4-9844-32a361702047",
+    "industry": "Fiber optics, media",
+    "location": "Murray, Utah, ;, Orem, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 8619db09-b320-42e4-9844-32a361702047",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T03:59:25.590666+00:00"
+  },
+  {
+    "company_name": "Myrexis",
+    "domain": "myrexis.com",
+    "company_id": "e1253731-6c3a-4621-a92c-24b0b9c53a16",
+    "industry": "Pharmaceuticals",
+    "location": "Salt Lake City, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: e1253731-6c3a-4621-a92c-24b0b9c53a16",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:05:34.770167+00:00"
+  },
+  {
+    "company_name": "Nielsen's Frozen Custard",
+    "domain": "nielsensfrozencustard.com",
+    "company_id": "f7a69cf0-5351-4669-a781-47fa49677fe3",
+    "industry": "Dessert",
+    "location": "Bountiful, Utah, [, 1, ]",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: f7a69cf0-5351-4669-a781-47fa49677fe3",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:06:38.867497+00:00"
+  },
+  {
+    "company_name": "North American Arms",
+    "domain": "northamericanarms.com",
+    "company_id": "d1da12ca-4ed1-4223-8997-bbec7b19eb24",
+    "industry": "Firearms",
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: d1da12ca-4ed1-4223-8997-bbec7b19eb24",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:07:52.137879+00:00"
+  },
+  {
+    "company_name": "Northplatte Records",
+    "domain": "northplatterecords.com",
+    "company_id": "60e66b99-ee3e-4dd0-a9f2-07a2565c91eb",
+    "industry": null,
+    "location": "American Fork, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 60e66b99-ee3e-4dd0-a9f2-07a2565c91eb",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:09:14.798977+00:00"
+  },
+  {
+    "company_name": "Novell",
+    "domain": "novell.com",
+    "company_id": "7c7a0323-5865-414d-af23-ff93e9bd5605",
+    "industry": "Computer software",
+    "location": "Provo, Utah, Waltham, Massachusetts",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 7c7a0323-5865-414d-af23-ff93e9bd5605",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:09:44.792318+00:00"
+  },
+  {
+    "company_name": "Omniture",
+    "domain": "omniture.com",
+    "company_id": "46823b6a-7eaf-477a-8c55-5aca81d9bacb",
+    "industry": "Web Analytics, Market Research, Online Optimization",
+    "location": "Lehi, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 46823b6a-7eaf-477a-8c55-5aca81d9bacb",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:19:06.658770+00:00"
+  },
+  {
+    "company_name": "Questar Pipeline",
+    "domain": "questarpipeline.com",
+    "company_id": "38fec85b-29b0-484a-afc0-e29b863afcb4",
+    "industry": "Natural Gas",
+    "location": "Salt Lake City, Utah, , United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 38fec85b-29b0-484a-afc0-e29b863afcb4",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:30:18.281373+00:00"
+  },
+  {
+    "company_name": "Seagull Book",
+    "domain": "seagullbook.com",
+    "company_id": "257997ff-681e-44ef-91d3-97bad64a56ab",
+    "industry": "Chain, bookstore",
+    "location": "Salt Lake City, ,, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 257997ff-681e-44ef-91d3-97bad64a56ab",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:32:35.084650+00:00"
+  },
+  {
+    "company_name": "SilencerCo",
+    "domain": "silencerco.com",
+    "company_id": "6e953e5a-c6c2-4f54-990b-f2dd9bb5a260",
+    "industry": "Suppressors, Firearms, Small arms ammunition",
+    "location": "West Valley City, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 6e953e5a-c6c2-4f54-990b-f2dd9bb5a260",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:33:19.026753+00:00"
+  },
+  {
+    "company_name": "SkyCraft Airplanes",
+    "domain": "skycraftairplanes.com",
+    "company_id": "713f97f3-2628-4131-9d73-2523bf895bdf",
+    "industry": "General Aviation",
+    "location": "Orem, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 713f97f3-2628-4131-9d73-2523bf895bdf",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:41:36.927927+00:00"
+  },
+  {
+    "company_name": "Skyworks Aeronautics",
+    "domain": "skyworks-aero.com",
+    "company_id": "e81264cb-bf7e-41e0-989c-9f5109f9231a",
+    "industry": "Aviation",
+    "location": "Chicago, Illinois, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: e81264cb-bf7e-41e0-989c-9f5109f9231a",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T04:42:08.413618+00:00"
+  },
+  {
+    "company_name": "Smith's Food and Drug",
+    "domain": "smithsfoodanddrug.com",
+    "company_id": "a4c02bdd-b4e0-4b72-a7e7-e89b9961efd5",
+    "industry": "Retail (Grocery & Pharmacy)",
+    "location": "Salt Lake City, Utah, ,, U.S.",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: a4c02bdd-b4e0-4b72-a7e7-e89b9961efd5",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:01:18.290319+00:00"
+  },
+  {
+    "company_name": "Smule",
+    "domain": "smule.com",
+    "company_id": "2088db2e-fdc3-4fd3-9166-08c34300c7d1",
+    "industry": "Mobile music apps, Computer software",
+    "location": "Salt Lake City, Utah, ,, U.S., [, 1, ]",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 2088db2e-fdc3-4fd3-9166-08c34300c7d1",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:01:37.572198+00:00"
+  },
+  {
+    "company_name": "USU Credit Union",
+    "domain": "usuccu.org",
+    "company_id": "d6e3aa75-bea4-48b9-a7c3-d51799ecb139",
+    "industry": "Financial services",
+    "location": "Logan, Utah, ,, Utah, , United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: d6e3aa75-bea4-48b9-a7c3-d51799ecb139",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:02:59.050037+00:00"
+  },
+  {
+    "company_name": "Utah Airways",
+    "domain": "flyutahair.com",
+    "company_id": "d68a2d33-6d33-4c2e-b666-ccdd28b024e5",
+    "industry": null,
+    "location": "Ogden, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: d68a2d33-6d33-4c2e-b666-ccdd28b024e5",
+      "Collection: completed",
+      "  signals_persisted: 3",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 3 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 3,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:03:55.524978+00:00"
+  },
+  {
+    "company_name": "VIA Motors",
+    "domain": "viamotors.com",
+    "company_id": "71b8476b-2793-4ea0-af0e-ecdc3536074c",
+    "industry": null,
+    "location": "Orem, Utah, , USA",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 71b8476b-2793-4ea0-af0e-ecdc3536074c",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:04:25.440458+00:00"
+  },
+  {
+    "company_name": "Vanderhall Motor Works",
+    "domain": "vanderhallusa.com",
+    "company_id": "d6ea5d8e-7285-4d60-8ea8-2755192918de",
+    "industry": "Automotive",
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: d6ea5d8e-7285-4d60-8ea8-2755192918de",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:04:48.885890+00:00"
+  },
+  {
+    "company_name": "Vidgo",
+    "domain": "vidgotv.com",
+    "company_id": "4d48af92-8afe-4a04-b6b0-2ddfdc95fe9a",
+    "industry": "Pay television",
+    "location": "Salt Lake City, Utah",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 4d48af92-8afe-4a04-b6b0-2ddfdc95fe9a",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:05:44.734421+00:00"
+  },
+  {
+    "company_name": "Vulcan Tire",
+    "domain": "vulcantire.com",
+    "company_id": "03fa8f8c-950f-447c-91e7-aa7cbb55b771",
+    "industry": "Retail",
+    "location": "Sandy, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 03fa8f8c-950f-447c-91e7-aa7cbb55b771",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:06:11.484494+00:00"
+  },
+  {
+    "company_name": "WakeUpNow",
+    "domain": "akeupnow.com",
+    "company_id": "ddcfb557-d7b1-42cb-a540-08cada86455c",
+    "industry": null,
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: ddcfb557-d7b1-42cb-a540-08cada86455c",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:06:42.815430+00:00"
+  },
+  {
+    "company_name": "WildWorks",
+    "domain": "ildworks.com",
+    "company_id": "fb79de4b-d33f-4272-936d-7b3fa0a00859",
+    "industry": "Game developer",
+    "location": "Salt Lake City, Utah, ,, US",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: fb79de4b-d33f-4272-936d-7b3fa0a00859",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:06:56.034377+00:00"
+  },
+  {
+    "company_name": "Winder Farms",
+    "domain": "inderfarms.com",
+    "company_id": "776d5f80-6f03-4f17-a29d-9e82d3793362",
+    "industry": null,
+    "location": null,
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 776d5f80-6f03-4f17-a29d-9e82d3793362",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:07:10.257990+00:00"
+  },
+  {
+    "company_name": "WordPerfect Corporation",
+    "domain": "ordperfect.com",
+    "company_id": "a43f6a1f-8622-4339-b1e8-925706f6f5bc",
+    "industry": null,
+    "location": null,
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "moderate",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 4,
+    "distinct_signals_count": 4,
+    "open_positions_count": 0,
+    "friction_score": 3.25,
+    "dominant_friction_type": "tooling_inconsistency",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "Extraction coverage is low"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: a43f6a1f-8622-4339-b1e8-925706f6f5bc",
+      "Collection: completed",
+      "  signals_persisted: 4",
+      "  collector company_site: 0 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 1 signals (ok)",
+      "  collector newsroom: 0 signals (ok)",
+      "  collector dynamic_careers: 3 signals (ok)",
+      "Playwright skipped (sync collectors found 4 signals)",
+      "Scoring: 3.25 (tooling_inconsistency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: needs_recollection (4 signals)"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 4,
+      "signals_raw": 4,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T05:07:28.144930+00:00"
+  },
+  {
+    "company_name": "Dayna Communications",
+    "domain": "eb.archive.org",
+    "company_id": "058f64f0-d301-4979-a0ed-a38f5e2fb826",
+    "industry": "Computers",
+    "location": null,
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "unclear",
+    "company_type_confidence": "low",
+    "hiring_pressure": "low",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 0,
+    "distinct_signals_count": 0,
+    "open_positions_count": 0,
+    "friction_score": 0.0,
+    "dominant_friction_type": "reporting_fragmentation",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "No signals captured"
+    ],
+    "updated_at": "2026-04-12T17:12:47.380756+00:00"
+  },
+  {
+    "company_name": "Emery Telcom",
+    "domain": "etv.net",
+    "company_id": "d6656a35-1c80-4e3a-9337-ff23d007d7d9",
+    "industry": "Telecommunications",
+    "location": "Orangeville, Utah, , US",
+    "source": "wikipedia",
+    "status": "needs_recollection",
+    "company_type": "unclear",
+    "company_type_confidence": "low",
+    "hiring_pressure": "low",
+    "pain_clarity": "low",
+    "function_concentration": "low",
+    "extraction_coverage": "low",
+    "positioning_readiness": "low",
+    "diagnosis_status": "insufficient_evidence",
+    "signals_count": 0,
+    "distinct_signals_count": 0,
+    "open_positions_count": 0,
+    "friction_score": 0.0,
+    "dominant_friction_type": "reporting_fragmentation",
+    "summary": "The system has not captured enough structured evidence to evaluate this company yet.",
+    "notes": [
+      "No signals captured"
+    ],
+    "updated_at": "2026-04-12T17:21:02.585570+00:00"
+  }
+]

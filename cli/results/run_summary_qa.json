@@ -1,0 +1,25 @@
+{
+  "total_companies": 154,
+  "tier_1_ready_for_positioning": 0,
+  "tier_2_ready_for_review": 38,
+  "tier_3_needs_recollection": 110,
+  "tier_4_excluded": 6,
+  "position_now": 0,
+  "inspect_human": 38,
+  "collect_more": 110,
+  "exclude": 6,
+  "qa_high": 0,
+  "qa_medium": 142,
+  "qa_low": 12,
+  "original_ready_for_review": 104,
+  "original_needs_recollection": 45,
+  "original_excluded": 5,
+  "started_at": "2026-04-13T20:28:35.014040+00:00",
+  "finished_at": "2026-04-13T20:28:35.014071+00:00",
+  "top_qa_flags": {
+    "shallow_source_dependence": 117,
+    "deep_extraction_skipped_too_early": 96,
+    "suspicious_open_positions_count": 12,
+    "duplicate_record": 6
+  }
+}

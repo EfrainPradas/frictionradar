@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-04-17T16:19:55.304777+00:00",
+  "total_companies": 1293,
+  "errors": 0,
+  "diagnostic_state_distribution": {
+    "broad_hiring_pattern_detected": 1218,
+    "ready_for_positioning": 19,
+    "insufficient_evidence": 18,
+    "specific_pain_emerging": 38
+  },
+  "eligible_positioning_full": 57,
+  "eligible_positioning_conditional": 4,
+  "eligible_positioning_total": 61,
+  "sample_full": [
+    [
+      "Degreed",
+      "ready_for_positioning",
+      4,
+      0.5
+    ],
+    [
+      "BMC Software",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Aetna",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Fishbowl Inventory",
+      "specific_pain_emerging",
+      15,
+      0.4
+    ],
+    [
+      "Agile Software Corporation",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "EnergySolutions",
+      "specific_pain_emerging",
+      14,
+      0.43
+    ],
+    [
+      "Myriad Genetics",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Leavitt Group",
+      "ready_for_positioning",
+      8,
+      1.0
+    ],
+    [
+      "GE Healthcare Surgery",
+      "ready_for_positioning",
+      4,
+      1.0
+    ],
+    [
+      "Bank of Utah",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "InMoment",
+      "ready_for_positioning",
+      5,
+      0.6
+    ],
+    [
+      "Bloomberg L.P.",
+      "specific_pain_emerging",
+      5,
+      0.4
+    ],
+    [
+      "Caterpillar",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Cerberus Capital Management",
+      "ready_for_positioning",
+      6,
+      0.5
+    ],
+    [
+      "Chipotle Mexicano A La Parrilla",
+      "ready_for_positioning",
+      6,
+      1.0
+    ]
+  ],
+  "sample_conditional": [
+    [
+      "1-800 Contacts",
+      "broad_hiring_pattern_detected",
+      27,
+      0.41
+    ],
+    [
+      "Nike",
+      "broad_hiring_pattern_detected",
+      26,
+      0.5
+    ],
+    [
+      "Roberhalf",
+      "broad_hiring_pattern_detected",
+      26,
+      0.62
+    ],
+    [
+      "AgReserves",
+      "broad_hiring_pattern_detected",
+      13,
+      0.54
+    ]
+  ]
+}

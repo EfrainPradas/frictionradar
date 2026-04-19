@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaWork Global — Enciende tu Próximo Capítulo Profesional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #111827;
+      background: #FFFFFF;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ── Utility ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.25rem; color: #111827; }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #2563EB, #3B82F6);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.1rem;
+    }
+    .logo span { color: #6B7280; font-weight: 500; font-size: 0.85rem; margin-left: -2px; }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a {
+      font-size: 0.9rem; font-weight: 500; color: #6B7280;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #111827; }
+    .header-actions { display: flex; align-items: center; gap: 16px; }
+    .lang-select {
+      font-size: 0.85rem; color: #6B7280; background: none; border: 1px solid #E5E7EB;
+      border-radius: 8px; padding: 6px 12px; cursor: pointer; font-family: inherit;
+    }
+    .btn-ghost {
+      font-size: 0.9rem; font-weight: 600; color: #2563EB;
+      border: 1.5px solid #2563EB; border-radius: 100px;
+      padding: 10px 24px; background: none; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover { background: #EFF6FF; }
+    .btn-primary {
+      font-size: 0.9rem; font-weight: 600; color: #FFFFFF;
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      border: none; border-radius: 100px;
+      padding: 10px 28px; cursor: pointer;
+      transition: all 0.25s; box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #EFF6FF; color: #2563EB;
+      font-size: 0.8rem; font-weight: 600;
+      padding: 6px 14px; border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero-tag::before {
+      content: '✦'; font-size: 0.7rem;
+    }
+    .hero h1 {
+      font-size: 3.4rem; font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.02em; margin-bottom: 8px;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(135deg, #2563EB, #7C3AED);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 1.1rem; font-weight: 600; color: #6B7280;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-desc {
+      font-size: 1.1rem; color: #4B5563; line-height: 1.7;
+      margin-bottom: 32px; max-width: 520px;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-hero-primary {
+      font-size: 1rem; font-weight: 600; color: #FFFFFF;
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      border: none; border-radius: 14px;
+      padding: 16px 32px; cursor: pointer;
+      display: flex; align-items: center; gap: 8px;
+      transition: all 0.25s; box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+    }
+    .btn-hero-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37,99,235,0.4);
+    }
+    .btn-hero-primary .arrow { transition: transform 0.2s; }
+    .btn-hero-primary:hover .arrow { transform: translateX(4px); }
+    .btn-hero-secondary {
+      font-size: 1rem; font-weight: 600; color: #374151;
+      background: #FFFFFF; border: 1.5px solid #D1D5DB;
+      border-radius: 14px; padding: 16px 28px; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-hero-secondary:hover {
+      border-color: #9CA3AF; background: #F9FAFB;
+    }
+    .hero-note {
+      margin-top: 20px; font-size: 0.8rem; color: #9CA3AF;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* ── Hero Visual ── */
+    .hero-visual {
+      position: relative;
+    }
+    .hero-card {
+      background: linear-gradient(135deg, #1E293B, #0F172A);
+      border-radius: 20px;
+      padding: 32px;
+      color: #FFFFFF;
+      box-shadow: 0 25px 60px rgba(15,23,42,0.25), 0 0 0 1px rgba(255,255,255,0.05) inset;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(37,99,235,0.3), transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    .hero-card-header .badge {
+      background: rgba(37,99,235,0.2); color: #93C5FD;
+      font-size: 0.75rem; font-weight: 600;
+      padding: 4px 12px; border-radius: 100px;
+    }
+    .hero-card-header .status {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.8rem; color: #94A3B8;
+    }
+    .hero-card-header .status .dot {
+      width: 8px; height: 8px; background: #22C55E;
+      border-radius: 50%; animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .metric-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      margin-bottom: 28px;
+    }
+    .metric-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; padding: 20px;
+    }
+    .metric-card .label {
+      font-size: 0.75rem; color: #94A3B8;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .metric-card .value {
+      font-size: 1.5rem; font-weight: 700;
+    }
+    .metric-card .change {
+      font-size: 0.75rem; color: #22C55E; font-weight: 600;
+      margin-top: 4px;
+    }
+    .metric-card .value.blue { color: #60A5FA; }
+    .metric-card .value.purple { color: #A78BFA; }
+    .metric-card .value.green { color: #4ADE80; }
+    .metric-card .value.amber { color: #FBBF24; }
+
+    .progress-section { margin-bottom: 24px; }
+    .progress-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .progress-header .title { font-size: 0.9rem; font-weight: 600; }
+    .progress-header .pct { font-size: 0.85rem; color: #60A5FA; font-weight: 600; }
+    .progress-bar {
+      height: 8px; background: rgba(255,255,255,0.1);
+      border-radius: 100px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; border-radius: 100px;
+      background: linear-gradient(90deg, #2563EB, #7C3AED);
+      transition: width 1s ease;
+    }
+    .progress-insight {
+      margin-top: 16px; padding: 16px;
+      background: rgba(37,99,235,0.1);
+      border-left: 3px solid #2563EB;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.85rem; color: #CBD5E1;
+      line-height: 1.5;
+    }
+    .progress-insight strong { color: #FFFFFF; }
+
+    /* ── Social Proof Bar ── */
+    .social-proof-bar {
+      padding: 48px 0;
+      border-top: 1px solid #F3F4F6;
+      border-bottom: 1px solid #F3F4F6;
+      background: #FFFFFF;
+    }
+    .sp-label {
+      text-align: center; font-size: 0.8rem; font-weight: 600;
+      color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 28px;
+    }
+    .sp-logos {
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; flex-wrap: wrap; opacity: 0.5;
+    }
+    .sp-logo {
+      font-size: 1.2rem; font-weight: 700; color: #374151;
+      letter-spacing: -0.01em;
+    }
+    .sp-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+      margin-top: 40px; padding-top: 40px;
+      border-top: 1px solid #F3F4F6;
+    }
+    .sp-stat { text-align: center; }
+    .sp-stat .number {
+      font-size: 2.2rem; font-weight: 800;
+      background: linear-gradient(135deg, #2563EB, #7C3AED);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .sp-stat .desc { font-size: 0.9rem; color: #6B7280; margin-top: 4px; }
+
+    /* ── How It Works ── */
+    .how-it-works {
+      padding: 100px 0;
+      background: #FFFFFF;
+    }
+    .section-label {
+      font-size: 0.8rem; font-weight: 600; color: #2563EB;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      text-align: center; margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 2.4rem; font-weight: 800; text-align: center;
+      letter-spacing: -0.02em; margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 1.1rem; color: #6B7280; text-align: center;
+      max-width: 600px; margin: 0 auto 60px;
+    }
+    .steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    }
+    .step {
+      position: relative; padding: 36px; border-radius: 20px;
+      background: #F9FAFB; border: 1px solid #F3F4F6;
+      transition: all 0.3s;
+    }
+    .step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: #E0E7FF;
+    }
+    .step-number {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      color: white; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .step h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+    .step p { font-size: 0.95rem; color: #6B7280; line-height: 1.6; }
+
+    /* ── Testimonials ── */
+    .testimonials {
+      padding: 100px 0;
+      background: linear-gradient(180deg, #F8FAFC, #FFFFFF);
+    }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .testimonial {
+      background: #FFFFFF; border: 1px solid #F3F4F6;
+      border-radius: 20px; padding: 32px;
+      transition: all 0.3s;
+    }
+    .testimonial:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    }
+    .testimonial-stars {
+      color: #FBBF24; font-size: 0.9rem; margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    .testimonial blockquote {
+      font-size: 0.95rem; color: #374151; line-height: 1.7;
+      margin-bottom: 24px; font-style: italic;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: white; font-size: 0.9rem;
+    }
+    .avatar-1 { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+    .avatar-2 { background: linear-gradient(135deg, #7C3AED, #A78BFA); }
+    .avatar-3 { background: linear-gradient(135deg, #059669, #34D399); }
+    .testimonial-name { font-size: 0.9rem; font-weight: 600; }
+    .testimonial-role { font-size: 0.8rem; color: #9CA3AF; }
+
+    /* ── CTA Final ── */
+    .cta-final {
+      padding: 100px 0;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, #1E293B, #0F172A);
+      border-radius: 28px; padding: 80px 60px;
+      text-align: center; color: #FFFFFF;
+      position: relative; overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(37,99,235,0.2), transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-box h2 {
+      font-size: 2.6rem; font-weight: 800; margin-bottom: 16px;
+      position: relative;
+    }
+    .cta-box h2 .accent {
+      background: linear-gradient(135deg, #60A5FA, #A78BFA);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cta-box p {
+      font-size: 1.15rem; color: #94A3B8; max-width: 540px;
+      margin: 0 auto 36px; line-height: 1.7;
+      position: relative;
+    }
+    .btn-cta-final {
+      font-size: 1.05rem; font-weight: 600; color: #FFFFFF;
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      border: none; border-radius: 14px;
+      padding: 18px 40px; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: all 0.25s;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.4);
+      position: relative;
+    }
+    .btn-cta-final:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37,99,235,0.5);
+    }
+
+    /* ── FAQ ── */
+    .faq {
+      padding: 100px 0;
+      background: #F9FAFB;
+    }
+    .faq-list {
+      max-width: 720px; margin: 0 auto;
+    }
+    .faq-item {
+      background: #FFFFFF; border: 1px solid #E5E7EB;
+      border-radius: 14px; margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%; background: none; border: none;
+      padding: 20px 24px; cursor: pointer;
+      font-family: inherit; font-size: 1rem; font-weight: 600;
+      color: #111827; text-align: left;
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: #F9FAFB; }
+    .faq-question .icon {
+      font-size: 1.2rem; color: #9CA3AF;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-question .icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer p {
+      padding: 0 24px 20px;
+      font-size: 0.95rem; color: #6B7280; line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 60px 0 32px;
+      background: #FFFFFF;
+      border-top: 1px solid #F3F4F6;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    .footer-brand .logo { margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.9rem; color: #6B7280; max-width: 280px; line-height: 1.6; }
+    .footer-col h4 {
+      font-size: 0.8rem; font-weight: 700; color: #111827;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; font-size: 0.9rem; color: #6B7280;
+      padding: 4px 0; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #2563EB; }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 24px; border-top: 1px solid #F3F4F6;
+      font-size: 0.8rem; color: #9CA3AF;
+    }
+    .footer-social { display: flex; gap: 16px; }
+    .footer-social a { color: #9CA3AF; transition: color 0.2s; }
+    .footer-social a:hover { color: #2563EB; }
+
+    /* ── Mobile hamburger ── */
+    .mobile-toggle {
+      display: none; background: none; border: none;
+      font-size: 1.5rem; cursor: pointer; color: #374151;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero h1 { font-size: 2.4rem; }
+      .hero-visual { order: -1; }
+      .steps { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .sp-stats { grid-template-columns: 1fr; gap: 24px; }
+      .cta-box { padding: 48px 28px; }
+      .cta-box h2 { font-size: 1.8rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      nav { display: none; }
+      .mobile-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════ HEADER ════ -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">✦</div>
+        NovaWork <span>Global</span>
+      </a>
+      <nav>
+        <a href="#programas">Programas</a>
+        <a href="#como-funciona">Cómo Funciona</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#testimonios">Perspectivas</a>
+      </nav>
+      <div class="header-actions">
+        <select class="lang-select">
+          <option>ES Español</option>
+          <option>EN English</option>
+          <option>PT Português</option>
+        </select>
+        <a href="#" class="btn-ghost">Iniciar Sesión</a>
+        <a href="#" class="btn-primary">Comienza Gratis</a>
+      </div>
+      <button class="mobile-toggle" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="hero-tag">Coaching de carrera potenciado con IA</div>
+        <h1>
+          Enciende tu<br>
+          <span class="accent">Próximo Capítulo</span><br>
+          Profesional
+        </h1>
+        <p class="hero-sub">Claridad · Dirección · Impulso</p>
+        <p class="hero-desc">
+          NovaWork Global combina coaching humano con herramientas inteligentes de IA para ayudarte a navegar el cambio de carrera con <strong>confianza</strong> y <strong>claridad</strong>.
+        </p>
+        <div class="hero-ctas">
+          <a href="#" class="btn-hero-primary">
+            Descubre tu Plan <span class="arrow">→</span>
+          </a>
+          <a href="#programas" class="btn-hero-secondary">Explorar Programas</a>
+        </div>
+        <p class="hero-note">✓ Sin tarjeta de crédito &nbsp;·&nbsp; ✓ Diagnóstico gratis &nbsp;·&nbsp; ✓ 5 min para empezar</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span class="badge">✨ Dashboard IA</span>
+            <span class="status"><span class="dot"></span> En vivo</span>
+          </div>
+          <div class="metric-row">
+            <div class="metric-card">
+              <div class="label">Claridad de Objetivo</div>
+              <div class="value blue">87%</div>
+              <div class="change">↑ +12% esta semana</div>
+            </div>
+            <div class="metric-card">
+              <div class="label">Habilidades Detectadas</div>
+              <div class="value purple">14</div>
+              <div class="change">↑ 3 nuevas</div>
+            </div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-card">
+              <div class="label">Oportunidades</div>
+              <div class="value green">23</div>
+              <div class="change">↑ +8 este mes</div>
+            </div>
+            <div class="metric-card">
+              <div class="label">Preparación</div>
+              <div class="value amber">92%</div>
+              <div class="change">↑ Listo para aplicar</div>
+            </div>
+          </div>
+          <div class="progress-section">
+            <div class="progress-header">
+              <span class="title">Progreso de Transición</span>
+              <span class="pct">72%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 72%"></div>
+            </div>
+          </div>
+          <div class="progress-insight">
+            <strong>Insight IA:</strong> Tu perfil tiene un 89% de compatibilidad con roles de Product Management en fintech. Te recomendamos fortalecer competencias en análisis de datos.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SOCIAL PROOF ════ -->
+  <section class="social-proof-bar">
+    <div class="container">
+      <p class="sp-label">Profesionales de estas organizaciones confían en NovaWork</p>
+      <div class="sp-logos">
+        <span class="sp-logo">Google</span>
+        <span class="sp-logo">Microsoft</span>
+        <span class="sp-logo">McKinsey</span>
+        <span class="sp-logo">Spotify</span>
+        <span class="sp-logo">Rappi</span>
+        <span class="sp-logo">Mercado Libre</span>
+      </div>
+      <div class="sp-stats">
+        <div class="sp-stat">
+          <div class="number">5,200+</div>
+          <div class="desc">Profesionales transformados</div>
+        </div>
+        <div class="sp-stat">
+          <div class="number">94%</div>
+          <div class="desc">Satisfacción de usuarios</div>
+        </div>
+        <div class="sp-stat">
+          <div class="number">3.2x</div>
+          <div class="desc">Más rápido que coaching tradicional</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CÓMO FUNCIONA ════ -->
+  <section class="how-it-works" id="como-funciona">
+    <div class="container">
+      <p class="section-label">Cómo Funciona</p>
+      <h2 class="section-title">Tu roadmap en 3 pasos</h2>
+      <p class="section-desc">Un sistema claro y probado para pasar de la incertidumbre a la acción con propósito.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Diagnóstico Inteligente</h3>
+          <p>Nuestra IA analiza tus habilidades, experiencia y aspiraciones para identificar tu perfil único de carrera y oportunidades ocultas.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Plan Personalizado</h3>
+          <p>Recibe un roadmap detallado con acciones concretas, timelines y metas medibles, guiado por un coach humano certificado.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Ejecución con Soporte</h3>
+          <p>Avanza semana a semana con sesiones de coaching, herramientas de IA y una comunidad de profesionales en transición.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ TESTIMONIOS ════ -->
+  <section class="testimonials" id="testimonios">
+    <div class="container">
+      <p class="section-label">Perspectivas</p>
+      <h2 class="section-title">Lo que dicen nuestros profesionales</h2>
+      <p class="section-desc">Historias reales de personas que transformaron su carrera con NovaWork.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Estaba atrapada en marketing durante 8 años sin saber cómo dar el salto a tech. NovaWork no solo me mostró el camino — me dio la confianza para recorrerlo. En 4 meses, conseguí un rol de Product Manager."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar avatar-1">MA</div>
+            <div>
+              <div class="testimonial-name">María Alejandra R.</div>
+              <div class="testimonial-role">Product Manager @ Rappi · Bogotá</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"El diagnóstico de IA fue revelador. Descubrí habilidades que tenía pero nunca valoré. La combinación con mi coach fue clave — tecnología con empatía humana, justo lo que necesitaba."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar avatar-2">CG</div>
+            <div>
+              <div class="testimonial-name">Carlos Gutiérrez</div>
+              <div class="testimonial-role">Data Engineer @ Microsoft · CDMX</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Probé coaching tradicional antes y siempre me quedaba con ganas de más estructura. NovaWork me dio un plan claro con métricas y acciones semanales. Finalmente sentí que avanzaba."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar avatar-3">LV</div>
+            <div>
+              <div class="testimonial-name">Laura Valdés</div>
+              <div class="testimonial-role">UX Lead @ Mercado Libre · Buenos Aires</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CTA FINAL ════ -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-box">
+        <h2>¿Listo para escribir tu<br><span class="accent">próximo capítulo</span>?</h2>
+        <p>Agenda tu diagnóstico de carrera gratis y descubre lo que la IA puede revelar sobre tu potencial profesional.</p>
+        <a href="#" class="btn-cta-final">
+          Agenda tu Diagnóstico Gratis <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FAQ ════ -->
+  <section class="faq">
+    <div class="container">
+      <p class="section-label">Preguntas Frecuentes</p>
+      <h2 class="section-title">Resolvemos tus dudas</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            ¿NovaWork es coaching con IA o coaching humano?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Es ambos. Combinamos lo mejor de los dos mundos: la IA te da análisis de datos, diagnóstico de habilidades y recomendaciones personalizadas al instante, mientras que un coach humano certificado te guía, motiva y adapta la estrategia a tu contexto real.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            ¿Cuánto tiempo toma ver resultados?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>La mayoría de nuestros profesionales ven avances significativos en sus primeras 4-6 semanas. El diagnóstico inicial te da claridad inmediata, y el plan personalizado te pone en acción desde el día uno.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            ¿Es solo para cambio de carrera?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. También ayudamos a profesionales que quieren crecer en su rol actual, negociar un ascenso, explorar industrias nuevas, o simplemente encontrar más propósito en lo que hacen. Nuestros programas se adaptan a tu situación.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            ¿El diagnóstico inicial es realmente gratis?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, 100%. Sin tarjeta de crédito ni compromiso. Nuestro diagnóstico de IA analiza tu perfil profesional y te entrega un reporte detallado con oportunidades y recomendaciones. Queremos que pruebes el valor antes de invertir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">✦</div>
+            NovaWork <span>Global</span>
+          </a>
+          <p>Coaching de carrera potenciado con IA para profesionales que quieren más.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <a href="#">Programas</a>
+          <a href="#">Metodología</a>
+          <a href="#">Precios</a>
+          <a href="#">Para Empresas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="#">Blog</a>
+          <a href="#">Guías Gratuitas</a>
+          <a href="#">Webinars</a>
+          <a href="#">Casos de Éxito</a>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="#">Sobre Nosotros</a>
+          <a href="#">Carreras</a>
+          <a href="#">Contacto</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NovaWork Global. Todos los derechos reservados.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════ FAQ toggle script ════ -->
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

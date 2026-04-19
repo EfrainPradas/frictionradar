@@ -1,0 +1,675 @@
+[
+  {
+    "company_name": "AgReserves",
+    "domain": "agreserves.com",
+    "industry": "Agriculture",
+    "location": "Salt Lake City, ,, Utah, 84111, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Alpine Air Express",
+    "domain": "alpine-air.com",
+    "location": "Provo, Utah, , United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Amano Artisan Chocolate",
+    "domain": "amanochocolate.com",
+    "industry": "Manufacturing",
+    "location": "Orem, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Antarctic Logistics and Expeditions",
+    "domain": "antarctic-logistics.com",
+    "industry": "Logistics; aviation services; adventure travel",
+    "location": "Salt Lake City, , Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Axial Biotech",
+    "domain": "axialbiotech.com",
+    "location": "Salt Lake City",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "BYU AdLab",
+    "domain": "byuadlab.com",
+    "industry": "Advertising, &, Marketing",
+    "location": "Provo, UT, , USA",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Beneficial Financial Group",
+    "domain": "beneficialfinancialgroup.com",
+    "industry": "Insurance, &, Finance",
+    "location": "Salt Lake City, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Big Finish Games",
+    "domain": "bigfinishgames.com",
+    "industry": "Video games",
+    "location": "Salt Lake City, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Black Rifle Coffee Company",
+    "domain": "blackriflecoffee.com",
+    "industry": "Retail",
+    "location": "Salt Lake City, , Utah, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Blerp",
+    "domain": "blerp.com",
+    "industry": "SaaS, ,, Live streaming, ,, Creator economy",
+    "location": "Salt Lake City, ,, Utah, , U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Bluehost",
+    "domain": "bluehost.com",
+    "industry": "Web hosting",
+    "location": "Jacksonville, Florida, , US",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Browning Arms Company",
+    "domain": "browning.com",
+    "industry": "Firearms, Sports equipment",
+    "location": "Morgan, , Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Cafe Rio",
+    "domain": "caferio.com",
+    "industry": "Casual dining, Restaurants",
+    "location": "Salt Lake City, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Caleb Chapman's Soundhouse",
+    "domain": "ccsoundhouse.com",
+    "industry": "Music and Performance Education",
+    "location": "Pleasant Grove, Utah, ,, US",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Callware",
+    "domain": "callware.com",
+    "industry": "Telecommunications, ,, Software",
+    "location": "Salt Lake City, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "CancerVax",
+    "domain": "cancervax.com",
+    "industry": "Pharmaceutical",
+    "location": "Lehi, Utah, ,, USA",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Cedar Fort, Inc.",
+    "domain": "cedarfortbooks.com",
+    "location": "2373 W. 700 S., Springville, UT, .",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Chem-Dry",
+    "domain": "chemdry.com",
+    "location": "1683 (2024)",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Christopherson Business Travel",
+    "domain": "cbtravel.com",
+    "industry": "Travel",
+    "location": "Salt Lake City, ,, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Chuck-A-Rama",
+    "domain": "chuck-a-rama.com",
+    "industry": "Restaurants",
+    "location": "Salt Lake City, Utah, ,, U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Church Historian's Press",
+    "domain": "churchhistorianspress.org",
+    "location": "Salt Lake City, ,, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "CircusTrix",
+    "domain": "circustrix.com",
+    "industry": "Recreation",
+    "location": "Provo, ,, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "ClearCenter",
+    "domain": "clearcenter.com",
+    "industry": "Information technology",
+    "location": "New Zealand",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "ColcaSac",
+    "domain": "colcasac.com",
+    "industry": "Protective Equipment, Manufacturing",
+    "location": "Salt Lake City, ,, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Construction Monitor",
+    "domain": "constructionmonitor.com",
+    "industry": "Construction",
+    "location": "Cedar City, UT",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Daily Herald (Utah)",
+    "domain": "heraldextra.com",
+    "location": "1200 Towne Center Blvd. STE1058, Provo, ,, Utah, 84601, [, 1, ], USA",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Dayna Communications",
+    "domain": "eb.archive.org",
+    "industry": "Computers",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Daz 3D",
+    "domain": "daz3d.com",
+    "location": "Salt Lake City, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Degreed",
+    "domain": "degreed.com",
+    "industry": "Workforce upskilling",
+    "location": "Pleasanton, CA, Salt Lake City, UT",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Deseret Book Company",
+    "domain": "deseretbook.com",
+    "location": "Salt Lake City, , Utah, U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Deseret Management Corporation",
+    "domain": "deseretmanagement.com",
+    "industry": "Asset management company",
+    "location": "Salt Lake City, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Deseret News",
+    "domain": "deseret.com",
+    "location": "55 N 300 W, Salt Lake City, , Utah, U.S., [, 1, ]",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "DevMountain",
+    "domain": "devmountain.com",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "DigEplayer",
+    "domain": "burrana.aero",
+    "industry": "Inflight Entertainment",
+    "location": "Brisbane, Australia, ,, U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "DigiCert",
+    "domain": "digicert.com",
+    "industry": "Internet security, ,, Public key infrastructure, ,, IoT security",
+    "location": "Lehi, Utah, , U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Disaster Kleenup International",
+    "domain": "dkiservices.com",
+    "industry": "Disaster recovery, and prevention",
+    "location": "Elk Grove Village, Illinois, (corporate headquarters), ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "EFileCabinet",
+    "domain": "efilecabinet.com",
+    "industry": "document management software, enterprise content management",
+    "location": "Lehi, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Emery Telcom",
+    "domain": "etv.net",
+    "industry": "Telecommunications",
+    "location": "Orangeville, Utah, , US",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Empower Playgrounds",
+    "domain": "empowerplaygrounds.org",
+    "location": "Provo, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "EnergySolutions",
+    "domain": "energysolutions.com",
+    "industry": "Nuclear Materials",
+    "location": "Salt Lake City, ,, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "EquityNet",
+    "domain": "equitynet.com",
+    "industry": "Crowdfunding",
+    "location": "Salt Lake City, UT, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Fanzz",
+    "domain": "fanzz.com",
+    "location": "Salt Lake City, Utah, ,, U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Fibernet Corp.",
+    "domain": "fiber.net",
+    "industry": "Internet service provider, ,, colocation, provider",
+    "location": "Orem, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Goode Ski Technologies",
+    "domain": "goode.com",
+    "industry": "Snow skiing, /, water skiing, equipment",
+    "location": "Ogden, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Grounds for Coffee",
+    "domain": "groundsforcoffee.com",
+    "industry": "Restaurant",
+    "location": "Ogden, Utah, ,, US",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "GumCo",
+    "domain": "gumco.com",
+    "industry": "Advertising, ,, Marketing",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Harmons",
+    "domain": "harmonsgrocery.com",
+    "industry": "Retail",
+    "location": "West Valley City, ,, Utah, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Hart Skis",
+    "domain": "hartskis.com",
+    "industry": "Sports equipment",
+    "location": "Ogden, Utah, ,, USA",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Heritage Internet Technologies",
+    "domain": "heritagewebsolutions.com",
+    "industry": "Internet technology services",
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Heritage Makers",
+    "domain": "heritagemakers.com",
+    "industry": "Scrapbooking",
+    "location": "Provo, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Infinite Discs",
+    "domain": "infinitediscs.com",
+    "industry": "Disc golf, equipment",
+    "location": "Logan, Utah, , United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Lagoon (amusement park)",
+    "domain": "lagoonpark.com",
+    "location": "Farmington, , Utah, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Mity-Lite",
+    "domain": "mitylite.com",
+    "location": "Orem, ,, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Motor Cargo",
+    "domain": "tforcefreight.com",
+    "industry": "Transportation",
+    "location": "Richmond, Virginia, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Mountain West Energy",
+    "domain": "mtnwestenergy.com",
+    "industry": "Oil shale industry",
+    "location": "Highland, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Mstar (Internet service provider)",
+    "domain": "mstar.net",
+    "industry": "Fiber optics, media",
+    "location": "Murray, Utah, ;, Orem, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Myrexis",
+    "domain": "myrexis.com",
+    "industry": "Pharmaceuticals",
+    "location": "Salt Lake City, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Neighbor (company)",
+    "domain": "neighbor.com",
+    "industry": "Self storage",
+    "location": "United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Nielsen's Frozen Custard",
+    "domain": "nielsensfrozencustard.com",
+    "industry": "Dessert",
+    "location": "Bountiful, Utah, [, 1, ]",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "North American Arms",
+    "domain": "northamericanarms.com",
+    "industry": "Firearms",
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Northplatte Records",
+    "domain": "northplatterecords.com",
+    "location": "American Fork, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Novell",
+    "domain": "novell.com",
+    "industry": "Computer software",
+    "location": "Provo, Utah, Waltham, Massachusetts",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Omniture",
+    "domain": "omniture.com",
+    "industry": "Web Analytics, Market Research, Online Optimization",
+    "location": "Lehi, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "OpenEdge",
+    "domain": "globalpaymentsintegrated.com",
+    "industry": "Payment processing",
+    "location": "Lindon,, Utah, , U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Owala (brand)",
+    "domain": "owalalife.com",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Parker Migliorini International",
+    "domain": "pmifoods.com",
+    "location": "Salt Lake City, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "PoliticIt",
+    "domain": "politicit.com",
+    "industry": "Online services",
+    "location": "Logan, Utah, ,, USA",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Powdr",
+    "domain": "powdr.com",
+    "location": "Park City, ,, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Questar Pipeline",
+    "domain": "questarpipeline.com",
+    "industry": "Natural Gas",
+    "location": "Salt Lake City, Utah, , United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Rocky Mountain Pictures",
+    "domain": "rockymtnpictures.com",
+    "industry": "Entertainment",
+    "location": "Chicago, Illinois, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Sawtooth Software",
+    "domain": "sawtoothsoftware.com",
+    "industry": "Research Software",
+    "location": "Provo, Utah, , United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Saygus",
+    "domain": "saygus.com",
+    "industry": "Telecommunications equipment",
+    "location": "Salt Lake City, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Seagull Book",
+    "domain": "seagullbook.com",
+    "industry": "Chain, bookstore",
+    "location": "Salt Lake City, ,, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Signature Books",
+    "domain": "signaturebooks.com",
+    "location": "Salt Lake City, UT",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "SilencerCo",
+    "domain": "silencerco.com",
+    "industry": "Suppressors, Firearms, Small arms ammunition",
+    "location": "West Valley City, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "SkyCraft Airplanes",
+    "domain": "skycraftairplanes.com",
+    "industry": "General Aviation",
+    "location": "Orem, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Skyworks Aeronautics",
+    "domain": "skyworks-aero.com",
+    "industry": "Aviation",
+    "location": "Chicago, Illinois, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Smith's Food and Drug",
+    "domain": "smithsfoodanddrug.com",
+    "industry": "Retail (Grocery & Pharmacy)",
+    "location": "Salt Lake City, Utah, ,, U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Smule",
+    "domain": "smule.com",
+    "industry": "Mobile music apps, Computer software",
+    "location": "Salt Lake City, Utah, ,, U.S., [, 1, ]",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Standard-Examiner",
+    "domain": "standard.net",
+    "location": "Ogden, ,, Utah, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Sunn Classic Pictures",
+    "domain": "sunnclassicpictures.com",
+    "industry": "Motion picture / television entertainment",
+    "location": "Park City, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Sunrider",
+    "domain": "sunrider.com",
+    "industry": "Direct selling",
+    "location": "Torrance, California",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "The Salt Lake Tribune",
+    "domain": "sltrib.com",
+    "location": "48 West Market St., Suite 200, Salt Lake City, ,, Utah, 84101, USA",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "USU Credit Union",
+    "domain": "usuccu.org",
+    "industry": "Financial services",
+    "location": "Logan, Utah, ,, Utah, , United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Ultra Championship Wrestling-Zero",
+    "domain": "ucwzero.com",
+    "location": "Salt Lake City, Utah, , United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Utah Airways",
+    "domain": "flyutahair.com",
+    "location": "Ogden, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "VIA Motors",
+    "domain": "viamotors.com",
+    "location": "Orem, Utah, , USA",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Vanderhall Motor Works",
+    "domain": "vanderhallusa.com",
+    "industry": "Automotive",
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "VidAngel",
+    "domain": "vidangel.com",
+    "industry": "Entertainment",
+    "location": "Lehi, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Vidgo",
+    "domain": "vidgotv.com",
+    "industry": "Pay television",
+    "location": "Salt Lake City, Utah",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Vulcan Tire",
+    "domain": "vulcantire.com",
+    "industry": "Retail",
+    "location": "Sandy, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "WW Clyde",
+    "domain": "clyde.net",
+    "industry": "Construction",
+    "location": "Orem, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Wahoo Studios",
+    "domain": "ahoo.com",
+    "industry": "Video games",
+    "location": "Orem, Utah, , US",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "WakeUpNow",
+    "domain": "akeupnow.com",
+    "location": "Provo, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "WildWorks",
+    "domain": "ildworks.com",
+    "industry": "Game developer",
+    "location": "Salt Lake City, Utah, ,, US",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Winder Farms",
+    "domain": "inderfarms.com",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "WordPerfect Corporation",
+    "domain": "ordperfect.com",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "XMission",
+    "domain": "xmission.com",
+    "industry": "Internet service provider",
+    "location": "Salt Lake City, ,, Utah, ,, U.S.",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Younique",
+    "domain": "youniqueproducts.com",
+    "industry": "Cosmetics, ,, network marketing",
+    "location": "Lehi, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Zions Bancorporation",
+    "domain": "zionsbancorporation.com",
+    "industry": "Financial services",
+    "location": "Salt Lake City, Utah, ,, United States",
+    "source": "wikipedia"
+  },
+  {
+    "company_name": "Zu Audio",
+    "domain": "zuaudio.com",
+    "location": "Ogden, Utah",
+    "source": "wikipedia"
+  }
+]

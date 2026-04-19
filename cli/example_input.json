@@ -1,0 +1,23 @@
+[
+  {
+    "company_name": "Qualtrics",
+    "domain": "qualtrics.com",
+    "industry": "SaaS / Experience Management",
+    "location": "Provo, UT",
+    "source": "utah_top_100"
+  },
+  {
+    "company_name": "Instructure",
+    "domain": "instructure.com",
+    "industry": "EdTech / SaaS",
+    "location": "Salt Lake City, UT",
+    "source": "utah_top_100"
+  },
+  {
+    "company_name": "Podium",
+    "domain": "podium.com",
+    "industry": "SaaS / Customer Engagement",
+    "location": "Lehi, UT",
+    "source": "utah_top_100"
+  }
+]

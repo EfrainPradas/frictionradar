@@ -71,12 +71,14 @@ def check_deep_extraction_skipped(
     if not playwright_skipped:
         return flags
 
-    # If it was skipped but coverage is still low/moderate and pain isn't isolated
-    if extraction_coverage in ("low", "moderate") and pain_clarity == "low":
+    # Only flag if Playwright was skipped AND evidence is genuinely thin.
+    # If sync collectors (especially careers) found rich evidence, skipping
+    # Playwright is justified even if pain_clarity remains low.
+    if extraction_coverage == "low" and pain_clarity == "low":
         flags.append("deep_extraction_skipped_too_early")
 
-    # If it was skipped but function concentration is low (no role-family evidence)
-    if function_concentration == "low" and signals_count < 10:
+    # Flag if function concentration is low AND signals are very scarce
+    if function_concentration == "low" and signals_count < 6:
         flags.append("deep_extraction_skipped_too_early")
 
     # Deduplicate

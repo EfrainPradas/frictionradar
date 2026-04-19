@@ -1,0 +1,86 @@
+[
+  {
+    "company_name": "AAPC (healthcare)",
+    "domain": "aapc.com",
+    "company_id": "1f5a1a33-20e9-44c9-b2e7-45c21c2af431",
+    "industry": null,
+    "location": "Salt Lake City, Utah",
+    "source": "wikipedia",
+    "status": "ready_for_review",
+    "company_type": "operating_company",
+    "company_type_confidence": "high",
+    "hiring_pressure": "high",
+    "pain_clarity": "moderate",
+    "function_concentration": "low",
+    "extraction_coverage": "high",
+    "positioning_readiness": "low",
+    "diagnosis_status": "broad_hiring_pattern_detected",
+    "signals_count": 10,
+    "distinct_signals_count": 10,
+    "open_positions_count": 6359,
+    "friction_score": 7.5,
+    "dominant_friction_type": "process_inefficiency",
+    "summary": "AAPC (healthcare) is worth human review, but the dominant pain is not yet isolated enough for precise positioning.",
+    "notes": [
+      "Broad hiring demand detected",
+      "Dominant pain not yet isolated"
+    ],
+    "pipeline_log": [
+      "Loaded existing company: 1f5a1a33-20e9-44c9-b2e7-45c21c2af431",
+      "Collection: completed",
+      "  signals_persisted: 1",
+      "  collector company_site: 1 signals (ok)",
+      "  collector careers: 0 signals (ok)",
+      "  collector ats_public: 0 signals (ok)",
+      "  collector newsroom: 1 signals (ok)",
+      "  collector dynamic_careers: 0 signals (ok)",
+      "Playwright extraction: open_positions=6359",
+      "Scoring: 7.5 (process_inefficiency)",
+      "Hypothesis: generated",
+      "Company type: operating_company (confidence: high)",
+      "Final status: ready_for_review (10 signals)",
+      "QA: pass=True score=high flags=[]",
+      "Tier: tier_2_ready_for_review"
+    ],
+    "collection_meta": {
+      "status": "completed",
+      "signals_persisted": 1,
+      "signals_raw": 2,
+      "collectors": [
+        {
+          "collector": "company_site",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "careers",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "ats_public",
+          "signals": 0,
+          "status": "ok"
+        },
+        {
+          "collector": "newsroom",
+          "signals": 1,
+          "status": "ok"
+        },
+        {
+          "collector": "dynamic_careers",
+          "signals": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    "updated_at": "2026-04-13T20:51:57.843794+00:00",
+    "qa_pass": true,
+    "qa_score": "high",
+    "qa_flags": [],
+    "data_quality_status": "high",
+    "target_tier": "tier_2_ready_for_review",
+    "tier_rationale": "not ready for positioning: function_concentration >= moderate",
+    "operational_state": "inspect_human"
+  }
+]

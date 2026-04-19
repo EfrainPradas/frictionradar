@@ -1,0 +1,51 @@
+[
+  {
+    "company_name": "Qualtrics",
+    "domain": "qualtrics.com",
+    "identifiers": [
+      {"id_type": "edgar_cik", "id_value": "1747748", "issuing_authority": "SEC"},
+      {"id_type": "ticker", "id_value": "XM", "issuing_authority": "NASDAQ"}
+    ]
+  },
+  {
+    "company_name": "Ancestry.com",
+    "domain": "ancestry.com",
+    "identifiers": [
+      {"id_type": "edgar_cik", "id_value": "1104039", "issuing_authority": "SEC"}
+    ]
+  },
+  {
+    "company_name": "Pluralsight",
+    "domain": "pluralsight.com",
+    "identifiers": [
+      {"id_type": "edgar_cik", "id_value": "1725579", "issuing_authority": "SEC"},
+      {"id_type": "ticker", "id_value": "PS", "issuing_authority": "NASDAQ"}
+    ]
+  },
+  {
+    "company_name": "Domo",
+    "domain": "domo.com",
+    "identifiers": [
+      {"id_type": "edgar_cik", "id_value": "1365742", "issuing_authority": "SEC"},
+      {"id_type": "ticker", "id_value": "DOMO", "issuing_authority": "NASDAQ"}
+    ]
+  },
+  {
+    "company_name": "Overstock.com",
+    "domain": "overstock.com",
+    "identifiers": [
+      {"id_type": "edgar_cik", "id_value": "1130713", "issuing_authority": "SEC"},
+      {"id_type": "ticker", "id_value": "OSTK", "issuing_authority": "NASDAQ"},
+      {"id_type": "state_registry_id", "id_value": "3463876-0142", "issuing_authority": "UT_SOS"}
+    ]
+  },
+  {
+    "company_name": "Zions Bancorporation",
+    "domain": "zionsbancorporation.com",
+    "identifiers": [
+      {"id_type": "edgar_cik", "id_value": "109380", "issuing_authority": "SEC"},
+      {"id_type": "ticker", "id_value": "ZION", "issuing_authority": "NASDAQ"},
+      {"id_type": "ein", "id_value": "87-0227400", "issuing_authority": "IRS"}
+    ]
+  }
+]

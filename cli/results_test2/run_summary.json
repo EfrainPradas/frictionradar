@@ -1,0 +1,23 @@
+{
+  "total_companies": 13,
+  "tier_1_ready_for_positioning": 0,
+  "tier_2_ready_for_review": 5,
+  "tier_3_needs_recollection": 0,
+  "tier_4_excluded": 0,
+  "position_now": 0,
+  "inspect_human": 5,
+  "collect_more": 0,
+  "exclude": 0,
+  "qa_high": 3,
+  "qa_medium": 2,
+  "qa_low": 0,
+  "original_ready_for_review": 5,
+  "original_needs_recollection": 0,
+  "original_excluded": 8,
+  "started_at": "2026-04-13T20:56:34.953437+00:00",
+  "finished_at": "2026-04-13T20:58:24.015535+00:00",
+  "top_qa_flags": {
+    "shallow_source_dependence": 2
+  },
+  "duration_seconds": 109.1
+}

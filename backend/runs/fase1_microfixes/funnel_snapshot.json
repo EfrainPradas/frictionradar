@@ -1,0 +1,198 @@
+{
+  "generated_at": "2026-04-17T17:48:53.195198+00:00",
+  "total_companies": 1293,
+  "errors": 0,
+  "diagnostic_state_distribution": {
+    "broad_hiring_pattern_detected": 1221,
+    "ready_for_positioning": 16,
+    "insufficient_evidence": 18,
+    "specific_pain_emerging": 38
+  },
+  "eligible_positioning_full": 16,
+  "eligible_positioning_conditional": 19,
+  "eligible_positioning_total": 35,
+  "sample_full": [
+    [
+      "Degreed",
+      "ready_for_positioning",
+      4,
+      0.5
+    ],
+    [
+      "Leavitt Group",
+      "ready_for_positioning",
+      8,
+      1.0
+    ],
+    [
+      "InMoment",
+      "ready_for_positioning",
+      5,
+      0.6
+    ],
+    [
+      "Cerberus Capital Management",
+      "ready_for_positioning",
+      6,
+      0.5
+    ],
+    [
+      "Chipotle Mexicano A La Parrilla",
+      "ready_for_positioning",
+      6,
+      1.0
+    ],
+    [
+      "Jamba",
+      "ready_for_positioning",
+      10,
+      0.6
+    ],
+    [
+      "Juniper Networks",
+      "ready_for_positioning",
+      4,
+      0.75
+    ],
+    [
+      "AdvancedMD",
+      "ready_for_positioning",
+      11,
+      1.0
+    ],
+    [
+      "AAPC (healthcare)",
+      "ready_for_positioning",
+      14,
+      0.5
+    ],
+    [
+      "Intermountain Health",
+      "ready_for_positioning",
+      5,
+      1.0
+    ],
+    [
+      "AMD",
+      "ready_for_positioning",
+      7,
+      1.0
+    ],
+    [
+      "Metro by T-Mobile",
+      "ready_for_positioning",
+      5,
+      0.8
+    ],
+    [
+      "Pall Corporation",
+      "ready_for_positioning",
+      3,
+      1.0
+    ],
+    [
+      "ScienceSoft",
+      "ready_for_positioning",
+      7,
+      0.57
+    ],
+    [
+      "RC Willey Home Furnishings",
+      "ready_for_positioning",
+      10,
+      1.0
+    ]
+  ],
+  "sample_conditional": [
+    [
+      "Aetna",
+      "specific_pain_emerging",
+      4,
+      0.5
+    ],
+    [
+      "Fishbowl Inventory",
+      "specific_pain_emerging",
+      15,
+      0.4
+    ],
+    [
+      "EnergySolutions",
+      "specific_pain_emerging",
+      14,
+      0.43
+    ],
+    [
+      "Bloomberg L.P.",
+      "specific_pain_emerging",
+      5,
+      0.4
+    ],
+    [
+      "Caterpillar",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "CVS Health",
+      "specific_pain_emerging",
+      4,
+      0.5
+    ],
+    [
+      "Dick's Sporting Goods",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Electronic Data Systems",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Embarcadero Technologies",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Flex LTD",
+      "specific_pain_emerging",
+      5,
+      0.4
+    ],
+    [
+      "Red Hat",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Salesforce",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "CrowdStrike",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "DXC Technology",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "MassMutual",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ]
+  ]
+}

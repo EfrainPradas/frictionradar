@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-04-17T15:32:44.922591+00:00",
+  "total_companies": 1293,
+  "errors": 0,
+  "diagnostic_state_distribution": {
+    "broad_hiring_pattern_detected": 1164,
+    "ready_for_positioning": 44,
+    "insufficient_evidence": 18,
+    "specific_pain_emerging": 67
+  },
+  "eligible_positioning_full": 111,
+  "eligible_positioning_conditional": 4,
+  "eligible_positioning_total": 115,
+  "sample_full": [
+    [
+      "Degreed",
+      "ready_for_positioning",
+      4,
+      0.5
+    ],
+    [
+      "BMC Software",
+      "specific_pain_emerging",
+      4,
+      0.5
+    ],
+    [
+      "7-Eleven",
+      "ready_for_positioning",
+      3,
+      1.0
+    ],
+    [
+      "Aetna",
+      "ready_for_positioning",
+      5,
+      0.6
+    ],
+    [
+      "Fishbowl Inventory",
+      "specific_pain_emerging",
+      16,
+      0.38
+    ],
+    [
+      "Nu Skin Enterprises",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "7-Eleven, Inc.",
+      "ready_for_positioning",
+      3,
+      1.0
+    ],
+    [
+      "Aflac",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Active Power",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Agile Software Corporation",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Myriad Genetics",
+      "specific_pain_emerging",
+      2,
+      1.0
+    ],
+    [
+      "Leavitt Group",
+      "ready_for_positioning",
+      8,
+      1.0
+    ],
+    [
+      "Apple Inc.",
+      "specific_pain_emerging",
+      3,
+      0.67
+    ],
+    [
+      "Dell",
+      "specific_pain_emerging",
+      5,
+      0.4
+    ],
+    [
+      "GE Healthcare Surgery",
+      "ready_for_positioning",
+      4,
+      1.0
+    ]
+  ],
+  "sample_conditional": [
+    [
+      "EnergySolutions",
+      "broad_hiring_pattern_detected",
+      18,
+      0.44
+    ],
+    [
+      "InMoment",
+      "broad_hiring_pattern_detected",
+      10,
+      0.4
+    ],
+    [
+      "Flex LTD",
+      "broad_hiring_pattern_detected",
+      11,
+      0.36
+    ],
+    [
+      "Stingray Advertising",
+      "broad_hiring_pattern_detected",
+      22,
+      0.36
+    ]
+  ]
+}
