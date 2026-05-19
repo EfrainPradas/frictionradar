@@ -16,7 +16,7 @@ export interface FrictionScore {
   id: string;
   company_id: string;
   total_score: number;
-  dominant_friction_type: FrictionCategory;
+  dominant_friction_type: FrictionCategory | null;  // null = insufficient evidence
   scoring_breakdown_json: ScoringBreakdown;
   scoring_version: string | null;
   computed_at: string;

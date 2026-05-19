@@ -22,4 +22,4 @@ FRICTION_CATEGORY_LABELS: Final[dict] = {
     "customer_experience_friction":  "Customer Experience Friction",
 }
 
-SCORING_VERSION: Final[str] = "1.0.0"
+SCORING_VERSION: Final[str] = "2.0.0"

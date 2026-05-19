@@ -14,7 +14,6 @@ to reuse (avoids double-fetching).
 from __future__ import annotations
 
 import re
-import urllib3
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from typing import List, Optional
@@ -23,10 +22,9 @@ from urllib.parse import urlparse
 import requests
 
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 TIMEOUT = 6
 
@@ -163,7 +161,7 @@ def _try_homepage_links(domain: str) -> Optional[DiscoveryResult]:
             headers=HEADERS,
             timeout=TIMEOUT,
             allow_redirects=True,
-            verify=False,
+            verify=get_ssl_verify(),
         )
         if resp.status_code != 200:
             return None
@@ -201,7 +199,7 @@ def _probe_url(url: str, strategy: str) -> Optional[DiscoveryResult]:
             headers=HEADERS,
             timeout=TIMEOUT,
             allow_redirects=True,
-            verify=False,
+            verify=get_ssl_verify(),
         )
         if resp.status_code != 200:
             return None

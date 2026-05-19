@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 from uuid import UUID
 from typing import List
@@ -13,11 +14,12 @@ from app.services.hypothesis_engine import generate_and_persist_hypothesis
 router = APIRouter()
 
 
-@router.post("/companies/{company_id}/hypothesis", response_model=OpportunityHypothesisRead)
+@router.post("/companies/{company_id}/hypothesis")
 def trigger_hypothesis(company_id: UUID, db: Session = Depends(get_db)):
     """
     Generate and persist an opportunity hypothesis based on the latest friction score.
     A score must exist before calling this endpoint.
+    Returns 200 with a message when evidence is insufficient for a hypothesis.
     """
     company = db.query(Company).filter(Company.id == company_id).first()
     if not company:
@@ -34,6 +36,17 @@ def trigger_hypothesis(company_id: UUID, db: Session = Depends(get_db)):
         raise HTTPException(
             status_code=400,
             detail="No friction score found. Run POST /companies/{company_id}/score first."
+        )
+
+    # Insufficient evidence — no diagnosis possible
+    if latest_score.dominant_friction_type == "no_signal":
+        return JSONResponse(
+            status_code=200,
+            content={
+                "message": "Insufficient evidence to generate a hypothesis.",
+                "diagnosis_status": "insufficient_evidence",
+                "company_id": str(company_id),
+            },
         )
 
     hypothesis = generate_and_persist_hypothesis(

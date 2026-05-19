@@ -1,7 +1,6 @@
 """Newsroom Collector — improved with homepage link discovery and multi-path fallback."""
 
 import re
-import urllib3
 from typing import List, Optional
 from urllib.parse import urlparse, urljoin
 
@@ -11,12 +10,11 @@ from bs4 import BeautifulSoup
 from app.collectors.base import BaseCollector
 from app.core.config import settings
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 from app.models.company import Company
 from app.schemas.signal import SignalCreate
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 NEWS_PATHS = ["/news", "/newsroom", "/press", "/about/news", "/blog", "/insights",
               "/media", "/press-releases", "/about/newsroom", "/company/news"]
@@ -77,7 +75,7 @@ class NewsroomCollector(BaseCollector):
             resp = requests.get(
                 f"https://{domain}",
                 headers={"User-Agent": settings.DEFAULT_USER_AGENT},
-                timeout=5, verify=False,
+                timeout=5, verify=get_ssl_verify(),
             )
             if resp.status_code != 200:
                 return None
@@ -105,7 +103,7 @@ class NewsroomCollector(BaseCollector):
         signals: List[SignalCreate] = []
         try:
             headers = {"User-Agent": settings.DEFAULT_USER_AGENT}
-            response = requests.get(url, headers=headers, timeout=5, verify=False)
+            response = requests.get(url, headers=headers, timeout=5, verify=get_ssl_verify())
             if response.status_code != 200:
                 return signals
         except Exception:

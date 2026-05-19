@@ -14,6 +14,9 @@ class OpportunityHypothesis(Base):
     company_id = Column(UUID(as_uuid=True), ForeignKey("companies.id", ondelete="CASCADE"), nullable=False, index=True)
     friction_score_id = Column(UUID(as_uuid=True), ForeignKey("friction_scores.id", ondelete="SET NULL"), nullable=True)
     summary = Column(String, nullable=False)
+    # "no_signal" is an INTERNAL sentinel; hypothesis engine returns None before
+    # persisting when dominant_friction_type is "no_signal", so this should never
+    # store "no_signal". API schemas translate it to null as defense-in-depth.
     friction_type = Column(String, nullable=False, index=True)
     suggested_opportunity = Column(String, nullable=False)
     rationale_json = Column(JSONB, nullable=True)

@@ -1,6 +1,12 @@
 import glob
 import os
 
+# Load .env so os.environ.get() calls in routers (e.g. OPENAI_API_KEY,
+# FRICTIONRADAR_INTERNAL_TOKEN) resolve the same values that pydantic-settings
+# reads for `config.settings`.
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, RedirectResponse
@@ -18,8 +24,15 @@ from app.api.routers import (
     validation,
     dashboard,
     pipeline,
+    internal,
 )
 from app.core.logging import setup_logging
+from app.core.security import (
+    get_allowed_origins,
+    get_allow_credentials,
+    APIKeyMiddleware,
+    install_exception_handler,
+)
 
 # Enable structured logging
 setup_logging()
@@ -30,13 +43,24 @@ app = FastAPI(
     version="0.4.0",
 )
 
+# Install global exception handler (removes stack traces from responses)
+install_exception_handler(app)
+
+# CORS — environment-specific configuration
+# Development: allow_origins=["*"], allow_credentials=False (browser-safe)
+# Production: explicit origins from ALLOWED_ORIGINS env var, allow_credentials=True
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Restrict in production
-    allow_credentials=True,
+    allow_origins=get_allowed_origins(),
+    allow_credentials=get_allow_credentials(),
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# API key middleware for data endpoints
+# Development: pass through when no key is configured
+# Production: require X-API-Key header
+app.add_middleware(APIKeyMiddleware)
 
 # Health
 app.include_router(health.router, prefix="/health", tags=["Health"])
@@ -71,6 +95,9 @@ app.include_router(dashboard.router, prefix="/api/v1", tags=["Dashboard"])
 
 # Commercial Pipeline (internal review workflow)
 app.include_router(pipeline.router, prefix="/api/v1", tags=["Pipeline"])
+
+# Internal server-to-server API (NovaWork VIP add-on integration)
+app.include_router(internal.router, prefix="/internal/v1", tags=["Internal"])
 
 
 @app.get("/", include_in_schema=False)

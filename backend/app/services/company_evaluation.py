@@ -5,6 +5,10 @@ Computes 6 orthogonal KPIs and a top-level Diagnostic State that works
 for any company (not just Nike). All thresholds are deterministic and
 driven by evidence already present in signals / job_roles.
 
+This engine is the SINGLE SOURCE OF TRUTH for confidence, evidence quality,
+hiring pressure, pain clarity, and diagnostic state. Other engines
+(EvidenceThresholdEngine, BusinessReadEngine) delegate to it.
+
 KPIs:
   1. extraction_coverage   — how much structured evidence was captured
   2. hiring_pressure       — visible strength of hiring demand
@@ -117,14 +121,14 @@ class CompanyEvaluationEngine:
 
         evidence = self._extract_evidence(signals, job_roles, hiring_pattern)
 
-        extraction_coverage = self._score_extraction_coverage(
+        extraction_coverage, extraction_reasoning = self._score_extraction_coverage(
             signals, job_roles, evidence
         )
-        hiring_pressure = self._score_hiring_pressure(evidence)
-        function_concentration = self._score_function_concentration(
+        hiring_pressure, hiring_reasoning = self._score_hiring_pressure(evidence)
+        function_concentration, concentration_reasoning = self._score_function_concentration(
             job_roles, evidence
         )
-        pain_clarity = self._score_pain_clarity(
+        pain_clarity, pain_reasoning = self._score_pain_clarity(
             job_roles, hiring_pattern, evidence
         )
         # Default MODERATE when the caller didn't provide confidence.
@@ -134,7 +138,7 @@ class CompanyEvaluationEngine:
         # is curated operating-companies, so MODERATE is the safer default.
         # Callers with strict requirements must pass explicitly.
         type_confidence = self._normalize_level(company_type_confidence) or LEVEL_MODERATE
-        positioning_readiness = self._score_positioning_readiness(
+        positioning_readiness, positioning_reasoning = self._score_positioning_readiness(
             hiring_pressure=hiring_pressure,
             pain_clarity=pain_clarity,
             function_concentration=function_concentration,
@@ -173,6 +177,18 @@ class CompanyEvaluationEngine:
                 function_concentration=function_concentration,
             ),
             "evidence": evidence,
+            "reasoning_trace": {
+                "extraction_coverage": extraction_reasoning,
+                "hiring_pressure": hiring_reasoning,
+                "function_concentration": concentration_reasoning,
+                "pain_clarity": pain_reasoning,
+                "company_type_confidence": {
+                    "level": type_confidence,
+                    "met_conditions": ["passed from caller"],
+                    "missed_conditions": [],
+                },
+                "positioning_readiness": positioning_reasoning,
+            },
         }
 
     # ------------------------------------------------------------------ #
@@ -271,7 +287,8 @@ class CompanyEvaluationEngine:
         signals: List[Any],
         job_roles: List[Any],
         ev: Dict[str, Any],
-    ) -> str:
+    ) -> tuple:
+        """Returns (level, reasoning_trace)."""
         has_any_hiring_evidence = (
             ev["has_careers_page_signal"]
             or ev["visible_hiring_areas"] >= 1
@@ -285,47 +302,60 @@ class CompanyEvaluationEngine:
         )
 
         checks = [
-            has_any_hiring_evidence,
-            ev["open_positions_count"] > 0,
-            ev["visible_hiring_areas"] >= 2,
-            ev["visible_hiring_areas"] >= 5,
-            ev["visible_job_cards"] >= 1 or ev["has_job_cards_signal"],
-            ev["parsed_titles"] >= 1,
-            ev["parsed_descriptions"] >= 1,
-            ev["distinct_signal_types"] >= 5 or ev["has_structured_api_signal"],
+            ("has_hiring_evidence", has_any_hiring_evidence),
+            ("open_positions > 0", ev["open_positions_count"] > 0),
+            ("hiring_areas >= 2", ev["visible_hiring_areas"] >= 2),
+            ("hiring_areas >= 5", ev["visible_hiring_areas"] >= 5),
+            ("job_cards >= 1", ev["visible_job_cards"] >= 1 or ev["has_job_cards_signal"]),
+            ("parsed_titles >= 1", ev["parsed_titles"] >= 1),
+            ("parsed_descriptions >= 1", ev["parsed_descriptions"] >= 1),
+            ("signal_types >= 5 or structured_api", ev["distinct_signal_types"] >= 5 or ev["has_structured_api_signal"]),
         ]
-        passed = sum(1 for c in checks if c)
+        passed = sum(1 for _, c in checks if c)
+        met = [name for name, cond in checks if cond]
+        missed = [name for name, cond in checks if not cond]
 
         # HIGH requires role-level parsing, not just breadth.
         if passed >= 6 and ev["parsed_titles"] >= 1:
-            return LEVEL_HIGH
+            return LEVEL_HIGH, {"level": LEVEL_HIGH, "met_conditions": met, "missed_conditions": missed}
         if passed >= 3:
-            return LEVEL_MODERATE
-        return LEVEL_LOW
+            return LEVEL_MODERATE, {"level": LEVEL_MODERATE, "met_conditions": met, "missed_conditions": missed}
+        return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": met, "missed_conditions": missed}
 
-    def _score_hiring_pressure(self, ev: Dict[str, Any]) -> str:
+    def _score_hiring_pressure(self, ev: Dict[str, Any]) -> tuple:
+        """Returns (level, reasoning_trace)."""
         open_positions = ev["open_positions_count"]
         hiring_areas = ev["visible_hiring_areas"]
         job_cards = ev["visible_job_cards"]
         distinct_signals = ev["distinct_signal_types"]
 
-        if (
-            open_positions >= 100
-            or hiring_areas >= 5
-            or (job_cards >= 5 and hiring_areas >= 2)
-            or (job_cards >= 5 and distinct_signals >= 6)
-        ):
-            return LEVEL_HIGH
+        high_conditions = [
+            ("open_positions >= 100", open_positions >= 100),
+            ("hiring_areas >= 5", hiring_areas >= 5),
+            ("job_cards >= 5 and hiring_areas >= 2", job_cards >= 5 and hiring_areas >= 2),
+            ("job_cards >= 5 and distinct_signals >= 6", job_cards >= 5 and distinct_signals >= 6),
+        ]
+        moderate_conditions = [
+            ("20 <= open_positions <= 99", 20 <= open_positions <= 99),
+            ("2 <= hiring_areas <= 4", 2 <= hiring_areas <= 4),
+            ("2 <= job_cards <= 4", 2 <= job_cards <= 4),
+            ("distinct_signals >= 3", distinct_signals >= 3),
+        ]
 
-        if (
-            20 <= open_positions <= 99
-            or 2 <= hiring_areas <= 4
-            or 2 <= job_cards <= 4
-            or distinct_signals >= 3
-        ):
-            return LEVEL_MODERATE
+        met_high = [name for name, cond in high_conditions if cond]
+        missed_high = [name for name, cond in high_conditions if not cond]
 
-        return LEVEL_LOW
+        if any(cond for _, cond in high_conditions):
+            return LEVEL_HIGH, {"level": LEVEL_HIGH, "met_conditions": met_high, "missed_conditions": missed_high}
+
+        met_mod = [name for name, cond in moderate_conditions if cond]
+        all_conditions = high_conditions + moderate_conditions
+        missed = [name for name, cond in all_conditions if not cond]
+
+        if any(cond for _, cond in moderate_conditions):
+            return LEVEL_MODERATE, {"level": LEVEL_MODERATE, "met_conditions": met_mod, "missed_conditions": missed}
+
+        return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": [], "missed_conditions": [name for name, _ in all_conditions]}
 
     _EXCLUDED_AREAS = {"junk", "unknown", "Technology"}
 
@@ -343,11 +373,10 @@ class CompanyEvaluationEngine:
         self,
         job_roles: List[Any],
         ev: Dict[str, Any],
-    ) -> str:
+    ) -> tuple:
         """High = one function dominates; Low = broadly distributed.
 
-        Only counts roles with valid functional_area (excludes junk/unknown).
-        Uses unique_areas from classified roles when available.
+        Returns (level, reasoning_trace).
         """
         function_counts = self._clean_role_counts(job_roles)
         total = sum(function_counts.values())
@@ -357,31 +386,41 @@ class CompanyEvaluationEngine:
         else:
             areas = ev["visible_hiring_areas"]
 
+        met = []
+        missed = []
+
         if areas >= 5 and total < 3:
-            return LEVEL_LOW
+            met.append("areas >= 5 and total < 3")
+            return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": met, "missed_conditions": missed}
 
         if total == 0:
-            return LEVEL_LOW
+            met.append("total == 0")
+            return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": met, "missed_conditions": missed}
 
         top = max(function_counts.values())
         share = top / total
 
         if top >= 3 and share >= 0.5 and areas <= 3:
-            return LEVEL_HIGH
+            met.append(f"top={top}, share={share:.2f}, areas={areas}")
+            return LEVEL_HIGH, {"level": LEVEL_HIGH, "met_conditions": met, "missed_conditions": missed}
+        missed.append(f"need top>=3, share>=0.5, areas<=3 (got top={top}, share={share:.2f}, areas={areas})")
+
         if top >= 2 and share >= 0.35 and areas <= 4:
-            return LEVEL_MODERATE
-        return LEVEL_LOW
+            met.append(f"top={top}, share={share:.2f}, areas={areas}")
+            return LEVEL_MODERATE, {"level": LEVEL_MODERATE, "met_conditions": met, "missed_conditions": missed}
+        missed.append(f"need top>=2, share>=0.35, areas<=4 (got top={top}, share={share:.2f}, areas={areas})")
+
+        return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": [], "missed_conditions": missed}
 
     def _score_pain_clarity(
         self,
         job_roles: List[Any],
         hiring_pattern: Any,
         ev: Dict[str, Any],
-    ) -> str:
+    ) -> tuple:
         """Pain Clarity — can we isolate a dominant internal pain?
 
-        Requires real classified roles (excludes junk/unknown).
-        Descriptions boost confidence but aren't required.
+        Returns (level, reasoning_trace).
         """
         function_counts = self._clean_role_counts(job_roles)
         total = sum(function_counts.values())
@@ -396,22 +435,31 @@ class CompanyEvaluationEngine:
 
         has_pattern = hiring_pattern is not None
 
+        met = []
+        missed = []
+
         # HIGH: strong concentration with evidence depth
         if (top >= 3 and share >= 0.5) or (
             has_pattern and with_desc >= 3 and share >= 0.5
         ):
-            return LEVEL_HIGH
+            met.append(f"top={top}, share={share:.2f}")
+            if has_pattern and with_desc >= 3 and share >= 0.5:
+                met.append(f"has_pattern, with_desc={with_desc}")
+            return LEVEL_HIGH, {"level": LEVEL_HIGH, "met_conditions": met, "missed_conditions": missed}
 
-        # MODERATE: requires real clustering, not just any 3 classified roles.
-        # At least 2 roles in the top function AND some evidence of a pattern.
+        # MODERATE: requires real clustering
         if top >= 2 and (has_pattern or total >= 5 or with_desc >= 2):
-            return LEVEL_MODERATE
+            met.append(f"top={top}, share={share:.2f}")
+            return LEVEL_MODERATE, {"level": LEVEL_MODERATE, "met_conditions": met, "missed_conditions": missed}
+        missed.append(f"need top>=2 with pattern or total>=5 or with_desc>=2 (got top={top}, total={total}, with_desc={with_desc})")
 
         # Fallback: if we have some classified roles at all
         if total >= 3:
-            return LEVEL_MODERATE
+            met.append(f"total={total} classified roles")
+            return LEVEL_MODERATE, {"level": LEVEL_MODERATE, "met_conditions": met, "missed_conditions": missed}
+        missed.append(f"need total>=3 (got total={total})")
 
-        return LEVEL_LOW
+        return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": [], "missed_conditions": missed}
 
     def _score_positioning_readiness(
         self,
@@ -419,10 +467,15 @@ class CompanyEvaluationEngine:
         pain_clarity: str,
         function_concentration: str,
         company_type_confidence: str,
-    ) -> str:
+    ) -> tuple:
+        """Returns (level, reasoning_trace)."""
+        met = []
+        missed = []
+
         # Rule E: cannot be high if Pain Clarity is low.
         if pain_clarity == LEVEL_LOW:
-            return LEVEL_LOW
+            missed.append("pain_clarity is low (blocks HIGH and MODERATE)")
+            return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": met, "missed_conditions": missed}
 
         if (
             pain_clarity == LEVEL_HIGH
@@ -430,16 +483,20 @@ class CompanyEvaluationEngine:
             and _gte(company_type_confidence, LEVEL_MODERATE)
             and _gte(hiring_pressure, LEVEL_MODERATE)
         ):
-            return LEVEL_HIGH
+            met.append(f"pain_clarity={pain_clarity}, func_conc={function_concentration}, type_conf={company_type_confidence}, hiring={hiring_pressure}")
+            return LEVEL_HIGH, {"level": LEVEL_HIGH, "met_conditions": met, "missed_conditions": missed}
+        missed.append(f"need pain_clarity=HIGH + func>=MOD + type>=MOD + hiring>=MOD (got pain={pain_clarity}, func={function_concentration}, type={company_type_confidence}, hiring={hiring_pressure})")
 
         if (
             _gte(pain_clarity, LEVEL_MODERATE)
             and _gte(function_concentration, LEVEL_MODERATE)
             and _gte(hiring_pressure, LEVEL_MODERATE)
         ):
-            return LEVEL_MODERATE
+            met.append(f"pain_clarity={pain_clarity}, func_conc={function_concentration}, hiring={hiring_pressure}")
+            return LEVEL_MODERATE, {"level": LEVEL_MODERATE, "met_conditions": met, "missed_conditions": missed}
+        missed.append(f"need pain>=MOD + func>=MOD + hiring>=MOD (got pain={pain_clarity}, func={function_concentration}, hiring={hiring_pressure})")
 
-        return LEVEL_LOW
+        return LEVEL_LOW, {"level": LEVEL_LOW, "met_conditions": met, "missed_conditions": missed}
 
     # ------------------------------------------------------------------ #
     # Diagnostic state + summaries

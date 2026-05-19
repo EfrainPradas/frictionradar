@@ -13,17 +13,13 @@ from __future__ import annotations
 import re
 from typing import Any, Dict, List, Optional
 
-import requests
-import urllib3
-
 from app.extraction.adapters.base import BaseATSAdapter, slugify_company, DEFAULT_TIMEOUT
 from app.extraction.constants import ATSPlatform, ExtractionStrategy, ReasonCode
 from app.extraction.schemas import NormalizedJob, NormalizedJobsResult
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 GRAPHQL_URL = "https://jobs.ashbyhq.com/api/non-user-graphql"
 
@@ -161,20 +157,10 @@ class AshbyAdapter(BaseATSAdapter):
         }
 
         try:
-            resp = requests.post(
-                GRAPHQL_URL,
-                json=payload,
-                headers={
-                    "Content-Type": "application/json",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-                },
-                timeout=DEFAULT_TIMEOUT,
-                verify=False,
-            )
-            if resp.status_code != 200:
+            data = self._post_json(GRAPHQL_URL, payload, timeout=DEFAULT_TIMEOUT)
+            if data is None:
                 return None
 
-            data = resp.json()
             # Validate the slug resolved to a real job board. An empty board
             # is still a valid resolution — only missing jobBoard means the
             # slug was wrong.

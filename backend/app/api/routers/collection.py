@@ -28,8 +28,9 @@ def trigger_collection(
     db.commit()
     db.refresh(run)
 
-    # Schedule the synchronous orchestration to run in the background
-    background_tasks.add_task(run_collection_for_company, db, company.id, run.id)
+    # Schedule background task — it creates its own DB session internally
+    # to avoid using a closed session after the response
+    background_tasks.add_task(run_collection_for_company, company.id, run.id)
 
     return {"message": "Collection started", "run_id": run.id}
 

@@ -10,7 +10,7 @@ interface Props {
 export function ScoreCard({ score, verdictType }: Props) {
   const frictionInfo = getFrictionLevel(score.total_score);
 
-  const isWeakEvidence = verdictType === 'preliminary' || score.total_score === 0;
+  const isWeakEvidence = verdictType === 'preliminary' || score.total_score === 0 || score.dominant_friction_type === null;
 
   return (
     <div className="space-y-4">

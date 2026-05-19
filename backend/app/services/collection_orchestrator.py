@@ -308,18 +308,27 @@ async def _extract_careers_evidence_inner(
 
 
 def run_collection_for_company(
-    db: Session, company_id: UUID, run_id: UUID
+    company_id: UUID, run_id: UUID
 ) -> dict:
     """
     Run all synchronous collectors for a company SEQUENTIALLY.
 
-    Previous version used ThreadPoolExecutor which caused silent failures
-    because CareersURLFinder's requests.Session was shared across threads.
-    Sequential execution is just as fast (collectors share HTTP responses
-    to the same domain anyway) and eliminates all thread-safety issues.
+    Creates its own DB session to avoid using a closed session from
+    the request lifecycle (BackgroundTasks outlive the response).
 
     Returns a dict with metadata about the run.
     """
+    from app.db.session import SessionLocal
+
+    db = SessionLocal()
+    try:
+        return _run_collection_inner(db, company_id, run_id)
+    finally:
+        db.close()
+
+
+def _run_collection_inner(db: Session, company_id: UUID, run_id: UUID) -> dict:
+    """Inner implementation — runs inside a dedicated DB session."""
     logger.info(f"[Collector] Starting collection for company {company_id}, run {run_id}")
 
     company = db.query(Company).filter(Company.id == company_id).first()

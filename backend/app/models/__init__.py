@@ -12,6 +12,7 @@ from .extraction import (
     CompanyExtractionAttempt,
 )
 from .commercial_pipeline import PipelineEntry, PipelineEvent
+from .smart_match_cache import SmartMatchCache
 
 # Master Index
 from app.master.models import (

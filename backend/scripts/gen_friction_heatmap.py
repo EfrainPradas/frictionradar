@@ -312,6 +312,69 @@ def aggregate(db, min_companies: int):
     }
 
 
+# ─── Public helper: single-cell companies (reused by /internal/v1/heatmap/cell) ─
+
+def compute_cell_companies(
+    db, sector: str, function: str, *, min_companies: int = 1
+) -> dict:
+    """Return the heatmap payload for one (sector, function) cell.
+
+    Shape mirrors what the HTML renderer consumes:
+
+        {
+          "sector": str,
+          "function": str,
+          "n": int,
+          "pain_score": float,
+          "pct_pain": float, "pct_eligible": float,
+          "mean_dominance": float, "velocity": float,
+          "mean_concentration": float,
+          "sparse": bool,
+          "companies": [sorted by eligibility gate, then roles_in_f],
+        }
+
+    Empty cell returns n=0 and empty companies list.
+    """
+    agg = aggregate(db, min_companies=min_companies)
+    cell = agg["cells"].get((sector, function))
+    if cell is None:
+        return {
+            "sector": sector,
+            "function": function,
+            "n": 0,
+            "pain_score": 0.0,
+            "pct_pain": 0.0,
+            "pct_eligible": 0.0,
+            "mean_dominance": 0.0,
+            "velocity": 0.0,
+            "mean_concentration": 0.0,
+            "sparse": True,
+            "companies": [],
+        }
+
+    sorted_companies = sorted(
+        cell["companies"],
+        key=lambda c: (
+            0 if c["eligibility"] == "full" else
+            1 if c["eligibility"] == "conditional" else 2,
+            -c["roles_in_f"],
+        ),
+    )
+    return {
+        "sector": sector,
+        "function": function,
+        "n": cell.get("n", len(cell["companies"])),
+        "pain_score": cell.get("pain_score", 0.0),
+        "pct_pain": cell.get("pct_pain", 0.0),
+        "pct_eligible": cell.get("pct_eligible", 0.0),
+        "mean_dominance": cell.get("mean_dominance", 0.0),
+        "velocity": cell.get("velocity", 0.0),
+        "mean_concentration": cell.get("mean_concentration", 0.0),
+        "sparse": cell.get("sparse", False),
+        "companies": sorted_companies,
+    }
+
+
 # ─── HTML rendering ─────────────────────────────────────────────────────────
 
 def render_html(agg: dict, min_companies: int) -> str:

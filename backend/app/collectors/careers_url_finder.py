@@ -12,17 +12,15 @@ Returns the best URL found with discovery strategy and confidence.
 """
 
 import re
-import urllib3
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
 import requests
 
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 # ---------------------------------------------------------------------------
 # Config
@@ -436,7 +434,7 @@ class CareersURLFinder:
         """
         try:
             resp = session.get(
-                url, timeout=self.timeout, allow_redirects=True, verify=False
+                url, timeout=self.timeout, allow_redirects=True, verify=get_ssl_verify()
             )
             if resp.status_code != 200:
                 # Server responded but non-200 — domain is alive, just this
@@ -480,7 +478,7 @@ class CareersURLFinder:
         """Probe a URL and determine if it's a real careers page."""
         try:
             resp = session.get(
-                url, timeout=self.timeout, allow_redirects=True, verify=False
+                url, timeout=self.timeout, allow_redirects=True, verify=get_ssl_verify()
             )
             if resp.status_code != 200:
                 return False
@@ -526,7 +524,7 @@ class CareersURLFinder:
             url = config["url_template"].format(slug=slug)
             try:
                 resp = session.get(
-                    url, timeout=self.timeout, allow_redirects=True, verify=False
+                    url, timeout=self.timeout, allow_redirects=True, verify=get_ssl_verify()
                 )
                 if (
                     resp.status_code == 200
@@ -558,7 +556,7 @@ class CareersURLFinder:
                 url = config["url_template"].format(slug=slug)
                 try:
                     resp = session.get(
-                        url, timeout=self.timeout, allow_redirects=True, verify=False
+                        url, timeout=self.timeout, allow_redirects=True, verify=get_ssl_verify()
                     )
                     if (
                         resp.status_code == 200

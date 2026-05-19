@@ -5,10 +5,16 @@ from app.models.opportunity_hypothesis import OpportunityHypothesis
 from app.models.collection_run import CollectionRun
 from app.services.evidence_threshold_engine import evidence_threshold_engine
 from app.services.business_read_engine import business_read_engine
+from app.services.company_evaluation import company_evaluation_engine
 
 
 class FinalVerdictEngine:
-    """Generates the final business verdicts for each company with anti-hallucination logic."""
+    """Generates the final business verdicts for each company with anti-hallucination logic.
+
+    Uses the canonical CompanyEvaluationEngine for all KPI and diagnostic computations.
+    BusinessReadEngine and EvidenceThresholdEngine are still called for backward-compatible
+    API fields, but they now delegate to the same canonical source.
+    """
 
     OPERATING_PAIN_MAP = {
         "reporting_fragmentation": {
@@ -86,28 +92,52 @@ class FinalVerdictEngine:
         collection_runs: list[CollectionRun] | None = None,
         db=None,
     ) -> dict:
-        """Generate final verdict based on all available data with anti-hallucination."""
+        """Generate final verdict based on all available data with anti-hallucination.
 
-        # First, get business reading (separates hiring pressure from pain clarity)
+        Uses CompanyEvaluationEngine (canonical) for KPIs and diagnostic state.
+        Falls back to EvidenceThresholdEngine and BusinessReadEngine for
+        backward-compatible verdict fields.
+        """
+
+        # Get canonical evaluation
+        evaluation = company_evaluation_engine.evaluate(
+            company_id=company.id,
+            db=db,
+            signals=signals,
+        )
+
+        kpis = evaluation["kpis"]
+        diagnostic_state = evaluation["diagnostic_state"]
+        hiring_pressure = kpis["hiring_pressure"]
+        pain_clarity = kpis["pain_clarity"]
+        allow_specific_pain = evaluation["allow_specific_pain_output"]
+
+        # Get business read for backward-compatible fields
         business_read = business_read_engine.compute_reading(
             company_id=company.id,
             db=db,
             signals=signals,
         )
 
-        # Use business read for diagnosis instead of old evidence threshold
-        hiring_pressure = business_read.get("hiring_pressure", "low")
-        pain_clarity = business_read.get("pain_clarity", "low")
+        # Get evidence for backward-compatible fields
+        evidence = evidence_threshold_engine.evaluate_evidence(
+            signals=signals,
+            score=score,
+            collection_runs=collection_runs,
+            company_id=company.id,
+            db=db,
+        )
 
-        # Rule C: If hiring pressure is high but pain clarity is low, do NOT produce definitive pain
+        # Rule C: If hiring pressure is high but pain clarity is low,
+        # do NOT produce definitive pain
         if hiring_pressure == "high" and pain_clarity == "low":
             return {
                 "verdict_type": "preliminary",
                 "hiring_pressure": hiring_pressure,
                 "pain_clarity": pain_clarity,
-                "diagnosis_status": business_read.get("diagnosis_status"),
+                "diagnosis_status": diagnostic_state,
                 "business_read_summary": business_read.get("business_read_summary"),
-                "confidence": "low",
+                "confidence": evidence.get("confidence", "low"),
                 "main_pain": None,
                 "where_pain_lives": None,
                 "what_the_company_needs": None,
@@ -119,19 +149,12 @@ class FinalVerdictEngine:
 
         # Pain clarity is moderate or high - can generate verdict
         if pain_clarity in ["moderate", "high"]:
-            # Also use old evidence threshold for additional context
-            evidence = evidence_threshold_engine.evaluate_evidence(
-                signals=signals,
-                score=score,
-                collection_runs=collection_runs,
-            )
-
-            if not evidence["is_strong_enough"]:
+            if not allow_specific_pain:
                 return {
                     "verdict_type": "preliminary",
                     "hiring_pressure": hiring_pressure,
                     "pain_clarity": pain_clarity,
-                    "diagnosis_status": business_read.get("diagnosis_status"),
+                    "diagnosis_status": diagnostic_state,
                     "business_read_summary": business_read.get("business_read_summary"),
                     "confidence": evidence.get("confidence", "low"),
                     "main_pain": None,
@@ -155,10 +178,8 @@ class FinalVerdictEngine:
 
             verdict["hiring_pressure"] = hiring_pressure
             verdict["pain_clarity"] = pain_clarity
-            verdict["diagnosis_status"] = business_read.get("diagnosis_status")
-            verdict["business_read_summary"] = business_read.get(
-                "business_read_summary"
-            )
+            verdict["diagnosis_status"] = diagnostic_state
+            verdict["business_read_summary"] = business_read.get("business_read_summary")
             return verdict
 
         # Default: low hiring pressure or unclear
@@ -166,9 +187,9 @@ class FinalVerdictEngine:
             "verdict_type": "preliminary",
             "hiring_pressure": hiring_pressure,
             "pain_clarity": pain_clarity,
-            "diagnosis_status": business_read.get("diagnosis_status"),
-            "business_read_summary": "Not enough evidence to determine hiring pressure or pain clarity.",
-            "confidence": "low",
+            "diagnosis_status": diagnostic_state,
+            "business_read_summary": business_read.get("business_read_summary") or "Not enough evidence to determine hiring pressure or pain clarity.",
+            "confidence": evidence.get("confidence", "low"),
             "main_pain": None,
             "where_pain_lives": None,
             "what_the_company_needs": None,
@@ -187,13 +208,21 @@ class FinalVerdictEngine:
         company_type: str,
         evidence: dict,
     ) -> dict:
-        """Generate full final verdict when evidence is strong."""
+        """Generate full final verdict when evidence is strong.
+
+        Uses normalized_score from the scoring breakdown to determine
+        dominant friction type, which corrects for structural category bias.
+        Falls back to hypothesis.friction_type, then score.dominant_friction_type,
+        then signal-based inference.
+        """
 
         dominant_friction = None
         if hypothesis and hypothesis.friction_type:
             dominant_friction = hypothesis.friction_type
         elif score and score.dominant_friction_type:
-            dominant_friction = score.dominant_friction_type
+            # v2 scoring may return "no_signal" when no rules matched
+            if score.dominant_friction_type != "no_signal":
+                dominant_friction = score.dominant_friction_type
 
         if not dominant_friction:
             dominant_friction = self._infer_friction_from_signals(signals)

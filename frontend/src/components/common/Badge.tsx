@@ -22,6 +22,18 @@ interface Props {
 }
 
 export function FrictionTypeBadge({ type, size = 'md' }: Props) {
+  // Insufficient evidence — no diagnosis available
+  if (!type) {
+    const sizeClass = size === 'sm' ? 'text-xs px-2 py-0.5' : 'text-xs px-2.5 py-1';
+    return (
+      <span
+        className={`inline-flex items-center font-medium rounded ring-1 ring-inset bg-gray-50 text-gray-400 ring-gray-200 ${sizeClass}`}
+      >
+        Insufficient Evidence
+      </span>
+    );
+  }
+
   const label = CATEGORY_LABELS[type] ?? type;
   const style = CATEGORY_STYLES[type] ?? 'bg-gray-100 text-gray-600 ring-gray-200';
   const sizeClass = size === 'sm' ? 'text-xs px-2 py-0.5' : 'text-xs px-2.5 py-1';

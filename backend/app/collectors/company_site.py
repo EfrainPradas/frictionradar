@@ -5,7 +5,6 @@ from the homepage, instead of a simplistic keyword match.
 """
 
 import re
-import urllib3
 from typing import List
 
 import requests
@@ -19,12 +18,11 @@ from app.collectors.careers_url_finder import (
 )
 from app.core.config import settings
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 from app.models.company import Company
 from app.schemas.signal import SignalCreate
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 # Keywords that suggest operational friction / growth
 FRICTION_KEYWORDS = {
@@ -58,7 +56,7 @@ class CompanySiteCollector(BaseCollector):
         try:
             headers = {"User-Agent": settings.DEFAULT_USER_AGENT}
             response = requests.get(
-                target_url, headers=headers, timeout=5, verify=False
+                target_url, headers=headers, timeout=5, verify=get_ssl_verify()
             )
             if response.status_code != 200:
                 logger.info(f"[CompanySite] {company.domain}: homepage HTTP {response.status_code}")

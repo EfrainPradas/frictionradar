@@ -18,7 +18,20 @@ def build_hypothesis_from_template(
     """
     Deterministic, template-based hypothesis generator.
     Returns a dict with: summary, suggested_opportunity.
+    Returns a no-diagnosis result when dominant_friction_type is 'no_signal'.
     """
+    # Guard: insufficient evidence — no diagnosis to generate
+    if dominant_friction_type == "no_signal":
+        return {
+            "summary": (
+                f"{company_name} does not yet have enough qualifying signals "
+                f"to determine a dominant friction type."
+            ),
+            "suggested_opportunity": (
+                "Collect more signals from the careers page, about page, "
+                "and other sources before generating a hypothesis."
+            ),
+        }
 
     label = FRICTION_CATEGORY_LABELS.get(dominant_friction_type, dominant_friction_type)
 

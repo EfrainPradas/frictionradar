@@ -14,7 +14,7 @@ page contains embed markers for this ATS.
 from __future__ import annotations
 
 import re
-import urllib3
+import time
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -23,10 +23,9 @@ import requests
 from app.extraction.constants import ATSPlatform, ExtractionStrategy, ReasonCode
 from app.extraction.schemas import NormalizedJob, NormalizedJobsResult
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 # Shared HTTP session config
 DEFAULT_TIMEOUT = 12
@@ -34,6 +33,11 @@ DEFAULT_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
     "Accept": "application/json",
 }
+
+# Retry configuration
+MAX_RETRIES = 3
+RETRY_BACKOFF_BASE = 1.0  # seconds — doubles each attempt (1s, 2s, 4s)
+TRANSIENT_STATUS_CODES = {429, 500, 502, 503, 504}
 
 
 def slugify_company(name: str, domain: str) -> List[str]:
@@ -154,41 +158,111 @@ class BaseATSAdapter(ABC):
         result = self.parse_jobs(raw, api_url, domain)
         return result
 
-    # ── Shared HTTP helper ──────────────────────────────────────────
+    # ── Shared HTTP helpers (with retry) ──────────────────────────────
+
+    def _request_with_retry(
+        self,
+        method: str,
+        url: str,
+        timeout: int = DEFAULT_TIMEOUT,
+        **kwargs,
+    ) -> Optional[requests.Response]:
+        """Make an HTTP request with exponential backoff on transient errors.
+
+        Retries on: 429, 500, 502, 503, 504 status codes, timeouts, and
+        connection errors. Non-transient errors (4xx except 429) return
+        the response immediately without retry.
+
+        Returns the Response on success, or None after exhausting retries.
+        """
+        headers = kwargs.pop("headers", DEFAULT_HEADERS)
+        for attempt in range(MAX_RETRIES):
+            try:
+                resp = requests.request(
+                    method, url, headers=headers, timeout=timeout, **kwargs
+                )
+                if resp.status_code in TRANSIENT_STATUS_CODES:
+                    if attempt < MAX_RETRIES - 1:
+                        backoff = RETRY_BACKOFF_BASE * (2 ** attempt)
+                        logger.debug(
+                            f"[{self.platform.value}] {method} {url} got "
+                            f"{resp.status_code}, retrying in {backoff}s "
+                            f"(attempt {attempt + 1}/{MAX_RETRIES})"
+                        )
+                        time.sleep(backoff)
+                        continue
+                    # Final attempt failed with transient error
+                    return None
+                return resp
+            except requests.exceptions.Timeout:
+                if attempt < MAX_RETRIES - 1:
+                    backoff = RETRY_BACKOFF_BASE * (2 ** attempt)
+                    logger.debug(
+                        f"[{self.platform.value}] {method} {url} timed out, "
+                        f"retrying in {backoff}s (attempt {attempt + 1}/{MAX_RETRIES})"
+                    )
+                    time.sleep(backoff)
+                    continue
+                return None
+            except requests.exceptions.ConnectionError:
+                if attempt < MAX_RETRIES - 1:
+                    backoff = RETRY_BACKOFF_BASE * (2 ** attempt)
+                    logger.debug(
+                        f"[{self.platform.value}] {method} {url} connection error, "
+                        f"retrying in {backoff}s (attempt {attempt + 1}/{MAX_RETRIES})"
+                    )
+                    time.sleep(backoff)
+                    continue
+                return None
+            except requests.exceptions.RequestException:
+                return None  # Non-retryable error
+        return None
 
     def _get_json(
         self, url: str, timeout: int = DEFAULT_TIMEOUT
     ) -> Optional[Any]:
         """GET a URL and return parsed JSON, or None on any failure."""
+        resp = self._request_with_retry("GET", url, timeout=timeout, verify=get_ssl_verify())
+        if resp is None or resp.status_code != 200:
+            return None
         try:
-            resp = requests.get(
-                url,
-                headers=DEFAULT_HEADERS,
-                timeout=timeout,
-                verify=False,
-            )
-            if resp.status_code != 200:
-                logger.debug(
-                    f"[{self.platform.value}] HTTP {resp.status_code} for {url}"
-                )
-                return None
             return resp.json()
-        except Exception as exc:
-            logger.debug(f"[{self.platform.value}] Request failed for {url}: {exc}")
+        except (ValueError, requests.exceptions.JSONDecodeError):
             return None
 
     def _head_ok(self, url: str, timeout: int = 8) -> bool:
         """Quick HEAD check to see if a URL responds with 200."""
+        resp = self._request_with_retry(
+            "HEAD",
+            url,
+            timeout=timeout,
+            verify=get_ssl_verify(),
+            allow_redirects=True,
+            headers={"User-Agent": DEFAULT_HEADERS["User-Agent"]},
+        )
+        return resp is not None and resp.status_code == 200
+
+    def _post_json(
+        self,
+        url: str,
+        payload: dict,
+        timeout: int = DEFAULT_TIMEOUT,
+        headers: Optional[dict] = None,
+    ) -> Optional[dict]:
+        """POST JSON to a URL with retry, return parsed response or None."""
+        post_headers = {
+            "Content-Type": "application/json",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        }
+        if headers:
+            post_headers.update(headers)
+        resp = self._request_with_retry(
+            "POST", url, timeout=timeout, json=payload,
+            headers=post_headers, verify=get_ssl_verify(),
+        )
+        if resp is None or resp.status_code != 200:
+            return None
         try:
-            resp = requests.head(
-                url,
-                headers={
-                    "User-Agent": DEFAULT_HEADERS["User-Agent"],
-                },
-                timeout=timeout,
-                allow_redirects=True,
-                verify=False,
-            )
-            return resp.status_code == 200
-        except Exception:
-            return False
+            return resp.json()
+        except (ValueError, requests.exceptions.JSONDecodeError):
+            return None

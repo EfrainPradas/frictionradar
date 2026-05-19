@@ -4,7 +4,6 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional, List
 from uuid import UUID
-import traceback
 
 from app.db.session import get_db
 from app.services.browser_capture_service import browser_capture_service, PageCapture
@@ -15,6 +14,7 @@ from app.models.company import Company
 from app.models.company_job_role import CompanyJobRole
 from app.models.company_signal import CompanySignal
 from app.services.role_ingest import persist_job_role
+from app.core.security import validate_url, SSRFError
 
 router = APIRouter()
 
@@ -37,6 +37,12 @@ async def extract_careers_page(
         if not careers_url.endswith("/careers") and not careers_url.endswith("/jobs"):
             careers_url = f"https://careers.{request.domain}"
 
+    # SSRF protection: validate all URLs before navigation
+    try:
+        careers_url = validate_url(careers_url)
+    except SSRFError as e:
+        raise HTTPException(status_code=400, detail=f"Invalid URL: {e}")
+
     try:
         capture = await browser_capture_service.capture_page(
             url=careers_url,
@@ -46,14 +52,8 @@ async def extract_careers_page(
             take_screenshot=False,
             intercept_network=True,
         )
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "detail": f"Failed to capture page: {str(e)}",
-                "trace": traceback.format_exc(),
-            },
-        )
+    except Exception:
+        raise HTTPException(status_code=502, detail="Failed to capture page.")
 
     if capture.error:
         return JSONResponse(
@@ -171,19 +171,13 @@ async def extract_careers_page(
 
             db.commit()
             result["job_roles_saved"] = job_roles_saved
-        except Exception as db_error:
-            result["db_warning"] = f"DB save failed: {str(db_error)}"
+        except Exception:
+            result["db_warning"] = "DB save failed"
 
         return result
 
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "detail": f"Extraction failed: {str(e)}",
-                "trace": traceback.format_exc(),
-            },
-        )
+    except Exception:
+        raise HTTPException(status_code=500, detail="Extraction failed.")
 
 
 @router.get("/captures", response_model=List[dict])

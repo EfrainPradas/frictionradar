@@ -65,11 +65,13 @@ class NormalizedJobsResult:
 
     @property
     def success(self) -> bool:
-        return self.error is None and (
-            self.open_positions_count is not None
-            or len(self.jobs) > 0
-            or len(self.hiring_areas) > 0
-        )
+        if self.error is not None:
+            return False
+        # Explicit open_positions_count (even 0) means the collection succeeded
+        if self.open_positions_count is not None:
+            return True
+        # No positions count, but we have jobs or areas — still success
+        return len(self.jobs) > 0 or len(self.hiring_areas) > 0
 
     @property
     def jobs_count(self) -> int:

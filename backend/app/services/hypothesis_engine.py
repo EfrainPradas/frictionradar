@@ -11,6 +11,7 @@ Designed to support a future LLM integration without structural changes:
 """
 
 from uuid import UUID
+from typing import Optional
 from sqlalchemy.orm import Session
 
 from app.core.logging import logger
@@ -25,10 +26,19 @@ def generate_and_persist_hypothesis(
     db: Session,
     company_id: UUID,
     friction_score: FrictionScore,
-) -> OpportunityHypothesis:
+) -> Optional[OpportunityHypothesis]:
     """
     Use the latest friction score to generate and persist an opportunity hypothesis.
+    Returns None when there is insufficient evidence (dominant_friction_type == "no_signal").
     """
+    # No diagnosis possible without a dominant friction type
+    if friction_score.dominant_friction_type == "no_signal":
+        logger.info(
+            f"[HypothesisEngine] Skipping hypothesis for company {company_id}: "
+            f"no dominant friction type (insufficient evidence)."
+        )
+        return None
+
     company = db.query(Company).filter(Company.id == company_id).first()
     if not company:
         raise ValueError(f"Company {company_id} not found.")
@@ -38,15 +48,22 @@ def generate_and_persist_hypothesis(
     breakdown: dict = friction_score.scoring_breakdown_json or {}
     dominant = friction_score.dominant_friction_type
 
+    # v2.0.0 format wraps categories under a "categories" key
+    categories = breakdown.get("categories", breakdown)
+
     # Gather top matched signal labels from all categories
     all_matched_signals = []
-    for cat_data in breakdown.values():
-        all_matched_signals.extend(cat_data.get("matched_signals", []))
+    for cat_data in categories.values():
+        if isinstance(cat_data, dict):
+            all_matched_signals.extend(cat_data.get("matched_signals", []))
 
-    # Top categories sorted by score
+    # Top categories sorted by score (v2 uses "raw_score", v1 uses "score")
     top_categories = sorted(
-        breakdown.keys(),
-        key=lambda c: breakdown[c].get("score", 0),
+        categories.keys(),
+        key=lambda c: (
+            categories[c].get("raw_score", categories[c].get("score", 0))
+            if isinstance(categories[c], dict) else 0
+        ),
         reverse=True,
     )[:3]
 

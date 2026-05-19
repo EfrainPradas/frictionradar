@@ -5,7 +5,6 @@ the careers page, then extracts hiring categories and job count signals.
 """
 
 import re
-import urllib3
 from typing import List, Optional
 
 import requests
@@ -16,10 +15,9 @@ from app.collectors.careers_url_finder import careers_url_finder
 from app.models.company import Company
 from app.schemas.signal import SignalCreate
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 CATEGORY_KEYWORDS = {
     "retail": ["retail", "store", "cashier", "sales floor", "associate"],
@@ -138,7 +136,7 @@ class DynamicCareersCollector(BaseCollector):
         }
 
         try:
-            response = requests.get(url, headers=headers, timeout=5, allow_redirects=True, verify=False)
+            response = requests.get(url, headers=headers, timeout=5, allow_redirects=True, verify=get_ssl_verify())
             if response.status_code != 200:
                 return None
 

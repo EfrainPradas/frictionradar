@@ -37,7 +37,8 @@ const FRICTION_TYPES = [
   'tooling_inconsistency',
   'scaling_strain',
   'customer_experience_friction',
-];
+  'insufficient_evidence',
+] as const;
 
 export function CompanyTable({ companies, latestScores, companyStats = {} }: Props) {
   const navigate = useNavigate();
@@ -95,7 +96,9 @@ export function CompanyTable({ companies, latestScores, companyStats = {} }: Pro
         (c.domain ?? '').toLowerCase().includes(term);
       const matchType =
         !filterType ||
-        latestScores[c.id]?.dominant_friction_type === filterType;
+        (filterType === 'insufficient_evidence'
+          ? latestScores[c.id]?.dominant_friction_type === null
+          : latestScores[c.id]?.dominant_friction_type === filterType);
       return matchSearch && matchType;
     })
     .sort((a, b) => {
@@ -133,7 +136,7 @@ export function CompanyTable({ companies, latestScores, companyStats = {} }: Pro
           <option value="">All friction types</option>
           {FRICTION_TYPES.map((t) => (
             <option key={t} value={t}>
-              {t.replaceAll('_', ' ')}
+              {t === 'insufficient_evidence' ? 'Insufficient Evidence' : t.replaceAll('_', ' ')}
             </option>
           ))}
         </select>

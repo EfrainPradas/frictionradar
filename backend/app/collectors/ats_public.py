@@ -8,7 +8,6 @@ This is a real detector, not a placeholder.
 """
 
 import re
-import urllib3
 from typing import List, Optional
 from urllib.parse import urlparse
 
@@ -21,12 +20,11 @@ from app.collectors.careers_url_finder import (
     careers_url_finder,
 )
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 from app.models.company import Company
 from app.schemas.signal import SignalCreate
 
 logger = get_logger(__name__)
-
-urllib3.disable_warnings()
 
 # Map ATS platforms to signal types we emit
 ATS_SIGNAL_MAP = {
@@ -118,7 +116,7 @@ class AtsPublicCollector(BaseCollector):
                 headers={
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
                 },
-                verify=False,
+                verify=get_ssl_verify(),
             )
             if resp.status_code != 200:
                 return None
@@ -144,7 +142,7 @@ class AtsPublicCollector(BaseCollector):
                 headers={
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
                 },
-                verify=False,
+                verify=get_ssl_verify(),
             )
             if resp.status_code != 200:
                 return None

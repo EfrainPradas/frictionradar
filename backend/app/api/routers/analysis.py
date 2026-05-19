@@ -246,7 +246,7 @@ def build_response(
         signals_count=len(signals),
         friction_score={
             "total_score": score.total_score,
-            "dominant_friction_type": score.dominant_friction_type,
+            "dominant_friction_type": None if score.dominant_friction_type == "no_signal" else score.dominant_friction_type,
             "computed_at": score.computed_at.isoformat()
             if score and score.computed_at
             else "",
@@ -256,7 +256,7 @@ def build_response(
         hypothesis={
             "summary": hypothesis.summary,
             "suggested_opportunity": hypothesis.suggested_opportunity,
-            "friction_type": hypothesis.friction_type,
+            "friction_type": None if hypothesis.friction_type == "no_signal" else hypothesis.friction_type,
             "llm_confidence": hypothesis.llm_confidence,
             "created_at": hypothesis.created_at.isoformat()
             if hypothesis and hypothesis.created_at
@@ -549,10 +549,10 @@ def export_all_companies(db: Session = Depends(get_db)):
             "signals_count": len(signals),
             "signals": signals_data,
             "friction_score": float(score.total_score) if score else None,
-            "dominant_friction_type": score.dominant_friction_type if score else None,
+            "dominant_friction_type": None if (score and score.dominant_friction_type == "no_signal") else (score.dominant_friction_type if score else None),
             "hypothesis": {
                 "summary": hypothesis.summary,
-                "friction_type": hypothesis.friction_type,
+                "friction_type": None if hypothesis.friction_type == "no_signal" else hypothesis.friction_type,
                 "suggested_opportunity": hypothesis.suggested_opportunity,
             } if hypothesis else None,
             "evaluation": {

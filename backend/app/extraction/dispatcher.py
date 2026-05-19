@@ -188,7 +188,6 @@ def try_playwright_extraction(
         fallback_from=fallback_from,
     ) as attempt:
         loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
         try:
             result = loop.run_until_complete(
                 run_playwright_extraction(

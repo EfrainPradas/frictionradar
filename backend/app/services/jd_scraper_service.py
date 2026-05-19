@@ -22,6 +22,7 @@ from sqlalchemy import func
 
 from app.models.company_job_role import CompanyJobRole
 from app.core.logging import get_logger
+from app.core.security import get_ssl_verify
 
 logger = get_logger(__name__)
 
@@ -63,7 +64,7 @@ def _extract_from_greenhouse_api(job_url: str) -> Optional[str]:
     api_url = f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs/{job_id}"
 
     try:
-        resp = requests.get(api_url, headers={"Accept": "application/json"}, timeout=12, verify=False)
+        resp = requests.get(api_url, headers={"Accept": "application/json"}, timeout=12, verify=get_ssl_verify())
         if resp.status_code != 200:
             return None
         data = resp.json()
@@ -88,7 +89,7 @@ def _extract_from_lever_api(job_url: str) -> Optional[str]:
     api_url = f"https://api.lever.co/v0/postings/{company}/{posting_id}"
 
     try:
-        resp = requests.get(api_url, headers={"Accept": "application/json"}, timeout=12, verify=False)
+        resp = requests.get(api_url, headers={"Accept": "application/json"}, timeout=12, verify=get_ssl_verify())
         if resp.status_code != 200:
             return None
         data = resp.json()
@@ -117,7 +118,7 @@ def _extract_from_lever_api(job_url: str) -> Optional[str]:
 def _extract_from_http(job_url: str) -> Optional[str]:
     """Fetch the job page via HTTP and extract JD text with BeautifulSoup."""
     try:
-        resp = requests.get(job_url, headers=HEADERS, timeout=15, verify=False, allow_redirects=True)
+        resp = requests.get(job_url, headers=HEADERS, timeout=15, verify=get_ssl_verify(), allow_redirects=True)
         if resp.status_code != 200:
             return None
 
@@ -175,7 +176,7 @@ def _extract_from_workday_api(job_url: str) -> Optional[str]:
             api_url,
             headers={"Accept": "application/json", **HEADERS},
             timeout=12,
-            verify=False,
+            verify=get_ssl_verify(),
         )
         if resp.status_code != 200:
             return None

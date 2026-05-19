@@ -29,6 +29,7 @@ from uuid import UUID, uuid4
 import requests
 from sqlalchemy.orm import Session
 
+from app.core.security import get_ssl_verify
 from .domain_models import CompanyDomain, DomainResolutionRun
 from .models import CompanyMaster, CompanySourceRecord
 from .staging_models import CompanyStagingNormalized
@@ -381,7 +382,7 @@ def _verify_domain(cd: CompanyDomain) -> None:
             timeout=HTTP_TIMEOUT,
             headers={"User-Agent": USER_AGENT},
             allow_redirects=True,
-            verify=False,
+            verify=get_ssl_verify(),
         )
         cd.http_status = resp.status_code
 

@@ -50,6 +50,14 @@ _JUNK_PATTERNS = [
     # Marketing section headers:
     "contact center leaders", "digital leaders", "r&d leadership",
     "bench scientists", "leading brands", "grow their business",
+    # Benefits / perks page sections (leavitt.com and similar):
+    # The raw scraper mistakes benefit-page headings for job cards.
+    # Patterns here are chosen to be unlikely substrings of real titles
+    # (e.g. "paid vacation" won't appear inside "Senior Vacation Planner").
+    "paid vacation", "sick leave", "mental wellbeing", "wellness program",
+    "employee recognition", "voluntary products", "teledoc",
+    "paid time off", "retirement plan", "health & wellness", "holiday pay",
+    "401(k)", "pto policy",
 ]
 
 # Exact-match department/section labels. These short strings pass
@@ -133,6 +141,12 @@ class FunctionInferenceEngine:
             "data visualization", "visualization", "etl",
             "data engineer", "data science", "data scientist",
             "machine learning", "ml engineer",
+            # Data leadership titles — were falling to unknown because the
+            # bare token "data" wasn't in the list and these compounds
+            # weren't either.
+            "director of data", "head of data", "vp of data",
+            "chief data officer", "data platform", "data infrastructure",
+            "analytics engineer", "data warehouse",
         ],
         "finance": [
             "finance", "financial", "accountant", "accounting",
@@ -218,7 +232,7 @@ class FunctionInferenceEngine:
             "programmer",
             # Coverage gaps:
             "tech lead", "technical lead", "cloud engineer",
-            "security engineer", "ml engineer", "data engineer",
+            "security engineer",
             "staff engineer", "principal engineer", "qa engineer",
             # Fix G2 — architect variants:
             "solution architect", "software architect",

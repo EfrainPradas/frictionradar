@@ -14,26 +14,20 @@ router = APIRouter()
 
 
 @router.post("/companies/{company_id}/score", response_model=FrictionScoreRead)
-def trigger_scoring(company_id: UUID, db: Session = Depends(get_db)):
+async def trigger_scoring(company_id: UUID, db: Session = Depends(get_db)):
     """Compute and persist a new friction score for the given company."""
     company = db.query(Company).filter(Company.id == company_id).first()
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")
 
-    import asyncio
     from app.services.collection_orchestrator import extract_careers_evidence
 
     open_positions = None
     if company.domain:
         try:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            try:
-                open_positions = loop.run_until_complete(
-                    extract_careers_evidence(db, company_id, company.domain)
-                )
-            finally:
-                loop.close()
+            open_positions = await extract_careers_evidence(
+                db, company_id, company.domain
+            )
         except Exception as e:
             logger.warning(f"Careers extraction failed during scoring: {e}")
 
