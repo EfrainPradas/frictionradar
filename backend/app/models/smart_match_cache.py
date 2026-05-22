@@ -30,7 +30,7 @@ class SmartMatchCache(Base):
     main_pain = Column(Text, nullable=True)
     where_pain_lives = Column(Text, nullable=True)
     what_the_company_needs = Column(Text, nullable=True)
-    best_attack_angle = Column(Text, nullable=True)
+    recommended_positioning = Column(Text, nullable=True)
 
     confidence = Column(Text, nullable=True)
     eligibility_gate = Column(Text, nullable=True)

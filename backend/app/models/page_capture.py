@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import Column, String, DateTime, Text, Integer, ForeignKey
+from sqlalchemy import Column, String, DateTime, Text, Integer, ForeignKey, text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
@@ -33,7 +33,7 @@ class PageCapture(Base):
     page_type_confidence = Column(String, nullable=True)
 
     captured_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
 
     extraction_status = Column(String, default="pending")

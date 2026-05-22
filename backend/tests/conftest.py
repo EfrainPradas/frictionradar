@@ -212,6 +212,7 @@ def make_collection_run(
     r.company_id = company_id or uuid4()
     r.collector_type = "orchestrator"
     r.status = status
+    r.created_at = datetime.now(timezone.utc)
     r.started_at = datetime.now(timezone.utc)
     r.finished_at = datetime.now(timezone.utc) if status in ("completed", "failed") else None
     r.error_message = "Test error" if status == "failed" else None

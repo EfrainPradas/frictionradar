@@ -6,6 +6,11 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://user:password@localhost:5432/friction_radar")
 
+    # Ascendia database (cross-project read-only for candidate intelligence)
+    ASCENDIA_DATABASE_URL: str | None = os.getenv("ASCENDIA_DATABASE_URL")
+    ASCENDIA_SUPABASE_URL: str | None = os.getenv("ASCENDIA_SUPABASE_URL")
+    ASCENDIA_SUPABASE_KEY: str | None = os.getenv("ASCENDIA_SUPABASE_KEY")
+
     # Supabase (for REST ops if needed, although we use SQLAlchemy direct for now)
     SUPABASE_URL: str | None = os.getenv("SUPABASE_URL")
     SUPABASE_KEY: str | None = os.getenv("SUPABASE_KEY")

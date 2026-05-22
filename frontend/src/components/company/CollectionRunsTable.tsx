@@ -20,12 +20,12 @@ export function CollectionRunsTable({ runs }: Props) {
     <div className="overflow-x-auto">
       <table className="min-w-full text-sm">
         <thead>
-          <tr className="border-b border-gray-100">
+          <tr className="border-b border-orbital-border">
             {['Collector', 'Status', 'Started', 'Finished', 'Signals', 'Error'].map(
               (h) => (
                 <th
                   key={h}
-                  className="py-2 px-3 text-left text-xs font-semibold text-gray-400 uppercase tracking-wide"
+                  className="py-2 px-3 text-left text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600"
                 >
                   {h}
                 </th>
@@ -33,28 +33,28 @@ export function CollectionRunsTable({ runs }: Props) {
             )}
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-50">
+        <tbody className="divide-y divide-orbital-border/50">
           {runs.map((run) => (
-            <tr key={run.id}>
-              <td className="py-2 px-3 font-mono text-xs text-gray-600">
+            <tr key={run.id} className="hover:bg-white/[0.02] transition-colors">
+              <td className="py-2 px-3 font-mono text-xs text-gray-500">
                 {run.collector_type}
               </td>
               <td className="py-2 px-3">
                 <CollectionStatusBadge status={run.status} />
               </td>
-              <td className="py-2 px-3 text-xs text-gray-400 whitespace-nowrap">
+              <td className="py-2 px-3 text-[11px] text-gray-500 whitespace-nowrap font-mono">
                 {new Date(run.started_at).toLocaleString()}
               </td>
-              <td className="py-2 px-3 text-xs text-gray-400 whitespace-nowrap">
+              <td className="py-2 px-3 text-[11px] text-gray-500 whitespace-nowrap font-mono">
                 {run.finished_at
                   ? new Date(run.finished_at).toLocaleString()
                   : '—'}
               </td>
-              <td className="py-2 px-3 text-xs text-gray-500 tabular-nums">
+              <td className="py-2 px-3 text-xs text-gray-400 tabular-nums">
                 {(run.metadata_json as { signals_extracted?: number } | null)
                   ?.signals_extracted ?? '—'}
               </td>
-              <td className="py-2 px-3 text-xs text-red-500 max-w-xs">
+              <td className="py-2 px-3 text-xs text-red-400/70 max-w-xs">
                 {run.error_message ?? '—'}
               </td>
             </tr>

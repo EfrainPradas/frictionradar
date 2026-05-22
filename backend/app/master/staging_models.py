@@ -9,7 +9,7 @@ Three tables:
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import Column, DateTime, ForeignKey, Integer, String, Text
+from sqlalchemy import Column, DateTime, ForeignKey, Integer, String, Text, text
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import relationship
 
@@ -27,7 +27,7 @@ class ImportRun(Base):
     source_type = Column(String, nullable=False, default="json_file")
 
     started_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
     finished_at = Column(DateTime(timezone=True), nullable=True)
 
@@ -42,7 +42,7 @@ class ImportRun(Base):
     error_message = Column(Text, nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
 
     raw_records = relationship(
@@ -75,7 +75,7 @@ class CompanyStagingRaw(Base):
     error_message = Column(Text, nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
 
     import_run = relationship("ImportRun", back_populates="raw_records")
@@ -119,7 +119,7 @@ class CompanyStagingNormalized(Base):
     action = Column(String, nullable=False, default="pending", index=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
 
     import_run = relationship("ImportRun", back_populates="normalized_records")

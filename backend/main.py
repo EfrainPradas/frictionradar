@@ -25,6 +25,9 @@ from app.api.routers import (
     dashboard,
     pipeline,
     internal,
+    temporal,
+    intelligence,
+    operations,
 )
 from app.core.logging import setup_logging
 from app.core.security import (
@@ -96,8 +99,17 @@ app.include_router(dashboard.router, prefix="/api/v1", tags=["Dashboard"])
 # Commercial Pipeline (internal review workflow)
 app.include_router(pipeline.router, prefix="/api/v1", tags=["Pipeline"])
 
+# Temporal Intelligence
+app.include_router(temporal.router, prefix="/api/v1", tags=["Temporal"])
+
 # Internal server-to-server API (NovaWork VIP add-on integration)
 app.include_router(internal.router, prefix="/internal/v1", tags=["Internal"])
+
+# Candidate Intelligence & Alignment
+app.include_router(intelligence.router, prefix="/api/v1/intelligence", tags=["Intelligence"])
+
+# Operations (Pipeline Status)
+app.include_router(operations.router, prefix="/api/v1/operations", tags=["Operations"])
 
 
 @app.get("/", include_in_schema=False)

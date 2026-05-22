@@ -11,7 +11,7 @@ interface CompanyVerdict {
     main_pain: string;
     where_pain_lives: string;
     what_the_company_needs: string;
-    best_attack_angle: string;
+    recommended_positioning: string;
   };
 }
 
@@ -28,9 +28,9 @@ export function CompanyTypeCard({ companyId }: Props) {
 
   if (isLoading) {
     return (
-      <div className="animate-pulse">
-        <div className="h-4 bg-gray-200 rounded w-1/4 mb-2"></div>
-        <div className="h-20 bg-gray-100 rounded"></div>
+      <div className="animate-pulse space-y-2">
+        <div className="h-4 bg-white/5 rounded w-1/4"></div>
+        <div className="h-10 bg-white/[0.02] rounded"></div>
       </div>
     );
   }
@@ -42,20 +42,20 @@ export function CompanyTypeCard({ companyId }: Props) {
   const getTargetFitBadge = (fit: string) => {
     if (fit === 'primary') {
       return (
-        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-          Primary Target
+        <span className="inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20">
+          Strong Fit
         </span>
       );
     }
     if (fit === 'secondary') {
       return (
-        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-          Secondary Target
+        <span className="inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-amber-500/10 text-amber-400 ring-1 ring-inset ring-amber-500/20">
+          Potential Fit
         </span>
       );
     }
     return (
-      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+      <span className="inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-white/5 text-gray-500 ring-1 ring-inset ring-white/10">
         Unclear
       </span>
     );
@@ -64,20 +64,20 @@ export function CompanyTypeCard({ companyId }: Props) {
   const getConfidenceBadge = (confidence: string) => {
     if (confidence === 'high') {
       return (
-        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+        <span className="inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20">
           High
         </span>
       );
     }
-    if (confidence === 'medium') {
+    if (confidence === 'medium' || confidence === 'moderate') {
       return (
-        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+        <span className="inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-amber-500/10 text-amber-400 ring-1 ring-inset ring-amber-500/20">
           Medium
         </span>
       );
     }
     return (
-      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800">
+      <span className="inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-white/5 text-gray-500 ring-1 ring-inset ring-white/10">
         Low
       </span>
     );
@@ -97,29 +97,29 @@ export function CompanyTypeCard({ companyId }: Props) {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-4 flex-wrap">
         <div>
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Company Type</p>
-          <p className="text-sm font-medium text-gray-900">{formatCompanyType(verdict.company_type)}</p>
+          <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Company Type</p>
+          <p className="text-sm font-medium text-gray-200">{formatCompanyType(verdict.company_type)}</p>
         </div>
-        <div className="ml-4">
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Target Fit</p>
+        <div>
+          <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Target Fit</p>
           {getTargetFitBadge(verdict.target_fit)}
         </div>
-        <div className="ml-4">
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Confidence</p>
+        <div>
+          <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Confidence</p>
           {getConfidenceBadge(verdict.company_type_confidence)}
         </div>
       </div>
-      
+
       <div>
-        <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Analysis Mode</p>
-        <p className="text-sm text-gray-600">{formatAnalysisMode(verdict.analysis_mode)}</p>
+        <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Analysis Mode</p>
+        <p className="text-sm text-gray-400">{formatAnalysisMode(verdict.analysis_mode)}</p>
       </div>
 
-      <div className="pt-2 border-t border-gray-100">
-        <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Why</p>
-        <p className="text-sm text-gray-600">{verdict.company_type_reason}</p>
+      <div className="pt-2 border-t border-orbital-border">
+        <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Why</p>
+        <p className="text-sm text-gray-400">{verdict.company_type_reason}</p>
       </div>
     </div>
   );

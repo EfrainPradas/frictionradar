@@ -32,7 +32,6 @@ const INITIAL: RunState = {
 };
 
 export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrency = 5 }: Props) {
-  // ── All hooks MUST be before any conditional return ──────────
   const [running, setRunning] = useState(false);
   const [state, setState] = useState<RunState>(INITIAL);
   const [confirmOpen, setConfirmOpen] = useState(false);
@@ -59,7 +58,6 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
     setRunning(true);
     cancelRef.current = false;
 
-    // Filter: only analyze companies without a recent score
     const toAnalyze = analyzedIds
       ? companies.filter((c) => !analyzedIds.has(c.id))
       : companies;
@@ -167,10 +165,10 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
     const ss = String(elapsed % 60).padStart(2, '0');
 
     return (
-      <div className="rounded border border-gray-200 bg-white p-4 space-y-3">
+      <div className="rounded-lg border border-orbital-border bg-[#0b0f12] p-4 space-y-3">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-semibold text-gray-800">
+            <p className="text-sm font-semibold text-gray-200">
               Re-analyzing companies…
             </p>
             <p className="text-xs text-gray-500">
@@ -180,18 +178,18 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
           </div>
           <div className="flex items-center gap-4">
             <div className="text-right">
-              <p className="text-lg font-mono font-bold text-gray-900">
+              <p className="text-lg font-mono font-bold text-gray-200">
                 {mm}:{ss}
               </p>
               {state.done > 0 && (
-                <p className="text-xs text-gray-400">
+                <p className="text-[10px] text-gray-600">
                   {avgPerCompany.toFixed(1)}s/co · ETA ~{etaMin}m
                 </p>
               )}
             </div>
             <button
               onClick={cancel}
-              className="text-xs text-red-600 hover:text-red-800 underline"
+              className="text-xs text-red-400 hover:text-red-300 underline"
             >
               Cancel
             </button>
@@ -199,18 +197,18 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
         </div>
 
         {/* Gauge */}
-        <div className="relative h-3 w-full rounded-full bg-gray-100 overflow-hidden">
+        <div className="relative h-3 w-full rounded-full bg-white/5 overflow-hidden">
           <div
-            className="absolute inset-y-0 left-0 bg-emerald-500 transition-all duration-500 rounded-full"
+            className="absolute inset-y-0 left-0 bg-amber-500/60 transition-all duration-500 rounded-full"
             style={{ width: `${pct}%` }}
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-[10px] font-bold text-gray-700">{pct}%</span>
+            <span className="text-[10px] font-bold text-gray-300">{pct}%</span>
           </div>
         </div>
 
         {state.current.length > 0 && (
-          <p className="text-xs text-gray-500 truncate">
+          <p className="text-xs text-gray-600 truncate">
             In progress: {state.current.slice(0, 3).join(', ')}
             {state.current.length > 3
               ? ` +${state.current.length - 3}`
@@ -231,8 +229,8 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
       (pending * avgSeconds) / concurrency / 60,
     );
     return (
-      <div className="rounded border border-amber-200 bg-amber-50 p-4 space-y-3">
-        <p className="text-sm text-amber-900">
+      <div className="rounded-lg border border-amber-500/20 bg-amber-950/20 p-4 space-y-3">
+        <p className="text-sm text-amber-200">
           {analyzedIds ? (
             <>Will analyze <strong>{pending}</strong> pending companies ({companies.length - pending} already done). </>
           ) : (
@@ -244,13 +242,13 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
         <div className="flex gap-2">
           <button
             onClick={run}
-            className="px-3 py-1.5 bg-emerald-600 text-white text-sm rounded hover:bg-emerald-700"
+            className="px-3 py-1.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-sm rounded hover:bg-amber-500/20 transition-colors"
           >
             Start re-analysis
           </button>
           <button
             onClick={() => setConfirmOpen(false)}
-            className="px-3 py-1.5 bg-white border border-gray-300 text-sm rounded hover:bg-gray-50"
+            className="px-3 py-1.5 bg-white/5 border border-orbital-border text-gray-400 text-sm rounded hover:bg-white/10 transition-colors"
           >
             Cancel
           </button>
@@ -270,7 +268,7 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
       <button
         onClick={() => setConfirmOpen(true)}
         disabled={companies.length === 0}
-        className="px-3 py-1.5 bg-white border border-gray-300 text-sm rounded hover:bg-gray-50 disabled:opacity-50"
+        className="px-3 py-1.5 bg-white/5 border border-orbital-border text-gray-400 text-sm rounded hover:bg-white/10 disabled:opacity-30 transition-colors"
       >
         {analyzedIds
           ? `Analyze pending (${companies.filter((c) => !analyzedIds.has(c.id)).length})`
@@ -279,17 +277,17 @@ export function BulkReanalyzeButton({ companies, analyzedIds, onDone, concurrenc
       <button
         onClick={exportJson}
         disabled={companies.length === 0 || exporting}
-        className="px-3 py-1.5 bg-white border border-gray-300 text-sm rounded hover:bg-gray-50 disabled:opacity-50"
+        className="px-3 py-1.5 bg-white/5 border border-orbital-border text-gray-400 text-sm rounded hover:bg-white/10 disabled:opacity-30 transition-colors"
       >
         {exporting ? 'Exporting...' : 'Export JSON'}
       </button>
       {state.failedNames.length > 0 && (
-        <span className="text-xs text-gray-500">
+        <span className="text-[10px] text-gray-600">
           {state.failedNames.length} failed last run
         </span>
       )}
       {resultSummary && (
-        <span className="text-xs text-gray-500">{resultSummary}</span>
+        <span className="text-[10px] text-gray-600">{resultSummary}</span>
       )}
     </div>
   );

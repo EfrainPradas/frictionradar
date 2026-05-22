@@ -12,18 +12,19 @@ export function ScoreCard({ score, verdictType }: Props) {
 
   const isWeakEvidence = verdictType === 'preliminary' || score.total_score === 0 || score.dominant_friction_type === null;
 
+  const scoreColor =
+    score.total_score >= 6 ? 'text-red-400' :
+    score.total_score >= 3 ? 'text-amber-400' :
+    'text-emerald-400';
+
   return (
     <div className="space-y-4">
-      {/* Friction Level - Plain English */}
+      {/* Friction Level */}
       <div className="flex items-start gap-6 flex-wrap">
         <div>
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Overall assessment</p>
+          <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Overall assessment</p>
           <div className="flex items-center gap-3">
-            <span className={`text-2xl font-bold ${
-              score.total_score >= 6 ? 'text-red-600' : 
-              score.total_score >= 3 ? 'text-yellow-600' : 
-              'text-emerald-600'
-            }`}>
+            <span className={`text-2xl font-bold ${isWeakEvidence ? 'text-gray-500' : scoreColor}`}>
               {isWeakEvidence ? 'Insufficient data' : frictionInfo.level}
             </span>
             <span className="text-sm text-gray-500">
@@ -32,9 +33,9 @@ export function ScoreCard({ score, verdictType }: Props) {
           </div>
         </div>
         <div>
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">What this means</p>
-          <p className="text-sm text-gray-700 max-w-md">
-            {isWeakEvidence 
+          <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">What this means</p>
+          <p className="text-sm text-gray-400 max-w-md">
+            {isWeakEvidence
               ? 'Not enough evidence to determine a clear friction pattern yet.'
               : frictionInfo.description
             }
@@ -42,27 +43,27 @@ export function ScoreCard({ score, verdictType }: Props) {
         </div>
       </div>
 
-      {/* Main challenge - only show when evidence is not weak */}
+      {/* Primary challenge */}
       {!isWeakEvidence && (
         <div>
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Primary challenge</p>
+          <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Primary challenge</p>
           <FrictionTypeBadge type={score.dominant_friction_type} size="md" />
         </div>
       )}
 
-      {/* When computed */}
+      {/* Last analyzed */}
       <div>
-        <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Last analyzed</p>
-        <p className="text-sm text-gray-600">
+        <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Last analyzed</p>
+        <p className="text-sm text-gray-500">
           {new Date(score.computed_at).toLocaleDateString()}
         </p>
       </div>
 
-      {/* Open Positions Count */}
+      {/* Open Positions */}
       {score.open_positions_count && score.open_positions_count > 0 && (
         <div>
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Open positions</p>
-          <p className="text-lg font-semibold text-blue-600">
+          <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Open positions</p>
+          <p className="text-lg font-semibold text-blue-400">
             {score.open_positions_count.toLocaleString()} roles available
           </p>
         </div>

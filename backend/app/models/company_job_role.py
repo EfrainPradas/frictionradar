@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import Column, String, DateTime, Numeric, Text, ForeignKey
+from sqlalchemy import Column, String, DateTime, Numeric, Text, ForeignKey, text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
@@ -23,10 +23,12 @@ class CompanyJobRole(Base):
     functional_area_confidence = Column(String, nullable=True)
 
     discovered_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
     )
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
     )
 
     company = relationship("Company", back_populates="job_roles")
@@ -53,7 +55,8 @@ class CompanyRoleSignal(Base):
     confidence = Column(Numeric, nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
     )
 
     job_role = relationship("CompanyJobRole", back_populates="role_signals")
@@ -75,10 +78,12 @@ class HiringPattern(Base):
     unique_functions_found = Column(Numeric, default=0)
 
     generated_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
     )
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
     )
 
     company = relationship("Company", back_populates="hiring_patterns")

@@ -22,19 +22,24 @@ export function BreakdownPanel({ breakdown, maxScore = 10 }: Props) {
         if (!data) return null;
         const pct = Math.min((data.score / maxScore) * 100, 100);
 
+        const barColor =
+          data.score >= 7 ? 'bg-red-400' :
+          data.score >= 4 ? 'bg-amber-400' :
+          'bg-emerald-400';
+
         return (
           <div key={cat} className="space-y-1.5">
             <div className="flex items-center justify-between gap-4">
               <FrictionTypeBadge type={cat} size="sm" />
-              <span className="text-sm font-semibold text-gray-700 tabular-nums">
+              <span className="text-sm font-mono text-gray-300 tabular-nums">
                 {data.score.toFixed(2)}
               </span>
             </div>
 
             {/* Score bar */}
-            <div className="h-1.5 w-full rounded-full bg-gray-100 overflow-hidden">
+            <div className="h-1.5 w-full rounded-full bg-white/5 overflow-hidden">
               <div
-                className="h-full rounded-full bg-gray-400 transition-all"
+                className={`h-full rounded-full ${barColor} transition-all`}
                 style={{ width: `${pct}%` }}
               />
             </div>
@@ -45,14 +50,14 @@ export function BreakdownPanel({ breakdown, maxScore = 10 }: Props) {
                 {data.matched_signals.map((sig) => (
                   <span
                     key={sig}
-                    className="text-xs bg-gray-100 text-gray-600 rounded px-2 py-0.5 font-mono"
+                    className="text-[10px] bg-white/5 text-gray-500 rounded px-1.5 py-0.5 font-mono"
                   >
                     {sig}
                   </span>
                 ))}
               </div>
             ) : (
-              <p className="text-xs text-gray-400">No signals matched</p>
+              <p className="text-[10px] text-gray-700">No signals matched</p>
             )}
           </div>
         );

@@ -1,0 +1,125 @@
+/* ── FrictionRadar v2 — Corporate Intelligence Design Language ───────── */
+
+:root[data-theme="v2"] {
+  /* Surfaces */
+  --fr-bg: #f7f8fa;
+  --fr-paper: #ffffff;
+  --fr-paper-2: #fbfbfd;
+  --fr-elevated: #ffffff;
+  --fr-overlay: rgba(15, 23, 42, 0.05);
+
+  /* Lines */
+  --fr-line: #e5e7eb;
+  --fr-line-strong: #d1d5db;
+  --fr-line-focus: #0f172a;
+
+  /* Text */
+  --fr-ink: #0f172a;
+  --fr-ink-soft: #334155;
+  --fr-ink-mute: #64748b;
+  --fr-ink-faint: #94a3b8;
+
+  /* Accents */
+  --fr-gold: #a47b2b;
+  --fr-gold-soft: #d6b97a;
+  --fr-gold-tint: rgba(164, 123, 43, 0.08);
+  --fr-blue: #1e3a8a;
+  --fr-blue-soft: #3b82f6;
+  --fr-blue-tint: rgba(30, 58, 138, 0.06);
+
+  /* Pressure ramp (heatmap) */
+  --fr-pressure-0: #f8fafc;
+  --fr-pressure-1: #fef3e8;
+  --fr-pressure-2: #fde0bf;
+  --fr-pressure-3: #f9c089;
+  --fr-pressure-4: #ed9856;
+  --fr-pressure-5: #d97333;
+  --fr-pressure-6: #b85420;
+
+  /* Velocity ramp (signed) */
+  --fr-vel-down: #16a34a;
+  --fr-vel-neutral: #94a3b8;
+  --fr-vel-up: #dc2626;
+
+  /* Shadows */
+  --fr-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --fr-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --fr-shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+
+  /* Radii */
+  --fr-r-xs: 6px;
+  --fr-r-sm: 8px;
+  --fr-r: 12px;
+  --fr-r-lg: 16px;
+  --fr-r-xl: 24px;
+}
+
+/* ── Body theme override when v2 is active ──────────────────────────── */
+html[data-theme="v2"] body {
+  background: var(--fr-bg);
+  color: var(--fr-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Kill cinematic decorations under v2 */
+html[data-theme="v2"] body::before,
+html[data-theme="v2"] body::after {
+  content: none;
+}
+
+html[data-theme="v2"] ::-webkit-scrollbar-thumb {
+  background-color: rgba(15, 23, 42, 0.18);
+}
+
+html[data-theme="v2"] ::selection {
+  background: var(--fr-blue-tint);
+  color: var(--fr-ink);
+}
+
+html[data-theme="v2"] *:focus-visible {
+  outline: 2px solid var(--fr-blue-soft);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* ── v2 utility classes ──────────────────────────────────────────────── */
+.v2-surface {
+  background: var(--fr-paper);
+  border: 1px solid var(--fr-line);
+  border-radius: var(--fr-r-lg);
+  box-shadow: var(--fr-shadow-sm);
+}
+
+.v2-surface-elev {
+  background: var(--fr-paper);
+  border: 1px solid var(--fr-line);
+  border-radius: var(--fr-r-lg);
+  box-shadow: var(--fr-shadow);
+}
+
+.v2-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--fr-overlay);
+  color: var(--fr-ink-soft);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.v2-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fr-ink-mute);
+}
+
+.v2-divider {
+  height: 1px;
+  background: var(--fr-line);
+  width: 100%;
+}

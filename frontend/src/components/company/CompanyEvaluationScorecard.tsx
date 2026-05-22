@@ -24,9 +24,9 @@ const KPI_ORDER: Array<keyof CompanyEvaluation['kpis']> = [
 ];
 
 const LEVEL_STYLES: Record<KpiLevel, string> = {
-  high: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  moderate: 'bg-amber-50 text-amber-700 border-amber-200',
-  low: 'bg-gray-50 text-gray-600 border-gray-200',
+  high: 'bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20',
+  moderate: 'bg-amber-500/10 text-amber-400 ring-1 ring-inset ring-amber-500/20',
+  low: 'bg-white/5 text-gray-500 ring-1 ring-inset ring-white/10',
 };
 
 const DIAGNOSTIC_LABEL: Record<DiagnosticState, string> = {
@@ -38,17 +38,17 @@ const DIAGNOSTIC_LABEL: Record<DiagnosticState, string> = {
 };
 
 const DIAGNOSTIC_STYLES: Record<DiagnosticState, string> = {
-  insufficient_evidence: 'bg-gray-100 text-gray-700',
-  broad_hiring_pattern_detected: 'bg-sky-50 text-sky-700',
-  specific_pain_emerging: 'bg-indigo-50 text-indigo-700',
-  specific_pain_identified: 'bg-violet-50 text-violet-700',
-  ready_for_positioning: 'bg-emerald-50 text-emerald-700',
+  insufficient_evidence: 'bg-white/5 text-gray-500 ring-1 ring-inset ring-white/10',
+  broad_hiring_pattern_detected: 'bg-sky-500/10 text-sky-400 ring-1 ring-inset ring-sky-500/20',
+  specific_pain_emerging: 'bg-violet-500/10 text-violet-400 ring-1 ring-inset ring-violet-500/20',
+  specific_pain_identified: 'bg-amber-500/10 text-amber-400 ring-1 ring-inset ring-amber-500/20',
+  ready_for_positioning: 'bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20',
 };
 
 function LevelBadge({ level }: { level: KpiLevel }) {
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium capitalize ${LEVEL_STYLES[level]}`}
+      className={`inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${LEVEL_STYLES[level]}`}
     >
       {level}
     </span>
@@ -63,23 +63,23 @@ export function CompanyEvaluationScorecard({ companyId }: Props) {
   });
 
   if (isLoading) {
-    return <div className="text-sm text-gray-500">Loading evaluation…</div>;
+    return <div className="text-sm text-gray-600">Loading evaluation…</div>;
   }
 
   if (error || !data) {
-    return <div className="text-sm text-gray-500">Evaluation not available yet.</div>;
+    return <div className="text-sm text-gray-600">Evaluation not available yet.</div>;
   }
 
-  const diagnosticClass = DIAGNOSTIC_STYLES[data.diagnostic_state] ?? 'bg-gray-100 text-gray-700';
+  const diagnosticClass = DIAGNOSTIC_STYLES[data.diagnostic_state] ?? 'bg-white/5 text-gray-500 ring-1 ring-inset ring-white/10';
   const diagnosticLabel = DIAGNOSTIC_LABEL[data.diagnostic_state] ?? data.diagnostic_state;
 
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
-        <span className={`inline-flex items-center rounded px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${diagnosticClass}`}>
+        <span className={`inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${diagnosticClass}`}>
           {diagnosticLabel}
         </span>
-        <span className="text-xs text-gray-500">
+        <span className="text-[10px] text-gray-600 uppercase tracking-wider">
           {data.evidence.open_positions_count > 0 && `${data.evidence.open_positions_count} open roles · `}
           {data.evidence.visible_hiring_areas} hiring areas · {data.evidence.distinct_signal_types} distinct signals
         </span>
@@ -87,26 +87,26 @@ export function CompanyEvaluationScorecard({ companyId }: Props) {
 
       <div className="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3">
         {KPI_ORDER.map((key) => (
-          <div key={key} className="flex items-center justify-between rounded border border-gray-100 px-3 py-2">
-            <span className="text-xs text-gray-600">{KPI_LABELS[key]}</span>
+          <div key={key} className="flex items-center justify-between rounded border border-orbital-border bg-[#080b0e] px-3 py-2">
+            <span className="text-[10px] text-gray-500 uppercase tracking-wider">{KPI_LABELS[key]}</span>
             <LevelBadge level={data.kpis[key]} />
           </div>
         ))}
       </div>
 
-      <div className="rounded border border-gray-100 bg-gray-50 px-3 py-2 text-sm text-gray-700 leading-relaxed">
+      <div className="rounded border border-orbital-border bg-[#080b0e] px-3 py-2 text-sm text-gray-300 leading-relaxed">
         {data.summary}
       </div>
 
       {data.next_best_step && (
         <div className="text-xs text-gray-500">
-          <span className="font-medium text-gray-600">Next best step: </span>
+          <span className="font-medium text-gray-400">Next best step: </span>
           {data.next_best_step}
         </div>
       )}
 
       {!data.allow_specific_pain_output && (
-        <div className="text-xs text-amber-700">
+        <div className="text-xs text-amber-400/80">
           Specific-pain outputs are gated until Pain Clarity and Function Concentration both reach at least Moderate.
         </div>
       )}

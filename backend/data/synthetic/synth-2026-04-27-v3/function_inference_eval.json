@@ -1,0 +1,121 @@
+{
+  "overall": {
+    "n_total": 9203,
+    "n_in_scope": 8515,
+    "n_out_of_scope": 688,
+    "accuracy": 0.9107
+  },
+  "per_class": {
+    "customer_success": {
+      "n": 612,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 612,
+      "fp": 0,
+      "fn": 0
+    },
+    "data_analytics": {
+      "n": 577,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 577,
+      "fp": 0,
+      "fn": 0
+    },
+    "engineering": {
+      "n": 3318,
+      "precision": 1.0,
+      "recall": 0.873,
+      "tp": 2895,
+      "fp": 0,
+      "fn": 423
+    },
+    "finance": {
+      "n": 156,
+      "precision": 1.0,
+      "recall": 0.763,
+      "tp": 119,
+      "fp": 0,
+      "fn": 37
+    },
+    "marketing": {
+      "n": 452,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 452,
+      "fp": 0,
+      "fn": 0
+    },
+    "operations": {
+      "n": 1158,
+      "precision": 1.0,
+      "recall": 0.741,
+      "tp": 858,
+      "fp": 0,
+      "fn": 300
+    },
+    "product": {
+      "n": 940,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 940,
+      "fp": 0,
+      "fn": 0
+    },
+    "sales": {
+      "n": 1302,
+      "precision": 0.813,
+      "recall": 1.0,
+      "tp": 1302,
+      "fp": 300,
+      "fn": 0
+    }
+  },
+  "confusion_in_scope": {
+    "engineering": {
+      "engineering": 2895,
+      "unknown": 423
+    },
+    "data_analytics": {
+      "data_analytics": 577
+    },
+    "product": {
+      "product": 940
+    },
+    "marketing": {
+      "marketing": 452
+    },
+    "operations": {
+      "operations": 858,
+      "sales": 300
+    },
+    "customer_success": {
+      "customer_success": 612
+    },
+    "sales": {
+      "sales": 1302
+    },
+    "finance": {
+      "finance": 119,
+      "junk": 37
+    }
+  },
+  "out_of_scope_distribution": {
+    "other": {
+      "unknown": 78,
+      "it": 96,
+      "recruiting_talent": 81,
+      "hr_people": 71
+    },
+    "editorial": {
+      "unknown": 191
+    },
+    "teaching": {
+      "education": 43
+    },
+    "content": {
+      "unknown": 128
+    }
+  },
+  "n_per_role": 9203
+}

@@ -23,11 +23,11 @@ function getStrengthStyles(strength: 'strong' | 'medium' | 'weak'): {
 } {
   switch (strength) {
     case 'strong':
-      return { badge: 'bg-emerald-100 text-emerald-800', text: 'font-semibold text-gray-900' };
+      return { badge: 'bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20', text: 'font-medium text-gray-200' };
     case 'medium':
-      return { badge: 'bg-gray-100 text-gray-700', text: 'font-medium text-gray-700' };
+      return { badge: 'bg-white/5 text-gray-400 ring-1 ring-inset ring-white/10', text: 'text-gray-300' };
     case 'weak':
-      return { badge: 'bg-gray-50 text-gray-400', text: 'text-gray-500' };
+      return { badge: 'bg-white/[0.02] text-gray-600 ring-1 ring-inset ring-white/5', text: 'text-gray-500' };
   }
 }
 
@@ -96,7 +96,7 @@ export function SignalsTable({ signals, showDeduplicated = true }: Props) {
   return (
     <div className="space-y-3">
       {hasDuplicates && (
-        <div className="text-xs text-gray-500">
+        <div className="text-[10px] text-gray-600">
           Showing {groupedSignals.length} unique signals from {signals.length} occurrences
         </div>
       )}
@@ -104,33 +104,33 @@ export function SignalsTable({ signals, showDeduplicated = true }: Props) {
       <div className="overflow-x-auto">
         <table className="min-w-full text-sm">
           <thead>
-            <tr className="border-b border-gray-100">
-              {showDeduplicated && <th className="py-2 px-3 text-left text-xs font-semibold text-gray-400 uppercase">Count</th>}
-              <th className="py-2 px-3 text-left text-xs font-semibold text-gray-400 uppercase">Signal Type</th>
-              <th className="py-2 px-3 text-left text-xs font-semibold text-gray-400 uppercase">Signal</th>
-              <th className="py-2 px-3 text-left text-xs font-semibold text-gray-400 uppercase">Strength</th>
-              <th className="py-2 px-3 text-left text-xs font-semibold text-gray-400 uppercase">Latest</th>
+            <tr className="border-b border-orbital-border">
+              {showDeduplicated && <th className="py-2 px-3 text-left text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Count</th>}
+              <th className="py-2 px-3 text-left text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Signal Type</th>
+              <th className="py-2 px-3 text-left text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Signal</th>
+              <th className="py-2 px-3 text-left text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Strength</th>
+              <th className="py-2 px-3 text-left text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Latest</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-50">
+          <tbody className="divide-y divide-orbital-border/50">
             {displaySignals.map((sig, idx) => {
               const strength = getSignalStrength(sig.avg_confidence);
               const styles = getStrengthStyles(strength);
               return (
-                <tr key={`${sig.signal_type}-${sig.signal_text}-${idx}`} className="hover:bg-gray-50 transition-colors">
+                <tr key={`${sig.signal_type}-${sig.signal_text}-${idx}`} className="hover:bg-white/[0.02] transition-colors">
                   {showDeduplicated && (
-                    <td className="py-2 px-3 text-gray-500 tabular-nums">
+                    <td className="py-2 px-3 text-gray-600 tabular-nums">
                       {sig.occurrences > 1 ? (
-                        <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-gray-100 text-xs">
+                        <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-white/5 text-[10px] text-gray-400">
                           {sig.occurrences}×
                         </span>
                       ) : (
-                        <span className="text-gray-300">—</span>
+                        <span className="text-gray-700">—</span>
                       )}
                     </td>
                   )}
                   <td className="py-2 px-3">
-                    <span className={`text-xs px-1.5 py-0.5 rounded ${styles.badge}`}>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded ${styles.badge}`}>
                       {formatSignalType(sig.signal_type)}
                     </span>
                   </td>
@@ -139,14 +139,14 @@ export function SignalsTable({ signals, showDeduplicated = true }: Props) {
                   </td>
                   <td className="py-2 px-3 tabular-nums">
                     {sig.avg_confidence !== null ? (
-                      <span className={strength === 'strong' ? 'font-semibold text-emerald-600' : strength === 'medium' ? 'text-gray-600' : 'text-gray-400'}>
+                      <span className={strength === 'strong' ? 'font-semibold text-emerald-400' : strength === 'medium' ? 'text-gray-400' : 'text-gray-600'}>
                         {(sig.avg_confidence * 100).toFixed(0)}%
                       </span>
                     ) : (
-                      <span className="text-gray-400">—</span>
+                      <span className="text-gray-700">—</span>
                     )}
                   </td>
-                  <td className="py-2 px-3 text-gray-400 text-xs whitespace-nowrap">
+                  <td className="py-2 px-3 text-gray-600 text-xs whitespace-nowrap font-mono">
                     {new Date(sig.latest_captured_at).toLocaleDateString()}
                   </td>
                 </tr>

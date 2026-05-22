@@ -33,6 +33,7 @@ interface AnalysisFormProps {
 
 export function AnalysisForm({ onAnalysisComplete }: AnalysisFormProps) {
   const navigate = useNavigate();
+  const [expanded, setExpanded] = useState(false);
   const [domain, setDomain] = useState('');
   const [name, setName] = useState('');
   const [industry, setIndustry] = useState('Auto-detect');
@@ -41,7 +42,7 @@ export function AnalysisForm({ onAnalysisComplete }: AnalysisFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!domain.trim()) {
       setError('Domain is required');
       return;
@@ -57,9 +58,8 @@ export function AnalysisForm({ onAnalysisComplete }: AnalysisFormProps) {
         industry: industry === 'Auto-detect' ? undefined : industry,
       });
 
-      // Navigate to company detail
       const companyId = result.company.id;
-      
+
       if (onAnalysisComplete) {
         onAnalysisComplete(companyId);
       } else {
@@ -73,80 +73,85 @@ export function AnalysisForm({ onAnalysisComplete }: AnalysisFormProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Analyze a Company</h3>
-      
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Domain <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="text"
-            value={domain}
-            onChange={(e) => setDomain(e.target.value)}
-            placeholder="nike.com"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          />
-          <p className="text-xs text-gray-500 mt-1">Enter domain (e.g., nike.com, roberthalf.com)</p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Company Name
-            </label>
+    <form onSubmit={handleSubmit}>
+      <div className="rounded-lg border border-orbital-border bg-[#0b0f12] overflow-hidden">
+        {/* Command bar */}
+        <div className="flex items-center gap-0">
+          <div className="flex-1 flex items-center">
+            <span className="px-4 text-amber-500/60 text-sm font-mono select-none">❯</span>
             <input
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Nike"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              value={domain}
+              onChange={(e) => setDomain(e.target.value)}
+              placeholder="Enter domain to analyze (e.g., nike.com)"
+              className="flex-1 py-3 bg-transparent text-sm text-gray-200 placeholder-gray-600 focus:outline-none"
             />
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Industry
-            </label>
-            <select
-              value={industry}
-              onChange={(e) => setIndustry(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
-            >
-              {INDUSTRIES.map((ind) => (
-                <option key={ind} value={ind}>
-                  {ind}
-                </option>
-              ))}
-            </select>
-          </div>
+          <button
+            type="button"
+            onClick={() => setExpanded(!expanded)}
+            className="px-3 py-3 text-[10px] tracking-wider uppercase text-gray-600 hover:text-gray-400 transition-colors border-l border-orbital-border"
+          >
+            {expanded ? 'Less' : 'More'}
+          </button>
+          <button
+            type="submit"
+            disabled={isLoading || !domain.trim()}
+            className="px-5 py-3 bg-amber-500/10 text-amber-400 border-l border-orbital-border text-sm font-medium hover:bg-amber-500/20 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+          >
+            {isLoading ? (
+              <span className="flex items-center gap-2">
+                <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                </svg>
+                Scanning…
+              </span>
+            ) : (
+              'Analyze'
+            )}
+          </button>
         </div>
 
-        {error && (
-          <div className="text-sm text-red-600 bg-red-50 px-3 py-2 rounded">
-            {error}
+        {/* Expanded fields */}
+        {expanded && (
+          <div className="border-t border-orbital-border px-4 py-3 grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600 mb-1.5">
+                Company Name
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Optional"
+                className="w-full px-3 py-1.5 bg-[#080b0e] border border-orbital-border rounded text-sm text-gray-200 placeholder-gray-700 focus:outline-none focus:ring-1 focus:ring-amber-500/40"
+              />
+            </div>
+            <div>
+              <label className="block text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600 mb-1.5">
+                Industry
+              </label>
+              <select
+                value={industry}
+                onChange={(e) => setIndustry(e.target.value)}
+                className="w-full px-3 py-1.5 bg-[#080b0e] border border-orbital-border rounded text-sm text-gray-300 focus:outline-none focus:ring-1 focus:ring-amber-500/40"
+              >
+                {INDUSTRIES.map((ind) => (
+                  <option key={ind} value={ind}>{ind}</option>
+                ))}
+              </select>
+            </div>
           </div>
         )}
 
-        <button
-          type="submit"
-          disabled={isLoading || !domain.trim()}
-          className="w-full py-2.5 px-4 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-        >
-          {isLoading ? (
-            <span className="flex items-center justify-center gap-2">
-              <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
-              </svg>
-              Analyzing...
-            </span>
-          ) : (
-            'Run Analysis'
-          )}
-        </button>
-      </form>
-    </div>
+        {/* Error */}
+        {error && (
+          <div className="border-t border-red-900/50 bg-red-950/30 px-4 py-2 text-xs text-red-400">
+            {error}
+          </div>
+        )}
+      </div>
+    </form>
   );
 }

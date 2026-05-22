@@ -479,7 +479,7 @@ def get_company_verdict(company_id: UUID, db: Session = Depends(get_db)):
             "main_pain": None,
             "where_pain_lives": None,
             "what_company_needs": None,
-            "best_attack_angle": None,
+            "recommended_positioning": None,
             "gated_reason": evaluation["summary"],
         }
 

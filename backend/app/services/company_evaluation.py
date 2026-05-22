@@ -581,7 +581,7 @@ class CompanyEvaluationEngine:
         if diagnostic_state == "ready_for_positioning":
             return {
                 "summary": "Evidence is strong and concentrated — NovaWork can move to tailored positioning.",
-                "next_best_step": "Generate the attack angle for the dominant pain area.",
+                "next_best_step": "Generate the positioning angle for the dominant pain area.",
             }
         return {
             "summary": "",

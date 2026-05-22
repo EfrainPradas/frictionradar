@@ -1,0 +1,41 @@
+{
+  "dataset_version": "synth-2026-04-27-v3",
+  "generator_version": "0.1.0",
+  "seed": 42,
+  "generated_at": "2026-04-28T02:27:06.546224+00:00",
+  "simulated_window": {
+    "t0": "2025-04-01",
+    "t1": "2026-04-01"
+  },
+  "source_real_export": "backend/data/synthetic/seed/real_seed.json",
+  "totals": {
+    "companies": 218,
+    "roles": 9203,
+    "signals": 1538
+  },
+  "archetype_distribution": {
+    "scaling_startup": 30,
+    "noise_floor": 30,
+    "lit_edu_cluster": 25,
+    "post_layoff_rehire": 20,
+    "novawork_ideal": 20,
+    "data_quality_chaos": 20,
+    "ghost_jobs_giant": 15,
+    "hiring_freeze": 15,
+    "aggressive_replacer": 15,
+    "intermediary_trap": 10,
+    "lit_edu_cluster_cf": 6,
+    "novawork_ideal_cf": 4,
+    "post_layoff_rehire_cf": 3,
+    "ghost_jobs_giant_cf": 2,
+    "scaling_startup_cf": 2,
+    "aggressive_replacer_cf": 1
+  },
+  "counterfactual_pairs": 18,
+  "vocabularies_pinned": {
+    "sectors": "1e2d845849f381b01cf95d780c10e0d478baf9067b2c41b5bf66bc5b327f1f70",
+    "diagnostic_states": "c492086e25711519e1d9606cd1d07a391ee4f0a84cff92fd1b7050eed78bef8b",
+    "friction_categories": "bba66a4725b6241d79ccefff0994a34ff30f2a604f8c1f12081540f620d8f103",
+    "eligibility_gates": "bcfd86706e7f498858cbd0d8e03474ecb1f9d78dd6d6586fc04bc1b21738c422"
+  }
+}

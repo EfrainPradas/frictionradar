@@ -13,6 +13,7 @@ from sqlalchemy import (
     String,
     Text,
     UniqueConstraint,
+    text,
 )
 from sqlalchemy.dialects.postgresql import UUID
 
@@ -52,10 +53,11 @@ class CompanyDomain(Base):
     last_verified_at = Column(DateTime(timezone=True), nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
     updated_at = Column(
         DateTime(timezone=True),
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
         onupdate=lambda: datetime.now(timezone.utc),
     )
@@ -69,7 +71,7 @@ class DomainResolutionRun(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
 
     started_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
     finished_at = Column(DateTime(timezone=True), nullable=True)
 
@@ -83,5 +85,5 @@ class DomainResolutionRun(Base):
     error_message = Column(Text, nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )

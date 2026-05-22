@@ -73,7 +73,7 @@ def _make_cache_row(**overrides):
         "main_pain": "hiring scale",
         "where_pain_lives": "eng",
         "what_the_company_needs": "VP Eng",
-        "best_attack_angle": "scale-up playbook",
+        "recommended_positioning": "scale-up playbook",
         "confidence": "high",
         "eligibility_gate": "full",
         "inferred_sector": "fintech",
@@ -92,7 +92,7 @@ def test_cache_to_snapshot_maps_fields():
     assert snap.domain == "stripe.com"
     assert snap.friction_score == 61.0
     assert snap.main_pain == "hiring scale"
-    assert snap.best_attack_angle == "scale-up playbook"
+    assert snap.recommended_positioning == "scale-up playbook"
     assert snap.inferred_sector == "fintech"
     assert snap.confidence == "high"
     assert snap.kpis == {"positioning_readiness": 0.81}
@@ -270,7 +270,7 @@ def test_match_endpoint_returns_ranked_results(monkeypatch):
         "main_pain": "hiring scale",
         "where_pain_lives": "eng",
         "what_the_company_needs": "VP Eng",
-        "best_attack_angle": "scale-up",
+        "recommended_positioning": "scale-up",
         "confidence": "high",
         "eligibility_gate": "full",
         "inferred_sector": "saas",

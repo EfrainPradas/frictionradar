@@ -26,6 +26,11 @@ from app.models.company_signal import CompanySignal
 from app.services.company_evaluation import CompanyEvaluationEngine
 from app.services.title_normalizer import get_macro_family, MACRO_FAMILIES
 from app.core.logging import get_logger
+from app.schemas.temporal_diagnostic import (
+    TemporalDiagnosticResult,
+    TemporalDiagnosticState,
+    TemporalConfidence,
+)
 
 logger = get_logger(__name__)
 
@@ -51,6 +56,9 @@ class EligibilityResult:
     reason: str
     diagnostic_state: str
     confidence_band: str  # "high", "moderate", "low"
+    temporal_gate_passed: Optional[str] = None   # "temporal_override" or None
+    temporal_reason: Optional[str] = None
+    temporal_opportunity_type: Optional[str] = None  # "early_positioning", "accelerated_positioning"
 
 
 def check_eligibility(
@@ -60,9 +68,55 @@ def check_eligibility(
     positioning_readiness: str,
     classified_roles: int,
     jds_extracted: int,
+    temporal_diagnostic: Optional[TemporalDiagnosticResult] = None,
 ) -> EligibilityResult:
-    """Determine if a company has enough evidence for positioning."""
+    """Determine if a company has enough evidence for positioning.
 
+    Temporal override: when temporal evidence shows emerging or accelerating
+    pain with moderate+ confidence, a company that would otherwise be
+    ineligible can become conditionally eligible. This never overrides a
+    static "insufficient_evidence" diagnosis if temporal evidence itself
+    is insufficient.
+    """
+
+    # ── Static eligibility gates (always checked first) ──────────────
+    static = _check_static_eligibility(
+        diagnostic_state, pain_clarity, function_concentration,
+        positioning_readiness, classified_roles, jds_extracted,
+    )
+
+    # If statically eligible, return immediately — temporal never downgrades.
+    if static.eligible:
+        return static
+
+    # ── Temporal override ────────────────────────────────────────────
+    # If static gates did NOT make the company eligible, check whether
+    # temporal evidence is strong enough to promote to conditional.
+    if temporal_diagnostic is not None:
+        td = temporal_diagnostic
+        temporal_override = _apply_temporal_override(
+            static_ds=diagnostic_state,
+            temporal_state=td.temporal_state,
+            temporal_confidence=td.confidence,
+            signal_count=td.signal_count,
+            scored_signal_count=td.scored_signal_count,
+            score_snapshot_count=td.score_snapshot_count,
+        )
+        if temporal_override is not None:
+            return temporal_override
+
+    return static
+
+
+def _check_static_eligibility(
+    diagnostic_state: str,
+    pain_clarity: str,
+    function_concentration: str,
+    positioning_readiness: str,
+    classified_roles: int,
+    jds_extracted: int,
+) -> EligibilityResult:
+    """Pure static eligibility logic — no temporal override."""
     if diagnostic_state in ("ready_for_positioning",):
         return EligibilityResult(
             eligible=True,
@@ -133,6 +187,103 @@ def check_eligibility(
     )
 
 
+# ── Temporal override logic ────────────────────────────────────────────
+
+# Minimum evidence thresholds for temporal override.
+_TEMPORAL_MIN_SIGNALS = 5
+_TEMPORAL_MIN_SCORED = 3
+_TEMPORAL_MIN_SNAPSHOTS = 2
+
+# States where temporal override can promote from ineligible to conditional.
+_TEMPORAL_OVERRIDE_STATES = {
+    TemporalDiagnosticState.EMERGING_PAIN,
+    TemporalDiagnosticState.ACCELERATING_PAIN,
+}
+
+# Confidence levels that allow override.
+_TEMPORAL_OVERRIDE_CONFIDENCE = {
+    TemporalConfidence.MODERATE,
+    TemporalConfidence.HIGH,
+}
+
+
+def _apply_temporal_override(
+    static_ds: str,
+    temporal_state: TemporalDiagnosticState,
+    temporal_confidence: TemporalConfidence,
+    signal_count: int,
+    scored_signal_count: int,
+    score_snapshot_count: int,
+) -> EligibilityResult | None:
+    """Decide whether temporal evidence overrides a static ineligible result.
+
+    Returns an EligibilityResult if override applies, or None if it doesn't.
+
+    Rules:
+    - Never override if static_ds is one of the eligible states (shouldn't reach
+      here, but defensive).
+    - Never override if temporal state is INSUFFICIENT or the static ds is
+      "no_signal" AND temporal confidence is "none"/"low".
+    - Override only when temporal state is emerging_pain or accelerating_pain,
+      confidence is moderate/high, and evidence counts meet thresholds.
+    """
+    # Never override if temporal state is insufficient.
+    if temporal_state == TemporalDiagnosticState.INSUFFICIENT:
+        return None
+
+    # Never override when static ds is no_signal and temporal confidence
+    # is too weak to contradict that conclusion.
+    if static_ds == "no_signal" and temporal_confidence in (
+        TemporalConfidence.NONE,
+        TemporalConfidence.LOW,
+    ):
+        return None
+
+    # Must be an override-eligible temporal state.
+    if temporal_state not in _TEMPORAL_OVERRIDE_STATES:
+        return None
+
+    # Must have sufficient temporal confidence.
+    if temporal_confidence not in _TEMPORAL_OVERRIDE_CONFIDENCE:
+        return None
+
+    # Must have enough temporal evidence to justify override.
+    if signal_count < _TEMPORAL_MIN_SIGNALS:
+        return None
+    if scored_signal_count < _TEMPORAL_MIN_SCORED:
+        return None
+    if score_snapshot_count < _TEMPORAL_MIN_SNAPSHOTS:
+        return None
+
+    # Determine opportunity type based on temporal state.
+    if temporal_state == TemporalDiagnosticState.ACCELERATING_PAIN:
+        opportunity_type = "accelerated_positioning"
+        reason = (
+            "Pain is accelerating — temporal override grants conditional eligibility "
+            "for early positioning before static evidence fully matures."
+        )
+    else:  # EMERGING_PAIN
+        opportunity_type = "early_positioning"
+        reason = (
+            "Pain is emerging — temporal override grants conditional eligibility "
+            "for exploratory positioning based on trend evidence."
+        )
+
+    return EligibilityResult(
+        eligible=True,
+        gate_passed="conditional",
+        reason=reason,
+        diagnostic_state=static_ds,
+        confidence_band="moderate",
+        temporal_gate_passed="temporal_override",
+        temporal_reason=f"temporal_state={temporal_state.value}, "
+                        f"confidence={temporal_confidence.value}, "
+                        f"signals={signal_count}, scored={scored_signal_count}, "
+                        f"snapshots={score_snapshot_count}",
+        temporal_opportunity_type=opportunity_type,
+    )
+
+
 # ── Shared eligibility snapshot (single source of truth) ─────────────
 #
 # Canonical batch evaluator used by ALL reporting layers (dataset_health,
@@ -140,12 +291,16 @@ def check_eligibility(
 # Replicates the pattern that was duplicated across scripts so every
 # layer reports identical counts.
 
-def is_company_positioning_eligible(db, company_id) -> "EligibilityResult":
+def is_company_positioning_eligible(
+    db, company_id, *, temporal_diagnostic=None,
+) -> "EligibilityResult":
     """Single-company canonical eligibility check.
 
     Loads the inputs (diagnostic_state, kpis, classified_roles, jds) for
     one company and runs check_eligibility() on them. This is the one
     function every layer should call when asked "is company X eligible?".
+
+    Optionally accepts a TemporalDiagnosticResult to enable temporal override.
     """
     from app.models.company_job_role import CompanyJobRole
 
@@ -179,6 +334,7 @@ def is_company_positioning_eligible(db, company_id) -> "EligibilityResult":
         positioning_readiness=kpis.get("positioning_readiness", "low"),
         classified_roles=classified,
         jds_extracted=jds,
+        temporal_diagnostic=temporal_diagnostic,
     )
 
 
@@ -272,6 +428,9 @@ def compute_eligibility_snapshot(db) -> dict:
             "reason": elig.reason,
             "classified_roles": classified_by_company.get(cid, 0),
             "jds_extracted": jd_counts.get(cid, 0),
+            "temporal_gate_passed": elig.temporal_gate_passed,
+            "temporal_reason": elig.temporal_reason,
+            "temporal_opportunity_type": elig.temporal_opportunity_type,
         })
 
     return {

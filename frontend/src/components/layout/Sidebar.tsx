@@ -1,46 +1,50 @@
 import { NavLink } from 'react-router-dom';
 
 const NAV = [
-  { label: 'Dashboard', to: '/dashboard', icon: '⬛' },
-  { label: 'Heatmap', to: '/heatmap', icon: '▦' },
-  { label: 'Validation', to: '/validation', icon: '⬜' },
+  { label: 'Dashboard', to: '/dashboard', icon: 'FR' },
+  { label: 'Console', to: '/console', icon: 'CO' },
+  { label: 'Heatmap', to: '/heatmap', icon: 'HM' },
+  { label: 'Validation', to: '/validation', icon: 'VL' },
 ];
 
 export function Sidebar() {
   return (
-    <aside className="w-56 shrink-0 flex flex-col border-r border-gray-200 bg-white">
-      {/* Logo */}
-      <div className="px-4 py-4 border-b border-gray-100">
-        <span className="text-sm font-bold tracking-tight text-gray-900">
-          Friction Radar
-        </span>
-        <span className="ml-2 text-xs text-gray-400 font-medium">internal</span>
+    <aside className="w-[82px] shrink-0 flex flex-col items-center border-r border-orbital-border bg-[rgba(5,6,7,0.78)] py-6 gap-[22px]">
+      {/* Brand mark */}
+      <div className="w-[34px] h-[34px] rounded-full border border-[rgba(210,184,113,0.46)] relative mb-2"
+        style={{ boxShadow: '0 0 24px rgba(215,180,106,.24)' }}
+      >
+        <div className="absolute inset-[7px] rounded-full border border-[rgba(215,180,106,.4)]" />
+        <div className="absolute inset-[15px] rounded-full bg-[#d7b46a]" style={{ boxShadow: '0 0 18px #d7b46a' }} />
       </div>
 
-      {/* Nav */}
-      <nav className="flex-1 px-2 py-3 space-y-0.5">
+      {/* Nav items */}
+      <nav className="flex-1 flex flex-col items-center gap-[14px]">
         {NAV.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}
             className={({ isActive }) =>
-              `flex items-center gap-2.5 px-3 py-2 rounded text-sm transition-colors ${
+              `relative flex items-center justify-center w-10 h-10 rounded-[14px] border font-mono text-[12px] transition-all group ${
                 isActive
-                  ? 'bg-gray-100 text-gray-900 font-medium'
-                  : 'text-gray-500 hover:bg-gray-50 hover:text-gray-800'
+                  ? 'text-[#d7b46a] border-[rgba(210,184,113,0.46)] bg-[rgba(215,180,106,0.09)]'
+                    + ' shadow-[inset_0_0_18px_rgba(215,180,106,.09),0_0_24px_rgba(215,180,106,.11)]'
+                  : 'text-[#8e9994] border-[rgba(184,198,192,0.16)] bg-[rgba(255,255,255,.03)] hover:bg-[rgba(255,255,255,.06)] hover:text-[#edf2ef]'
               }`
             }
+            title={item.label}
           >
-            <span className="text-xs opacity-60">{item.icon}</span>
-            {item.label}
+            {item.icon}
+            {/* Tooltip */}
+            <span className="absolute left-[52px] px-2 py-1 rounded bg-[#101418] border border-orbital-border text-[11px] text-[#edf2ef] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+              {item.label}
+            </span>
           </NavLink>
         ))}
       </nav>
 
-      {/* Footer hint */}
-      <div className="px-4 py-3 border-t border-gray-100">
-        <p className="text-xs text-gray-400">MVP v0.3</p>
-      </div>
+      {/* Footer version */}
+      <span className="text-[9px] text-[#59635f] font-mono">v2.0</span>
     </aside>
   );
 }

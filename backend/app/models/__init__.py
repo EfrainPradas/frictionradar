@@ -13,6 +13,15 @@ from .extraction import (
 )
 from .commercial_pipeline import PipelineEntry, PipelineEvent
 from .smart_match_cache import SmartMatchCache
+from .candidate_intelligence import (
+    CandidateIntelligenceProfile,
+    FrictionCompanyProfile,
+    FrictionCandidateMatch,
+    FrictionPositioningRecommendation,
+    FrictionVipOpportunity,
+    FrictionAlignmentScore,
+    FrictionTemporalSnapshot,
+)
 
 # Master Index
 from app.master.models import (

@@ -145,7 +145,7 @@ export function JsonImport({ onImportComplete }: Props) {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="text-xs px-3 py-1.5 rounded border border-dashed border-gray-300 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors"
+        className="text-[10px] tracking-wider uppercase px-3 py-1.5 rounded border border-dashed border-orbital-border text-gray-600 hover:border-gray-500 hover:text-gray-400 transition-colors"
       >
         Import JSON
       </button>
@@ -153,125 +153,126 @@ export function JsonImport({ onImportComplete }: Props) {
   }
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-5 space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-gray-800">Import Companies from JSON</h3>
+    <div className="rounded-lg border border-orbital-border bg-[#0b0f12]">
+      <div className="border-b border-orbital-border px-5 py-3 flex items-center justify-between">
+        <h3 className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500">Import Companies from JSON</h3>
         <button
           onClick={() => { setOpen(false); reset(); }}
-          className="text-xs text-gray-400 hover:text-gray-600"
+          className="text-xs text-gray-600 hover:text-gray-400"
         >
           Close
         </button>
       </div>
+      <div className="px-5 py-4 space-y-4">
+        <p className="text-xs text-gray-500">
+          Upload a JSON array with company records. Fields auto-detected: <code className="text-gray-400">name</code> / <code className="text-gray-400">itemLabel</code>, <code className="text-gray-400">domain</code> / <code className="text-gray-400">website</code>, <code className="text-gray-400">industry</code>, <code className="text-gray-400">employees</code>.
+        </p>
 
-      <p className="text-xs text-gray-500">
-        Upload a JSON array with company records. Fields auto-detected: <code>name</code> / <code>itemLabel</code>, <code>domain</code> / <code>website</code>, <code>industry</code>, <code>employees</code>.
-      </p>
-
-      <div className="flex items-center gap-3">
-        <input
-          ref={fileRef}
-          type="file"
-          accept=".json"
-          onChange={handleFile}
-          className="text-sm file:mr-3 file:py-1.5 file:px-3 file:rounded file:border file:border-gray-200 file:text-xs file:bg-gray-50 file:text-gray-700 hover:file:bg-gray-100 file:cursor-pointer"
-        />
-        <div className="flex items-center gap-2">
-          <label className="text-xs text-gray-500">Source:</label>
+        <div className="flex items-center gap-3">
           <input
-            type="text"
-            value={sourceLabel}
-            onChange={(e) => setSourceLabel(e.target.value)}
-            className="text-xs border border-gray-200 rounded px-2 py-1 w-36 focus:outline-none focus:ring-1 focus:ring-gray-400"
-            placeholder="json_import"
+            ref={fileRef}
+            type="file"
+            accept=".json"
+            onChange={handleFile}
+            className="text-sm text-gray-400 file:mr-3 file:py-1.5 file:px-3 file:rounded file:border file:border-orbital-border file:text-[10px] file:tracking-wider file:uppercase file:bg-[#080b0e] file:text-gray-400 hover:file:bg-white/5 file:cursor-pointer"
           />
+          <div className="flex items-center gap-2">
+            <label className="text-[10px] uppercase tracking-wider text-gray-600">Source:</label>
+            <input
+              type="text"
+              value={sourceLabel}
+              onChange={(e) => setSourceLabel(e.target.value)}
+              className="text-xs border border-orbital-border bg-[#080b0e] rounded px-2 py-1 w-36 text-gray-300 focus:outline-none focus:ring-1 focus:ring-amber-500/50"
+              placeholder="json_import"
+            />
+          </div>
         </div>
+
+        {error && (
+          <div className="text-xs text-red-400 bg-red-950/40 border border-red-900/50 px-3 py-2 rounded">{error}</div>
+        )}
+
+        {result && (
+          <div className="text-xs bg-emerald-950/30 border border-emerald-900/40 px-3 py-2 rounded space-y-1">
+            <p className="text-emerald-400 font-medium">
+              {result.created} created, {result.skipped} skipped (duplicate domain)
+            </p>
+            {result.skipped_details && result.skipped_details.length > 0 && (
+              <details className="text-gray-500">
+                <summary className="cursor-pointer">{result.skipped_details.length} skipped details</summary>
+                <ul className="mt-1 space-y-0.5 pl-3 list-disc text-xs">
+                  {result.skipped_details.slice(0, 30).map((s, i) => (
+                    <li key={i}>
+                      <strong className="text-gray-400">{s.name}</strong> ({s.domain}) — matched existing: <em>{s.matched_name}</em>
+                    </li>
+                  ))}
+                  {result.skipped_details.length > 30 && (
+                    <li>...and {result.skipped_details.length - 30} more</li>
+                  )}
+                </ul>
+              </details>
+            )}
+            {result.errors.length > 0 && (
+              <details className="text-red-400">
+                <summary className="cursor-pointer">{result.errors.length} errors</summary>
+                <ul className="mt-1 space-y-0.5 pl-3 list-disc">
+                  {result.errors.slice(0, 20).map((err, i) => (
+                    <li key={i}>{err}</li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </div>
+        )}
+
+        {parsed.length > 0 && !result && (
+          <>
+            <div className="text-xs text-gray-500">
+              {parsed.length} unique companies detected from <strong className="text-gray-300">{fileName}</strong>
+            </div>
+
+            <div className="max-h-60 overflow-auto rounded-lg border border-orbital-border bg-[#080b0e]">
+              <table className="min-w-full text-xs">
+                <thead>
+                  <tr className="border-b border-orbital-border bg-[#080b0e]">
+                    <th className="px-2 py-1.5 text-left text-[10px] tracking-wider uppercase text-gray-600 font-medium">#</th>
+                    <th className="px-2 py-1.5 text-left text-[10px] tracking-wider uppercase text-gray-600 font-medium">Name</th>
+                    <th className="px-2 py-1.5 text-left text-[10px] tracking-wider uppercase text-gray-600 font-medium">Domain</th>
+                    <th className="px-2 py-1.5 text-left text-[10px] tracking-wider uppercase text-gray-600 font-medium">Industry</th>
+                    <th className="px-2 py-1.5 text-left text-[10px] tracking-wider uppercase text-gray-600 font-medium">Size</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-orbital-border/50">
+                  {parsed.slice(0, 50).map((row, i) => (
+                    <tr key={i} className="hover:bg-white/[0.02]">
+                      <td className="px-2 py-1 text-gray-600">{i + 1}</td>
+                      <td className="px-2 py-1 text-gray-300">{row.name}</td>
+                      <td className="px-2 py-1 text-gray-500 font-mono">{row.domain ?? '—'}</td>
+                      <td className="px-2 py-1 text-gray-500">{row.industry ?? '—'}</td>
+                      <td className="px-2 py-1 text-gray-500">{row.company_size ?? '—'}</td>
+                    </tr>
+                  ))}
+                  {parsed.length > 50 && (
+                    <tr>
+                      <td colSpan={5} className="px-2 py-1 text-gray-600 text-center">
+                        ... and {parsed.length - 50} more
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            <button
+              onClick={handleImport}
+              disabled={importing}
+              className="px-4 py-2 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-sm rounded hover:bg-amber-500/20 disabled:opacity-50 transition-colors"
+            >
+              {importing ? 'Importing...' : `Import ${parsed.length} companies`}
+            </button>
+          </>
+        )}
       </div>
-
-      {error && (
-        <div className="text-xs text-red-600 bg-red-50 px-3 py-2 rounded">{error}</div>
-      )}
-
-      {result && (
-        <div className="text-xs bg-green-50 border border-green-200 px-3 py-2 rounded space-y-1">
-          <p className="text-green-800 font-medium">
-            {result.created} created, {result.skipped} skipped (duplicate domain)
-          </p>
-          {result.skipped_details && result.skipped_details.length > 0 && (
-            <details className="text-gray-600">
-              <summary className="cursor-pointer">{result.skipped_details.length} skipped details</summary>
-              <ul className="mt-1 space-y-0.5 pl-3 list-disc text-xs">
-                {result.skipped_details.slice(0, 30).map((s, i) => (
-                  <li key={i}>
-                    <strong>{s.name}</strong> ({s.domain}) — matched existing: <em>{s.matched_name}</em>
-                  </li>
-                ))}
-                {result.skipped_details.length > 30 && (
-                  <li>...and {result.skipped_details.length - 30} more</li>
-                )}
-              </ul>
-            </details>
-          )}
-          {result.errors.length > 0 && (
-            <details className="text-red-600">
-              <summary className="cursor-pointer">{result.errors.length} errors</summary>
-              <ul className="mt-1 space-y-0.5 pl-3 list-disc">
-                {result.errors.slice(0, 20).map((err, i) => (
-                  <li key={i}>{err}</li>
-                ))}
-              </ul>
-            </details>
-          )}
-        </div>
-      )}
-
-      {parsed.length > 0 && !result && (
-        <>
-          <div className="text-xs text-gray-500">
-            {parsed.length} unique companies detected from <strong>{fileName}</strong>
-          </div>
-
-          <div className="max-h-60 overflow-auto rounded border border-gray-100">
-            <table className="min-w-full text-xs">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="px-2 py-1.5 text-left text-gray-500 font-medium">#</th>
-                  <th className="px-2 py-1.5 text-left text-gray-500 font-medium">Name</th>
-                  <th className="px-2 py-1.5 text-left text-gray-500 font-medium">Domain</th>
-                  <th className="px-2 py-1.5 text-left text-gray-500 font-medium">Industry</th>
-                  <th className="px-2 py-1.5 text-left text-gray-500 font-medium">Size</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-50">
-                {parsed.slice(0, 50).map((row, i) => (
-                  <tr key={i} className="hover:bg-gray-50">
-                    <td className="px-2 py-1 text-gray-400">{i + 1}</td>
-                    <td className="px-2 py-1 text-gray-800">{row.name}</td>
-                    <td className="px-2 py-1 text-gray-500 font-mono">{row.domain ?? '—'}</td>
-                    <td className="px-2 py-1 text-gray-500">{row.industry ?? '—'}</td>
-                    <td className="px-2 py-1 text-gray-500">{row.company_size ?? '—'}</td>
-                  </tr>
-                ))}
-                {parsed.length > 50 && (
-                  <tr>
-                    <td colSpan={5} className="px-2 py-1 text-gray-400 text-center">
-                      ... and {parsed.length - 50} more
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
-
-          <button
-            onClick={handleImport}
-            disabled={importing}
-            className="px-4 py-2 bg-gray-800 text-white text-sm rounded hover:bg-gray-900 disabled:opacity-50 transition-colors"
-          >
-            {importing ? 'Importing...' : `Import ${parsed.length} companies`}
-          </button>
-        </>
-      )}
     </div>
   );
 }

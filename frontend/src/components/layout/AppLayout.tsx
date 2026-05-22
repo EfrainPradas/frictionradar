@@ -9,11 +9,13 @@ interface Props {
 
 export function AppLayout({ title, subtitle, children }: Props) {
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-[#050607] relative">
       <Sidebar />
-      <div className="flex flex-col flex-1 min-w-0">
+      <div className="flex flex-col flex-1 min-w-0 relative z-10">
         <Header title={title} subtitle={subtitle} />
-        <main className="flex-1 overflow-auto p-6">{children}</main>
+        <main className="flex-1 overflow-auto">
+          {children}
+        </main>
       </div>
     </div>
   );

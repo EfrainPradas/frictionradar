@@ -232,10 +232,10 @@ export function idealProfile(primaryFriction: FrictionCategory): string[] {
   ];
 }
 
-export function targetingPosition(primaryFriction: FrictionCategory): string {
+export function positioningGuidance(primaryFriction: FrictionCategory): string {
   const func = FRICTION_TO_FUNCTION[primaryFriction] ?? "business operations";
-  
-  return `If you were targeting this company, you would position yourself as someone who helps teams improve ${func} through better processes, clearer data, and scalable solutions.`;
+
+  return `How to position yourself with this company: someone who helps teams improve ${func} through better processes, clearer data, and scalable solutions.`;
 }
 
 export function generateWhatThisMeans(signals: string[], _primaryFriction: string): string {

@@ -2,22 +2,307 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles for the Internal Console */
+/* ── FrictionRadar ORBITAL Cinematic Console ─────────────────────── */
+
+:root {
+  --orb-bg: #050607;
+  --orb-bg2: #0b0f12;
+  --orb-panel: rgba(13, 18, 21, 0.78);
+  --orb-line: rgba(184, 198, 192, 0.16);
+  --orb-line-strong: rgba(210, 184, 113, 0.46);
+  --orb-gold: #d7b46a;
+  --orb-green: #78b98f;
+  --orb-red: #d06d58;
+  --orb-blue: #6c9fd8;
+  --orb-text: #edf2ef;
+  --orb-muted: #8e9994;
+  --orb-dim: #59635f;
+}
+
 body {
-  @apply bg-gray-50 text-gray-900;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  @apply bg-[#050607] text-gray-100 antialiased;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 72% 24%, rgba(215, 180, 106, 0.13), transparent 30%),
+    radial-gradient(circle at 20% 70%, rgba(120, 185, 143, 0.08), transparent 34%),
+    linear-gradient(135deg, #030404, var(--orb-bg2) 48%, #050607);
 }
 
-/* Scrollbar styling for density */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* ── Grid overlay ──────────────────────────────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at 50% 45%, black 0%, transparent 78%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-transparent;
+/* ── Scanlines ──────────────────────────────────────────────────── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,.025) 50%, transparent 100%);
+  background-size: 100% 7px;
+  opacity: .18;
+  pointer-events: none;
+  z-index: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb { @apply bg-gray-700/50 rounded-full hover:bg-gray-600/50 transition-colors; }
+
+/* ── Focus rings ─────────────────────────────────────────────────── */
+*:focus-visible {
+  @apply outline-none ring-2 ring-amber-500/50 ring-offset-2 ring-offset-[#050505];
+}
+
+/* ── Selection ───────────────────────────────────────────────────── */
+::selection {
+  @apply bg-amber-500/30 text-white;
+}
+
+/* ── Sheen animation on panels ─────────────────────────────────── */
+@keyframes sheen {
+  0%, 62% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(215,180,106,.06), transparent);
+  transform: translateX(-100%);
+  animation: sheen 8s infinite;
+  pointer-events: none;
+}
+
+/* ── Radar sweep ─────────────────────────────────────────────────── */
+@keyframes radar-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-radar-sweep {
+  animation: radar-rotate 7s linear infinite;
+}
+
+/* ── Hex breathe ─────────────────────────────────────────────────── */
+@keyframes hex-breathe {
+  0%, 100% { transform: scale(.985); opacity: .76; }
+  50% { transform: scale(1.025); opacity: 1; }
+}
+.animate-hex-breathe {
+  animation: hex-breathe 3.8s ease-in-out infinite;
+}
+
+/* ── Pulse ────────────────────────────────────────────────────────── */
+@keyframes orb-pulse {
+  0%, 100% { transform: scale(1); opacity: .65; }
+  50% { transform: scale(1.9); opacity: 1; }
+}
+.animate-orb-pulse {
+  animation: orb-pulse 1.8s infinite;
+}
+
+/* ── Scan line animation ──────────────────────────────────────────── */
+@keyframes scan-line {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+.animate-scan-line {
+  animation: scan-line 1.5s ease-in-out forwards;
+}
+
+/* ── Signal lock pulse ───────────────────────────────────────────── */
+@keyframes signal-lock {
+  0% { border-color: rgba(191, 155, 48, 0.4); }
+  100% { border-color: rgba(255, 255, 255, 0.08); }
+}
+.animate-signal-lock {
+  animation: signal-lock 400ms ease-out forwards;
+}
+
+/* ── Amber pulse ─────────────────────────────────────────────────── */
+@keyframes amber-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.animate-amber-pulse {
+  animation: amber-pulse 3s ease-in-out infinite;
+}
+
+/* ── Ambient drift ──────────────────────────────────────────────── */
+@keyframes ambient-drift {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(2%, -1%) scale(1.02); }
+  66% { transform: translate(-1%, 2%) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-ambient-drift {
+  animation: ambient-drift 60s ease-in-out infinite;
+}
+
+/* ── Counter number transition ────────────────────────────────────── */
+@keyframes counter-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-counter {
+  animation: counter-in 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── State-specific keyframes ─────────────────────────────────────── */
+@keyframes state-emerging {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes state-accelerating {
+  0%, 100% { opacity: 0.6; }
+  33% { opacity: 1; }
+  66% { opacity: 0.8; }
+}
+@keyframes state-volatile {
+  0%, 100% { opacity: 0.8; }
+  25% { opacity: 0.5; }
+  50% { opacity: 1; }
+  75% { opacity: 0.6; }
+}
+.animate-state-emerging { animation: state-emerging 3s ease-in-out infinite; }
+.animate-state-accelerating { animation: state-accelerating 2s ease-in-out infinite; }
+.animate-state-volatile { animation: state-volatile 1.5s ease-in-out infinite; }
+
+/* ── Reduced motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scan-line,
+  .animate-signal-lock,
+  .animate-amber-pulse,
+  .animate-radar-sweep,
+  .animate-ambient-drift,
+  .animate-counter,
+  .animate-state-emerging,
+  .animate-state-accelerating,
+  .animate-volatile,
+  .animate-orb-pulse,
+  .animate-hex-breathe,
+  .animate-sheen::before {
+    animation: none !important;
+  }
+}
+
+/* ── Panel base styles ──────────────────────────────────────────── */
+.orb-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.022));
+  border: 1px solid var(--orb-line);
+  border-radius: 22px;
+  box-shadow: 0 20px 80px rgba(0,0,0,.45);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Mono font utility ──────────────────────────────────────────── */
+.font-mono-orb {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+/* ── Readout card ────────────────────────────────────────────────── */
+.orb-readout {
+  border: 1px solid var(--orb-line);
+  border-radius: 16px;
+  padding: 13px;
+  background: rgba(0,0,0,.18);
+}
+
+.orb-readout .orb-label {
+  display: block;
+  color: var(--orb-muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.orb-readout .orb-value {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+/* ── Evidence card ───────────────────────────────────────────────── */
+.orb-evidence {
+  border: 1px solid var(--orb-line);
+  background: rgba(255,255,255,.035);
+  border-radius: 16px;
+  padding: 13px;
+}
+
+/* ── Timeline event ──────────────────────────────────────────────── */
+.orb-timeline {
+  position: relative;
+  border-left: 1px solid rgba(215,180,106,.34);
+  margin-left: 16px;
+  padding-left: 24px;
+}
+
+.orb-event {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 14px 14px 14px 16px;
+  border: 1px solid var(--orb-line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.035);
+}
+
+.orb-event::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--orb-gold);
+  box-shadow: 0 0 22px var(--orb-gold);
+}
+
+/* ── Sparkline ───────────────────────────────────────────────────── */
+.orb-sparkline {
+  margin-top: 18px;
+  height: 54px;
+  display: flex;
+  align-items: end;
+  gap: 7px;
+}
+
+.orb-sparkline-bar {
+  display: block;
+  flex: 1;
+  min-width: 4px;
+  background: linear-gradient(180deg, var(--orb-gold), rgba(215,180,106,.12));
+  border-radius: 999px 999px 0 0;
+}
+
+/* ── Tiny bar ────────────────────────────────────────────────────── */
+.orb-tiny-bar {
+  height: 5px;
+  width: 100%;
+  background: rgba(255,255,255,.06);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.orb-tiny-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--orb-gold), var(--orb-green));
 }

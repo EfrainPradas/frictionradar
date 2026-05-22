@@ -244,14 +244,14 @@ def test_g2_data_architect_is_engineering():
     assert r["area"] == "engineering", r
 
 
-def test_g2_motion_designer_is_marketing():
+def test_g2_motion_designer_is_design():
     r = fie.infer_functional_area("Senior Motion Designer")
-    assert r["area"] == "marketing", r
+    assert r["area"] == "design", r
 
 
-def test_g2_graphic_designer_is_marketing():
+def test_g2_graphic_designer_is_design():
     r = fie.infer_functional_area("Graphic Designer")
-    assert r["area"] == "marketing", r
+    assert r["area"] == "design", r
 
 
 def test_g2_driver_is_supply_chain():

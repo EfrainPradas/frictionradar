@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import Column, String, DateTime, Numeric, ForeignKey
+from sqlalchemy import Column, String, DateTime, Numeric, ForeignKey, text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
@@ -17,8 +17,14 @@ class CompanySignal(Base):
     signal_text = Column(String, nullable=False)
     numeric_value = Column(Numeric, nullable=True)
     confidence = Column(Numeric, nullable=True)
-    
-    captured_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
-    created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+    captured_at = Column(
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"), index=True,
+    )
+    created_at = Column(
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
+    )
 
     company = relationship("Company", back_populates="signals")

@@ -20,11 +20,11 @@ export function CompanySummary({ company }: Props) {
     <dl className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3">
       {fields.map((f) => (
         <div key={f.label}>
-          <dt className="text-xs font-medium text-gray-400 uppercase tracking-wide">
+          <dt className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500">
             {f.label}
           </dt>
-          <dd className="mt-0.5 text-sm text-gray-900">
-            {f.value ?? <span className="text-gray-400">—</span>}
+          <dd className="mt-0.5 text-sm text-gray-200">
+            {f.value ?? <span className="text-gray-600">—</span>}
           </dd>
         </div>
       ))}

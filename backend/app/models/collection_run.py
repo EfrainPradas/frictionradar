@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import Column, String, DateTime, ForeignKey, JSON
+from sqlalchemy import Column, String, DateTime, ForeignKey, JSON, text
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
@@ -13,8 +13,15 @@ class CollectionRun(Base):
     company_id = Column(UUID(as_uuid=True), ForeignKey("companies.id", ondelete="CASCADE"), index=True)
     collector_type = Column(String, nullable=False)
     status = Column(String, nullable=False, default="pending") # pending, running, completed, failed
-    
-    started_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+    created_at = Column(
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
+    )
+    started_at = Column(
+        DateTime(timezone=True), nullable=False,
+        default=lambda: datetime.now(timezone.utc), server_default=text("now()"),
+    )
     finished_at = Column(DateTime(timezone=True), nullable=True)
     error_message = Column(String, nullable=True)
     metadata_json = Column(JSONB, nullable=True)

@@ -21,6 +21,7 @@ from sqlalchemy import (
     String,
     Text,
     UniqueConstraint,
+    text,
 )
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import relationship
@@ -62,10 +63,11 @@ class CompanyMaster(Base):
 
     # Timestamps
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
     updated_at = Column(
         DateTime(timezone=True),
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
         onupdate=lambda: datetime.now(timezone.utc),
     )
@@ -109,10 +111,11 @@ class CompanyExternalId(Base):
     verified_at = Column(DateTime(timezone=True), nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
     updated_at = Column(
         DateTime(timezone=True),
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
         onupdate=lambda: datetime.now(timezone.utc),
     )
@@ -142,7 +145,7 @@ class CompanyAlias(Base):
     source = Column(String, nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
 
     company_master = relationship("CompanyMaster", back_populates="aliases")
@@ -171,12 +174,13 @@ class CompanySourceRecord(Base):
     fetched_at = Column(
         DateTime(timezone=True),
         nullable=False,
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
     )
     raw_payload = Column(JSONB, nullable=True)
 
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
 
     company_master = relationship("CompanyMaster", back_populates="source_records")

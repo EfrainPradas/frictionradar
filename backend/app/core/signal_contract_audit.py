@@ -142,6 +142,7 @@ FIE_SIGNAL_MAP: Dict[str, str] = {
     "trades": "trades_hiring",
     "transportation": "transportation_hiring",
     "food_service": "food_service_hiring",
+    "design": "design_hiring",
 }
 
 # ------------------------------------------------------------------

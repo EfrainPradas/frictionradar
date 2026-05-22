@@ -1,0 +1,4339 @@
+{
+  "overall": {
+    "n": 218,
+    "dom_match_rate": 0.711,
+    "score_in_band_rate": 0.995,
+    "ds_match_rate": 0.697
+  },
+  "by_archetype": {
+    "scaling_startup": {
+      "n": 30,
+      "dom_match_rate": 0.933,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 7.93,
+      "avg_signals": 12.2,
+      "avg_roles": 71.2
+    },
+    "ghost_jobs_giant": {
+      "n": 15,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 0.8,
+      "avg_score": 7.5,
+      "avg_signals": 8.7,
+      "avg_roles": 102.5
+    },
+    "post_layoff_rehire": {
+      "n": 20,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 0.6,
+      "avg_score": 5.5,
+      "avg_signals": 8.1,
+      "avg_roles": 36.9
+    },
+    "hiring_freeze": {
+      "n": 15,
+      "dom_match_rate": 0.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 0.2,
+      "avg_score": 1.55,
+      "avg_signals": 1.4,
+      "avg_roles": 7.4
+    },
+    "aggressive_replacer": {
+      "n": 15,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 0.733,
+      "avg_score": 8.37,
+      "avg_signals": 10.7,
+      "avg_roles": 70.9
+    },
+    "lit_edu_cluster": {
+      "n": 25,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 0.32,
+      "avg_score": 5.41,
+      "avg_signals": 7.8,
+      "avg_roles": 15.7
+    },
+    "novawork_ideal": {
+      "n": 20,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 0.95,
+      "avg_score": 10.5,
+      "avg_signals": 14.8,
+      "avg_roles": 47.0
+    },
+    "noise_floor": {
+      "n": 30,
+      "dom_match_rate": 0.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 0.433,
+      "avg_score": 1.6,
+      "avg_signals": 1.5,
+      "avg_roles": 8.0
+    },
+    "intermediary_trap": {
+      "n": 10,
+      "dom_match_rate": 0.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 1.4,
+      "avg_signals": 1.4,
+      "avg_roles": 116.1
+    },
+    "data_quality_chaos": {
+      "n": 20,
+      "dom_match_rate": 0.7,
+      "score_in_band_rate": 0.95,
+      "ds_match_rate": 0.8,
+      "avg_score": 5.06,
+      "avg_signals": 6.6,
+      "avg_roles": 50.0
+    },
+    "scaling_startup_cf": {
+      "n": 5,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 0.0,
+      "avg_signals": 0.0,
+      "avg_roles": 0.0
+    },
+    "aggressive_replacer_cf": {
+      "n": 6,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 0.0,
+      "avg_signals": 0.0,
+      "avg_roles": 0.0
+    },
+    "ghost_jobs_giant_cf": {
+      "n": 2,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 0.0,
+      "avg_signals": 0.0,
+      "avg_roles": 0.0
+    },
+    "novawork_ideal_cf": {
+      "n": 2,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 0.0,
+      "avg_signals": 0.0,
+      "avg_roles": 0.0
+    },
+    "lit_edu_cluster_cf": {
+      "n": 2,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 0.0,
+      "avg_signals": 0.0,
+      "avg_roles": 0.0
+    },
+    "post_layoff_rehire_cf": {
+      "n": 1,
+      "dom_match_rate": 1.0,
+      "score_in_band_rate": 1.0,
+      "ds_match_rate": 1.0,
+      "avg_score": 0.0,
+      "avg_signals": 0.0,
+      "avg_roles": 0.0
+    }
+  },
+  "diagnostic_state_confusion": {
+    "ready_for_positioning": {
+      "ready_for_positioning": 54,
+      "specific_pain_emerging": 1
+    },
+    "broad_hiring_pattern_detected": {
+      "broad_hiring_pattern_detected": 44,
+      "specific_pain_emerging": 21,
+      "ready_for_positioning": 13
+    },
+    "specific_pain_emerging": {
+      "ready_for_positioning": 28,
+      "specific_pain_emerging": 36,
+      "broad_hiring_pattern_detected": 3
+    },
+    "insufficient_evidence": {
+      "insufficient_evidence": 18
+    }
+  },
+  "dominant_friction_confusion": {
+    "scaling_strain": {
+      "scaling_strain": 74,
+      "tooling_inconsistency": 2,
+      "None": 1
+    },
+    "process_inefficiency": {
+      "process_inefficiency": 18
+    },
+    "None": {
+      "scaling_strain": 58,
+      "None": 20
+    },
+    "tooling_inconsistency": {
+      "tooling_inconsistency": 18,
+      "None": 1
+    },
+    "reporting_fragmentation": {
+      "reporting_fragmentation": 25,
+      "None": 1
+    }
+  },
+  "per_company": [
+    {
+      "domain": "synth-lumen-pay-0000.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 53
+    },
+    {
+      "domain": "synth-junction-ai-0001.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 73
+    },
+    {
+      "domain": "synth-arcadia-bank-0002.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 65
+    },
+    {
+      "domain": "synth-harbor-ops-0003.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 73
+    },
+    {
+      "domain": "synth-granite-capital-0004.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 68
+    },
+    {
+      "domain": "synth-granite-ml-0005.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": false,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 7.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 70
+    },
+    {
+      "domain": "synth-junction-cortex-0006.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 76
+    },
+    {
+      "domain": "synth-ember-hub-0007.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 78
+    },
+    {
+      "domain": "synth-citrine-hub-0008.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 66
+    },
+    {
+      "domain": "synth-apex-ops-0009.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 74
+    },
+    {
+      "domain": "synth-quantum-compute-0010.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 71
+    },
+    {
+      "domain": "synth-cipher-labs-0011.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 71
+    },
+    {
+      "domain": "synth-fjord-ai-0012.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": false,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 7.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 77
+    },
+    {
+      "domain": "synth-fjord-ledger-0013.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 80
+    },
+    {
+      "domain": "synth-helix-ml-0014.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 80
+    },
+    {
+      "domain": "synth-ember-mind-0015.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 73
+    },
+    {
+      "domain": "synth-indigo-ml-0016.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 56
+    },
+    {
+      "domain": "synth-citrine-labs-0017.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 59
+    },
+    {
+      "domain": "synth-arcadia-cloud-0018.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 60
+    },
+    {
+      "domain": "synth-lumen-ai-0019.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 76
+    },
+    {
+      "domain": "synth-citrine-ai-0020.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 73
+    },
+    {
+      "domain": "synth-cipher-ml-0021.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 78
+    },
+    {
+      "domain": "synth-granite-cloud-0022.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 66
+    },
+    {
+      "domain": "synth-arcadia-labs-0023.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 79
+    },
+    {
+      "domain": "synth-helix-cloud-0024.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 75
+    },
+    {
+      "domain": "synth-apex-cloud-0025.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 66
+    },
+    {
+      "domain": "synth-ember-ops-0026.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 72
+    },
+    {
+      "domain": "synth-vortex-ops-0027.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 69
+    },
+    {
+      "domain": "synth-granite-stack-0028.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 13,
+      "n_roles": 79
+    },
+    {
+      "domain": "synth-indigo-cortex-0029.test",
+      "archetype": "scaling_startup",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        12
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 80
+    },
+    {
+      "domain": "synth-fjord-retail-0030.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 93
+    },
+    {
+      "domain": "synth-cipher-hospitality-0031.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 103
+    },
+    {
+      "domain": "synth-atlas-brands-0032.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 100
+    },
+    {
+      "domain": "synth-nexus-manufacturing-0033.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 101
+    },
+    {
+      "domain": "synth-fjord-works-0034.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 88
+    },
+    {
+      "domain": "synth-ember-brands-0035.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 97
+    },
+    {
+      "domain": "synth-forge-advisory-0036.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 94
+    },
+    {
+      "domain": "synth-vortex-group-0037.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 119
+    },
+    {
+      "domain": "synth-junction-partners-0038.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 96
+    },
+    {
+      "domain": "synth-junction-group-0039.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 110
+    },
+    {
+      "domain": "synth-forge-hospitality-0040.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 109
+    },
+    {
+      "domain": "synth-beacon-partners-0041.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 107
+    },
+    {
+      "domain": "synth-citrine-retail-0042.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 100
+    },
+    {
+      "domain": "synth-cipher-hospitality-0043.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 111
+    },
+    {
+      "domain": "synth-helix-works-0044.test",
+      "archetype": "ghost_jobs_giant",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        15
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 110
+    },
+    {
+      "domain": "synth-drift-stack-0045.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 39
+    },
+    {
+      "domain": "synth-mosaic-cloud-0046.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 35
+    },
+    {
+      "domain": "synth-indigo-sync-0047.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 40
+    },
+    {
+      "domain": "synth-drift-media-0048.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 36
+    },
+    {
+      "domain": "synth-nexus-networks-0049.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 36
+    },
+    {
+      "domain": "synth-apex-cloud-0050.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 41
+    },
+    {
+      "domain": "synth-ember-press-0051.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 33
+    },
+    {
+      "domain": "synth-drift-labs-0052.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 33
+    },
+    {
+      "domain": "synth-fjord-co-0053.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 30
+    },
+    {
+      "domain": "synth-drift-ops-0054.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 36
+    },
+    {
+      "domain": "synth-apex-stack-0055.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 34
+    },
+    {
+      "domain": "synth-fjord-hub-0056.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 39
+    },
+    {
+      "domain": "synth-drift-sync-0057.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 46
+    },
+    {
+      "domain": "synth-harbor-stack-0058.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 37
+    },
+    {
+      "domain": "synth-beacon-stack-0059.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 41
+    },
+    {
+      "domain": "synth-harbor-stack-0060.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 27
+    },
+    {
+      "domain": "synth-fjord-studios-0061.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 44
+    },
+    {
+      "domain": "synth-indigo-sync-0062.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 26
+    },
+    {
+      "domain": "synth-beacon-press-0063.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 39
+    },
+    {
+      "domain": "synth-harbor-ops-0064.test",
+      "archetype": "post_layoff_rehire",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 45
+    },
+    {
+      "domain": "synth-nexus-energy-0065.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 11
+    },
+    {
+      "domain": "synth-quantum-industries-0066.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 6
+    },
+    {
+      "domain": "synth-helix-holdings-0067.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 5
+    },
+    {
+      "domain": "synth-forge-group-0068.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-quantum-realty-0069.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 5
+    },
+    {
+      "domain": "synth-arcadia-utilities-0070.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 6
+    },
+    {
+      "domain": "synth-indigo-energy-0071.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 10
+    },
+    {
+      "domain": "synth-quantum-energy-0072.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 6
+    },
+    {
+      "domain": "synth-fjord-industries-0073.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-mosaic-co-0074.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 6
+    },
+    {
+      "domain": "synth-quantum-industries-0075.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 10
+    },
+    {
+      "domain": "synth-lumen-power-0076.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 4
+    },
+    {
+      "domain": "synth-harbor-manufacturing-0077.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-vortex-group-0078.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 11
+    },
+    {
+      "domain": "synth-mosaic-works-0079.test",
+      "archetype": "hiring_freeze",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-lumen-partners-0080.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 72
+    },
+    {
+      "domain": "synth-beacon-ops-0081.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 54
+    },
+    {
+      "domain": "synth-helix-capital-0082.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 11,
+      "n_roles": 74
+    },
+    {
+      "domain": "synth-nexus-capital-0083.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 76
+    },
+    {
+      "domain": "synth-indigo-pay-0084.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 69
+    },
+    {
+      "domain": "synth-atlas-pay-0085.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 10,
+      "n_roles": 81
+    },
+    {
+      "domain": "synth-nexus-capital-0086.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 79
+    },
+    {
+      "domain": "synth-cipher-advisory-0087.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 81
+    },
+    {
+      "domain": "synth-arcadia-ledger-0088.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 10,
+      "n_roles": 65
+    },
+    {
+      "domain": "synth-harbor-consulting-0089.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": false,
+      "n_signals": 10,
+      "n_roles": 55
+    },
+    {
+      "domain": "synth-drift-partners-0090.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 76
+    },
+    {
+      "domain": "synth-vortex-finance-0091.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 75
+    },
+    {
+      "domain": "synth-arcadia-labs-0092.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 71
+    },
+    {
+      "domain": "synth-apex-ledger-0093.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 61
+    },
+    {
+      "domain": "synth-arcadia-labs-0094.test",
+      "archetype": "aggressive_replacer",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        5,
+        14
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 11,
+      "n_roles": 74
+    },
+    {
+      "domain": "synth-ember-press-0095.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 18
+    },
+    {
+      "domain": "synth-ember-academy-0096.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 6.25,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 15
+    },
+    {
+      "domain": "synth-vortex-network-0097.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 12
+    },
+    {
+      "domain": "synth-apex-press-0098.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 6.25,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 16
+    },
+    {
+      "domain": "synth-helix-academy-0099.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 6.25,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 14
+    },
+    {
+      "domain": "synth-cipher-learning-0100.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 6.25,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 15
+    },
+    {
+      "domain": "synth-mosaic-press-0101.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 6.25,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 15
+    },
+    {
+      "domain": "synth-atlas-holdings-0102.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 14
+    },
+    {
+      "domain": "synth-harbor-studios-0103.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 16
+    },
+    {
+      "domain": "synth-drift-studios-0104.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 19
+    },
+    {
+      "domain": "synth-citrine-academy-0105.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 17
+    },
+    {
+      "domain": "synth-beacon-holdings-0106.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 17
+    },
+    {
+      "domain": "synth-drift-studios-0107.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 15
+    },
+    {
+      "domain": "synth-lumen-network-0108.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 14
+    },
+    {
+      "domain": "synth-cipher-learning-0109.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 16
+    },
+    {
+      "domain": "synth-mosaic-press-0110.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 16
+    },
+    {
+      "domain": "synth-drift-learning-0111.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 20
+    },
+    {
+      "domain": "synth-helix-edu-0112.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 14
+    },
+    {
+      "domain": "synth-quantum-press-0113.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 6.25,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 13
+    },
+    {
+      "domain": "synth-drift-academy-0114.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 8,
+      "n_roles": 10
+    },
+    {
+      "domain": "synth-nexus-press-0115.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 5.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 15
+    },
+    {
+      "domain": "synth-granite-co-0116.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 7.25,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 7,
+      "n_roles": 17
+    },
+    {
+      "domain": "synth-mosaic-network-0117.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 17
+    },
+    {
+      "domain": "synth-ember-edu-0118.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 19
+    },
+    {
+      "domain": "synth-indigo-group-0119.test",
+      "archetype": "lit_edu_cluster",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": "reporting_fragmentation",
+      "dom_match": true,
+      "expected_score_band": [
+        3,
+        10
+      ],
+      "actual_score": 4.75,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 8,
+      "n_roles": 18
+    },
+    {
+      "domain": "synth-vortex-ai-0120.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 16,
+      "n_roles": 47
+    },
+    {
+      "domain": "synth-vortex-cloud-0121.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 43
+    },
+    {
+      "domain": "synth-junction-labs-0122.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 47
+    },
+    {
+      "domain": "synth-mosaic-labs-0123.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 16,
+      "n_roles": 40
+    },
+    {
+      "domain": "synth-indigo-compute-0124.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 49
+    },
+    {
+      "domain": "synth-arcadia-labs-0125.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 52
+    },
+    {
+      "domain": "synth-citrine-mind-0126.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 46
+    },
+    {
+      "domain": "synth-harbor-compute-0127.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 51
+    },
+    {
+      "domain": "synth-harbor-stack-0128.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 56
+    },
+    {
+      "domain": "synth-mosaic-compute-0129.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 14,
+      "n_roles": 43
+    },
+    {
+      "domain": "synth-nexus-stack-0130.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 16,
+      "n_roles": 46
+    },
+    {
+      "domain": "synth-citrine-labs-0131.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 40
+    },
+    {
+      "domain": "synth-arcadia-mind-0132.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 16,
+      "n_roles": 44
+    },
+    {
+      "domain": "synth-harbor-ops-0133.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 51
+    },
+    {
+      "domain": "synth-indigo-cortex-0134.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 54
+    },
+    {
+      "domain": "synth-harbor-sync-0135.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 47
+    },
+    {
+      "domain": "synth-nexus-stack-0136.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 45
+    },
+    {
+      "domain": "synth-beacon-cloud-0137.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 16,
+      "n_roles": 50
+    },
+    {
+      "domain": "synth-indigo-cloud-0138.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 42
+    },
+    {
+      "domain": "synth-arcadia-cortex-0139.test",
+      "archetype": "novawork_ideal",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        7,
+        16
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 46
+    },
+    {
+      "domain": "synth-cipher-group-0140.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 10
+    },
+    {
+      "domain": "synth-granite-development-0141.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-lumen-holdings-0142.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 11
+    },
+    {
+      "domain": "synth-indigo-co-0143.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 11
+    },
+    {
+      "domain": "synth-arcadia-holdings-0144.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 10
+    },
+    {
+      "domain": "synth-helix-co-0145.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-drift-co-0146.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-helix-group-0147.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 9
+    },
+    {
+      "domain": "synth-arcadia-holdings-0148.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-drift-holdings-0149.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-vortex-co-0150.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 5
+    },
+    {
+      "domain": "synth-citrine-group-0151.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 5
+    },
+    {
+      "domain": "synth-arcadia-group-0152.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 12
+    },
+    {
+      "domain": "synth-ember-partners-0153.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 6
+    },
+    {
+      "domain": "synth-forge-group-0154.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-granite-co-0155.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 13
+    },
+    {
+      "domain": "synth-quantum-group-0156.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 9
+    },
+    {
+      "domain": "synth-citrine-holdings-0157.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 6
+    },
+    {
+      "domain": "synth-cipher-holdings-0158.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-atlas-holdings-0159.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-granite-advisory-0160.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-apex-co-0161.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-fjord-co-0162.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 4
+    },
+    {
+      "domain": "synth-harbor-transport-0163.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-ember-consulting-0164.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-vortex-partners-0165.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-quantum-consulting-0166.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 8
+    },
+    {
+      "domain": "synth-apex-group-0167.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 1,
+      "n_roles": 11
+    },
+    {
+      "domain": "synth-mosaic-consulting-0168.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-harbor-holdings-0169.test",
+      "archetype": "noise_floor",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        5
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-mosaic-consulting-0170.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 123
+    },
+    {
+      "domain": "synth-arcadia-advisory-0171.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 108
+    },
+    {
+      "domain": "synth-apex-co-0172.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 118
+    },
+    {
+      "domain": "synth-mosaic-holdings-0173.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 112
+    },
+    {
+      "domain": "synth-beacon-advisory-0174.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 139
+    },
+    {
+      "domain": "synth-beacon-advisory-0175.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 115
+    },
+    {
+      "domain": "synth-ember-partners-0176.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 122
+    },
+    {
+      "domain": "synth-fjord-co-0177.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 128
+    },
+    {
+      "domain": "synth-granite-group-0178.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 91
+    },
+    {
+      "domain": "synth-forge-co-0179.test",
+      "archetype": "intermediary_trap",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        4
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 105
+    },
+    {
+      "domain": "synth-mosaic-advisory-0180.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        10
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 9
+    },
+    {
+      "domain": "synth-cipher-stack-0181.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": null,
+      "dom_match": false,
+      "expected_score_band": [
+        2,
+        21
+      ],
+      "actual_score": 0.0,
+      "score_in_band": false,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 46
+    },
+    {
+      "domain": "synth-nexus-sync-0182.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        15
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 31
+    },
+    {
+      "domain": "synth-lumen-compute-0183.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        17
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 66
+    },
+    {
+      "domain": "synth-ember-group-0184.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        2,
+        20
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 104
+    },
+    {
+      "domain": "synth-mosaic-co-0185.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        10
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 10
+    },
+    {
+      "domain": "synth-fjord-co-0186.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        10
+      ],
+      "actual_score": 2.75,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 2,
+      "n_roles": 7
+    },
+    {
+      "domain": "synth-apex-works-0187.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        2,
+        20
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 9,
+      "n_roles": 104
+    },
+    {
+      "domain": "synth-vortex-learning-0188.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "reporting_fragmentation",
+      "actual_dominant": null,
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        15
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 18
+    },
+    {
+      "domain": "synth-cipher-partners-0189.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        10
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": false,
+      "n_signals": 0,
+      "n_roles": 5
+    },
+    {
+      "domain": "synth-ember-labs-0190.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        15
+      ],
+      "actual_score": 5.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 7,
+      "n_roles": 41
+    },
+    {
+      "domain": "synth-cipher-ai-0191.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        2,
+        21
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 14,
+      "n_roles": 61
+    },
+    {
+      "domain": "synth-beacon-finance-0192.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        19
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 69
+    },
+    {
+      "domain": "synth-drift-pay-0193.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": null,
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        19
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 0,
+      "n_roles": 68
+    },
+    {
+      "domain": "synth-cipher-consulting-0194.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        19
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": false,
+      "n_signals": 10,
+      "n_roles": 57
+    },
+    {
+      "domain": "synth-granite-advisory-0195.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "tooling_inconsistency",
+      "actual_dominant": "tooling_inconsistency",
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        19
+      ],
+      "actual_score": 8.5,
+      "score_in_band": true,
+      "expected_diagnostic": "specific_pain_emerging",
+      "actual_diagnostic": "specific_pain_emerging",
+      "ds_match": true,
+      "n_signals": 10,
+      "n_roles": 70
+    },
+    {
+      "domain": "synth-apex-holdings-0196.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": null,
+      "actual_dominant": "scaling_strain",
+      "dom_match": false,
+      "expected_score_band": [
+        0,
+        10
+      ],
+      "actual_score": 1.25,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 1,
+      "n_roles": 11
+    },
+    {
+      "domain": "synth-fjord-stack-0197.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        17
+      ],
+      "actual_score": 8.0,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 12,
+      "n_roles": 81
+    },
+    {
+      "domain": "synth-citrine-compute-0198.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "scaling_strain",
+      "actual_dominant": "scaling_strain",
+      "dom_match": true,
+      "expected_score_band": [
+        2,
+        21
+      ],
+      "actual_score": 10.5,
+      "score_in_band": true,
+      "expected_diagnostic": "ready_for_positioning",
+      "actual_diagnostic": "ready_for_positioning",
+      "ds_match": true,
+      "n_signals": 15,
+      "n_roles": 48
+    },
+    {
+      "domain": "synth-vortex-consulting-0199.test",
+      "archetype": "data_quality_chaos",
+      "is_counterfactual": false,
+      "expected_dominant": "process_inefficiency",
+      "actual_dominant": "process_inefficiency",
+      "dom_match": true,
+      "expected_score_band": [
+        2,
+        20
+      ],
+      "actual_score": 7.5,
+      "score_in_band": true,
+      "expected_diagnostic": "broad_hiring_pattern_detected",
+      "actual_diagnostic": "broad_hiring_pattern_detected",
+      "ds_match": true,
+      "n_signals": 9,
+      "n_roles": 93
+    },
+    {
+      "domain": "synth-cf-ember-ops-0026.test",
+      "archetype": "scaling_startup_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-harbor-consulting-0089.test",
+      "archetype": "aggressive_replacer_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-beacon-partners-0041.test",
+      "archetype": "ghost_jobs_giant_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-apex-cloud-0025.test",
+      "archetype": "scaling_startup_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-nexus-capital-0083.test",
+      "archetype": "aggressive_replacer_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-arcadia-cortex-0139.test",
+      "archetype": "novawork_ideal_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-cipher-hospitality-0043.test",
+      "archetype": "ghost_jobs_giant_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-granite-ml-0005.test",
+      "archetype": "scaling_startup_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-nexus-stack-0136.test",
+      "archetype": "novawork_ideal_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-quantum-press-0113.test",
+      "archetype": "lit_edu_cluster_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-ember-edu-0118.test",
+      "archetype": "lit_edu_cluster_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-arcadia-cloud-0018.test",
+      "archetype": "scaling_startup_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-fjord-ai-0012.test",
+      "archetype": "scaling_startup_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-nexus-capital-0086.test",
+      "archetype": "aggressive_replacer_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-lumen-partners-0080.test",
+      "archetype": "aggressive_replacer_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-indigo-pay-0084.test",
+      "archetype": "aggressive_replacer_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-mosaic-cloud-0046.test",
+      "archetype": "post_layoff_rehire_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    },
+    {
+      "domain": "synth-cf-atlas-pay-0085.test",
+      "archetype": "aggressive_replacer_cf",
+      "is_counterfactual": true,
+      "expected_dominant": null,
+      "actual_dominant": null,
+      "dom_match": true,
+      "expected_score_band": [
+        0,
+        3
+      ],
+      "actual_score": 0.0,
+      "score_in_band": true,
+      "expected_diagnostic": "insufficient_evidence",
+      "actual_diagnostic": "insufficient_evidence",
+      "ds_match": true,
+      "n_signals": 0,
+      "n_roles": 0
+    }
+  ]
+}

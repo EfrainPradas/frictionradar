@@ -36,14 +36,14 @@ export function BroadHiringReadCard({ evaluation }: Props) {
 
   return (
     <div className="space-y-4">
-      <p className="text-sm text-gray-700 leading-relaxed">{evaluation.summary}</p>
+      <p className="text-sm text-gray-300 leading-relaxed">{evaluation.summary}</p>
 
       <div>
-        <p className="text-xs text-gray-400 uppercase tracking-wide mb-1.5">What we know</p>
+        <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1.5">What we know</p>
         <ul className="space-y-1">
           {whatWeKnow.map((item, idx) => (
-            <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
-              <span className="text-emerald-500 mt-0.5">✓</span>
+            <li key={idx} className="text-sm text-gray-300 flex items-start gap-2">
+              <span className="text-emerald-400/70 mt-0.5 shrink-0">✓</span>
               <span>{item}</span>
             </li>
           ))}
@@ -51,20 +51,20 @@ export function BroadHiringReadCard({ evaluation }: Props) {
       </div>
 
       <div>
-        <p className="text-xs text-gray-400 uppercase tracking-wide mb-1.5">What we do not know yet</p>
+        <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1.5">What we do not know yet</p>
         <ul className="space-y-1">
           {whatWeDoNotKnow.map((item, idx) => (
-            <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
-              <span className="text-amber-500 mt-0.5">?</span>
+            <li key={idx} className="text-sm text-gray-400 flex items-start gap-2">
+              <span className="text-amber-400/70 mt-0.5 shrink-0">?</span>
               <span>{item}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="rounded border border-gray-100 bg-gray-50 px-3 py-2">
-        <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Next best step</p>
-        <p className="text-sm text-gray-700">{evaluation.next_best_step}</p>
+      <div className="rounded border border-orbital-border bg-[#080b0e] px-3 py-2">
+        <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1">Next best step</p>
+        <p className="text-sm text-gray-300">{evaluation.next_best_step}</p>
       </div>
     </div>
   );

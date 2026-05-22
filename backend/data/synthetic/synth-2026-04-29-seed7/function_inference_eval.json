@@ -1,0 +1,122 @@
+{
+  "overall": {
+    "n_total": 9517,
+    "n_in_scope": 8854,
+    "n_out_of_scope": 663,
+    "accuracy": 0.9129
+  },
+  "per_class": {
+    "customer_success": {
+      "n": 660,
+      "precision": 1.0,
+      "recall": 0.998,
+      "tp": 659,
+      "fp": 0,
+      "fn": 1
+    },
+    "data_analytics": {
+      "n": 549,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 549,
+      "fp": 0,
+      "fn": 0
+    },
+    "engineering": {
+      "n": 3471,
+      "precision": 1.0,
+      "recall": 0.87,
+      "tp": 3020,
+      "fp": 0,
+      "fn": 451
+    },
+    "finance": {
+      "n": 157,
+      "precision": 1.0,
+      "recall": 0.707,
+      "tp": 111,
+      "fp": 0,
+      "fn": 46
+    },
+    "marketing": {
+      "n": 479,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 479,
+      "fp": 0,
+      "fn": 0
+    },
+    "operations": {
+      "n": 1177,
+      "precision": 1.0,
+      "recall": 0.768,
+      "tp": 904,
+      "fp": 0,
+      "fn": 273
+    },
+    "product": {
+      "n": 1026,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1026,
+      "fp": 0,
+      "fn": 0
+    },
+    "sales": {
+      "n": 1335,
+      "precision": 0.83,
+      "recall": 1.0,
+      "tp": 1335,
+      "fp": 273,
+      "fn": 0
+    }
+  },
+  "confusion_in_scope": {
+    "engineering": {
+      "engineering": 3020,
+      "unknown": 451
+    },
+    "product": {
+      "product": 1026
+    },
+    "data_analytics": {
+      "data_analytics": 549
+    },
+    "customer_success": {
+      "customer_success": 659,
+      "junk": 1
+    },
+    "sales": {
+      "sales": 1335
+    },
+    "operations": {
+      "sales": 273,
+      "operations": 904
+    },
+    "marketing": {
+      "marketing": 479
+    },
+    "finance": {
+      "junk": 46,
+      "finance": 111
+    }
+  },
+  "out_of_scope_distribution": {
+    "other": {
+      "hr_people": 71,
+      "unknown": 72,
+      "it": 97,
+      "recruiting_talent": 79
+    },
+    "teaching": {
+      "education": 44
+    },
+    "content": {
+      "unknown": 143
+    },
+    "editorial": {
+      "unknown": 157
+    }
+  },
+  "n_per_role": 9517
+}

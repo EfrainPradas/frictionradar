@@ -85,7 +85,7 @@ def _pain_text_for(row: SmartMatchCache | dict) -> str:
 
     main_pain = _get("main_pain")
     needs = _get("what_the_company_needs")
-    angle = _get("best_attack_angle")
+    angle = _get("recommended_positioning")
     where = _get("where_pain_lives")
     sector = _get("inferred_sector")
     ds = _get("diagnostic_state")
@@ -94,7 +94,7 @@ def _pain_text_for(row: SmartMatchCache | dict) -> str:
         f"Pain: {main_pain}" if main_pain else "",
         f"Lives in: {where}" if where else "",
         f"Needs: {needs}" if needs else "",
-        f"Best attack angle: {angle}" if angle else "",
+        f"Recommended positioning: {angle}" if angle else "",
         f"Sector: {sector}" if sector else "",
         f"Diagnosis: {ds}" if ds else "",
     ]
@@ -200,7 +200,7 @@ def _prefilter_candidates(
 _RERANK_SYSTEM = (
     "You are a matchmaker between a job candidate and companies that have "
     "hiring pain. For each company, judge how well the candidate could "
-    "credibly attack that pain. Return ONLY JSON — no prose."
+    "credibly address that pain. Return ONLY JSON — no prose."
 )
 
 
@@ -213,7 +213,7 @@ def _build_rerank_prompt(payload: dict, rows: list[SmartMatchCache], top_k: int)
             f"[{idx}] id={row.company_id} domain={row.domain} sector={row.inferred_sector or 'n/a'}\n"
             f"    pain: {row.main_pain or '-'}\n"
             f"    needs: {row.what_the_company_needs or '-'}\n"
-            f"    angle: {row.best_attack_angle or '-'}"
+            f"    angle: {row.recommended_positioning or '-'}"
         )
     companies_block = "\n".join(company_lines)
 
@@ -499,7 +499,7 @@ def _snapshot_for(row: SmartMatchCache, *, db: Optional[Session] = None) -> dict
         "main_pain": row.main_pain,
         "where_pain_lives": row.where_pain_lives,
         "what_the_company_needs": row.what_the_company_needs,
-        "best_attack_angle": row.best_attack_angle,
+        "recommended_positioning": row.recommended_positioning,
         "confidence": row.confidence,
         "eligibility_gate": row.eligibility_gate,
         "inferred_sector": row.inferred_sector,
@@ -575,7 +575,7 @@ def build_cache_row_values(
         "main_pain": (verdict or {}).get("main_pain"),
         "where_pain_lives": (verdict or {}).get("where_pain_lives"),
         "what_the_company_needs": (verdict or {}).get("what_the_company_needs"),
-        "best_attack_angle": (verdict or {}).get("best_attack_angle"),
+        "recommended_positioning": (verdict or {}).get("recommended_positioning"),
         "confidence": getattr(eligibility, "confidence_band", None),
         "eligibility_gate": getattr(eligibility, "gate_passed", None),
         "evaluation_kpis": kpis,

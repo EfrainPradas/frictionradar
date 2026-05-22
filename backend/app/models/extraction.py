@@ -18,6 +18,7 @@ from sqlalchemy import (
     String,
     Text,
     ForeignKey,
+    text,
 )
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 
@@ -43,6 +44,8 @@ class CompanyAtsDetection(Base):
     confidence = Column(Numeric, nullable=True)
     detected_at = Column(
         DateTime(timezone=True),
+        nullable=False,
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
     )
 
@@ -78,6 +81,8 @@ class CompanyExtractionCache(Base):
 
     cached_at = Column(
         DateTime(timezone=True),
+        nullable=False,
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
     )
     expires_at = Column(DateTime(timezone=True), nullable=True)
@@ -123,5 +128,7 @@ class CompanyExtractionAttempt(Base):
 
     attempted_at = Column(
         DateTime(timezone=True),
+        nullable=False,
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
     )

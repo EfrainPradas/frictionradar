@@ -26,7 +26,7 @@ interface CompanyVerdict {
     main_pain: string;
     where_pain_lives: string;
     what_the_company_needs: string;
-    best_attack_angle: string;
+    recommended_positioning: string;
   };
 }
 
@@ -57,15 +57,20 @@ export function DashboardPage() {
     } catch {
       // Continue without verdict
     }
-
     refetch();
     refetchStats();
   };
 
+  // ── Compute stats for header metrics ──────────────────────────
+  const totalCompanies = companies?.length ?? 0;
+  const analyzedCount = analyzedIds.size;
+  const highFriction = Object.values(latestScores).filter(s => s && s.total_score >= 6).length;
+  const totalSignals = Object.values(companyStats).reduce((sum, s) => sum + (s.signalsCount ?? 0), 0);
+
   if (isLoading) {
     return (
       <AppLayout title="Dashboard" subtitle="Company triage & signal overview">
-        <LoadingState label="Loading companies…" />
+        <LoadingState label="Acquiring signals…" />
       </AppLayout>
     );
   }
@@ -80,40 +85,54 @@ export function DashboardPage() {
 
   return (
     <AppLayout title="Dashboard" subtitle="Company triage & signal overview">
-      <div className="space-y-6">
-        {/* Analysis Form at top */}
+      <div className="space-y-5">
+        {/* ── Command Input ──────────────────────────────────────── */}
         <AnalysisForm onAnalysisComplete={handleAnalysisComplete} />
 
-        {/* Companies list */}
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm font-semibold text-gray-700">Companies</h2>
-            <span className="text-xs text-gray-400">{companies?.length ?? 0} total</span>
+        {/* ── Status Metrics Bar ──────────────────────────────────── */}
+        <div className="grid grid-cols-4 gap-px rounded-lg overflow-hidden border border-orbital-border">
+          <div className="bg-[#0b0f12] px-4 py-3">
+            <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Companies</p>
+            <p className="text-2xl font-mono font-bold text-gray-200 mt-0.5 animate-counter">{totalCompanies}</p>
           </div>
-
-          <div className="flex items-center gap-3">
-            {companies && companies.length > 0 && (
-              <BulkReanalyzeButton companies={companies} analyzedIds={analyzedIds} onDone={() => { refetch(); refetchStats(); }} />
-            )}
-            <JsonImport onImportComplete={() => { refetch(); refetchStats(); }} />
+          <div className="bg-[#0b0f12] px-4 py-3">
+            <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Analyzed</p>
+            <p className="text-2xl font-mono font-bold text-amber-400 mt-0.5 animate-counter">{analyzedCount}</p>
           </div>
-
-          {!isLoading && !error && companies && companies.length > 0 && (
-            <CompanyTable
-              companies={companies}
-              latestScores={latestScores}
-              companyStats={companyStats}
-              verdicts={verdicts}
-            />
-          )}
-
-          {!isLoading && !error && (!companies || companies.length === 0) && (
-            <EmptyState
-              title="No companies yet"
-              description="Use the form above to analyze a company."
-            />
-          )}
+          <div className="bg-[#0b0f12] px-4 py-3">
+            <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">High Friction</p>
+            <p className="text-2xl font-mono font-bold text-red-400 mt-0.5 animate-counter">{highFriction}</p>
+          </div>
+          <div className="bg-[#0b0f12] px-4 py-3">
+            <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-600">Signals</p>
+            <p className="text-2xl font-mono font-bold text-gray-200 mt-0.5 animate-counter">{totalSignals.toLocaleString()}</p>
+          </div>
         </div>
+
+        {/* ── Actions Row ──────────────────────────────────────── */}
+        <div className="flex items-center gap-3">
+          {companies && companies.length > 0 && (
+            <BulkReanalyzeButton companies={companies} analyzedIds={analyzedIds} onDone={() => { refetch(); refetchStats(); }} />
+          )}
+          <JsonImport onImportComplete={() => { refetch(); refetchStats(); }} />
+        </div>
+
+        {/* ── Company Intelligence Feed ───────────────────────────── */}
+        {!isLoading && !error && companies && companies.length > 0 && (
+          <CompanyTable
+            companies={companies}
+            latestScores={latestScores}
+            companyStats={companyStats}
+            verdicts={verdicts}
+          />
+        )}
+
+        {!isLoading && !error && (!companies || companies.length === 0) && (
+          <EmptyState
+            title="No companies yet"
+            description="Use the command input above to analyze a company."
+          />
+        )}
       </div>
     </AppLayout>
   );

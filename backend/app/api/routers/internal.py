@@ -2,7 +2,7 @@
 
 All endpoints require `X-Internal-Token` equal to `FRICTIONRADAR_INTERNAL_TOKEN`.
 Never expose this router publicly — it returns raw FrictionRadar vocabulary
-(main_pain, best_attack_angle, etc.) and is assumed to be consumed only
+(main_pain, recommended_positioning, etc.) and is assumed to be consumed only
 by NovaWork's backend, which translates the field names to neutral
 vocabulary before serving them to end users.
 """
@@ -76,7 +76,7 @@ class CompanySnapshot(BaseModel):
     main_pain: Optional[str] = None
     where_pain_lives: Optional[str] = None
     what_the_company_needs: Optional[str] = None
-    best_attack_angle: Optional[str] = None
+    recommended_positioning: Optional[str] = None
     confidence: Optional[str] = None
     eligibility_gate: Optional[str] = None
     inferred_sector: Optional[str] = None
@@ -149,7 +149,7 @@ def _cache_to_snapshot(
         main_pain=row.main_pain,
         where_pain_lives=row.where_pain_lives,
         what_the_company_needs=row.what_the_company_needs,
-        best_attack_angle=row.best_attack_angle,
+        recommended_positioning=row.recommended_positioning,
         confidence=row.confidence,
         eligibility_gate=row.eligibility_gate,
         inferred_sector=row.inferred_sector,

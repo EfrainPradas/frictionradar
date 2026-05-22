@@ -8,7 +8,7 @@ and prepare positioning before any external contact.
 """
 
 import uuid
-from sqlalchemy import Column, String, Text, Boolean, SmallInteger, DateTime, ForeignKey, Numeric
+from sqlalchemy import Column, String, Text, Boolean, SmallInteger, DateTime, ForeignKey, Numeric, text
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
@@ -68,10 +68,11 @@ class PipelineEntry(Base):
     intake_source = Column(String, nullable=True)  # batch_run / manual / api
     batch_run_id = Column(String, nullable=True)
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
     updated_at = Column(
         DateTime(timezone=True),
+        server_default=text("now()"),
         default=lambda: datetime.now(timezone.utc),
         onupdate=lambda: datetime.now(timezone.utc),
     )
@@ -101,7 +102,7 @@ class PipelineEvent(Base):
     note = Column(Text, nullable=True)
     metadata_json = Column(JSONB, nullable=True)
     created_at = Column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+        DateTime(timezone=True), nullable=False, server_default=text("now()"), default=lambda: datetime.now(timezone.utc)
     )
 
     pipeline_entry = relationship("PipelineEntry")

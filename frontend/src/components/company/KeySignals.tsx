@@ -32,7 +32,6 @@ export function KeySignals({ signals, limit = 5 }: Props) {
   const keySignals = useMemo(() => {
     if (!signals || signals.length === 0) return [];
 
-    // Detect hiring-area cluster — collapse into one humanized summary.
     const hiringAreaTypes = new Set<string>();
     const otherSignals: typeof signals = [];
     for (const sig of signals) {
@@ -64,8 +63,6 @@ export function KeySignals({ signals, limit = 5 }: Props) {
       });
     }
 
-    // Dedupe the remaining signals by HUMANIZED text so repeated weak
-    // signals (e.g. multiple "active careers page" rows) collapse to one.
     const grouped = new Map<string, KeySignal>();
     for (const sig of otherSignals) {
       const formatted = transformSignalToObservation(sig.signal_text);
@@ -112,16 +109,16 @@ export function KeySignals({ signals, limit = 5 }: Props) {
     <div className="space-y-2">
       {keySignals.map((sig, idx) => (
         <div key={idx} className="flex items-start gap-2">
-          <span className="text-xs font-medium text-gray-400 w-4">{idx + 1}.</span>
-          <span className="text-sm text-gray-700">{sig.formatted}</span>
+          <span className="text-xs font-mono text-gray-600 w-4 shrink-0">{idx + 1}.</span>
+          <span className="text-sm text-gray-300">{sig.formatted}</span>
           {sig.occurrences > 1 && (
-            <span className="text-xs text-gray-400">({sig.occurrences}×)</span>
+            <span className="text-[10px] text-gray-600">({sig.occurrences}×)</span>
           )}
         </div>
       ))}
-      
+
       {(lowSignalCount || lowConfidence) && (
-        <div className="text-xs text-amber-600 mt-2">
+        <div className="text-xs text-amber-400/70 mt-2">
           {lowSignalCount && <span>Limited data: only {signals.length} observations. </span>}
           {lowConfidence && <span>Low confidence signals detected.</span>}
         </div>

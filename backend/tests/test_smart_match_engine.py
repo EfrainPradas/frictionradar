@@ -42,7 +42,7 @@ def _make_cache_row(**overrides):
         "main_pain": "Can't close senior roles fast enough",
         "where_pain_lives": "Engineering",
         "what_the_company_needs": "Seasoned VP Eng with SaaS scaling reps",
-        "best_attack_angle": "Show Series-B scale-up playbook",
+        "recommended_positioning": "Show Series-B scale-up playbook",
         "confidence": "high",
         "eligibility_gate": "full",
         "evaluation_kpis": {"positioning_readiness": 0.82},
@@ -338,7 +338,7 @@ def test_build_cache_row_values_shape():
         "main_pain": "can't close roles",
         "where_pain_lives": "eng",
         "what_the_company_needs": "VP Eng",
-        "best_attack_angle": "scale-up playbook",
+        "recommended_positioning": "scale-up playbook",
     }
     evaluation = {
         "kpis": {"positioning_readiness": 0.9},
@@ -431,7 +431,7 @@ def test_rank_companies_for_candidate_deterministic(monkeypatch):
     assert results[1].domain == "alpha.com"
     # snapshot fields surface neutral FR vocabulary for NovaWork to translate
     assert "main_pain" in results[0].snapshot
-    assert "best_attack_angle" in results[0].snapshot
+    assert "recommended_positioning" in results[0].snapshot
 
 
 def test_rank_companies_empty_prefilter_returns_empty(monkeypatch):

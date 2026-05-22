@@ -1,0 +1,483 @@
+# FrictionRadar synthetic dataset — archetype definitions
+#
+# Read by generate_dataset.py. Each archetype is a parameter pack that
+# drives company demographics, role generation, behavioral patterns, and
+# the ground-truth labels (expected_outputs) used for evaluation.
+#
+# Vocabularies are CLOSED — see backend/docs/synthetic_data_spec.md §0.
+# The generator MUST validate every value against those enums.
+#
+# Pesos del dataset (n_per_archetype) suman 200 (D2 confirmado).
+
+schema_version: archetypes-v1
+total_companies: 200
+simulated_window:
+  t0: 2025-04-01
+  t1: 2026-04-01
+
+# Counterfactual pairing: para cada arquetipo con cf_eligible=true,
+# el generador puede crear una versión "baseline" (sin firma de fricción)
+# para medir lift. cf_count_target define cuántos pares queremos.
+counterfactual:
+  cf_count_target: 18
+  cf_score_band_baseline: [0, 3]    # CFs strip roles+signals → engine returns 0
+
+archetypes:
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: scaling_startup
+    n: 30
+    cf_eligible: true
+    tagline: Crecimiento sano, alta presión, sin freeze
+    demographics:
+      size_band: [50, 500]
+      geography_weights:
+        US-CA: 0.40
+        US-NY: 0.20
+        EU: 0.30
+        Other: 0.10
+      sectors:
+        Software & SaaS: 0.60
+        AI & Machine Learning: 0.30
+        Fintech & Financial Services: 0.10
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 18
+      functional_area_mix:
+        # Tightened to 3 areas with eng dominant ≥0.5 →
+        # engine reaches pain_clarity=HIGH + concentration=HIGH.
+        engineering: 0.65
+        product: 0.20
+        data: 0.15
+      ttl_open_days: { p50: 28, p95: 75 }
+      repost_probability: 0.05
+      title_drift_probability: 0.0
+      evergreen_probability: 0.0
+    behavioral_pattern:
+      cohort: monotone_growth
+      signal_density: high
+      noise_signals: low
+      friction_signatures:
+        - high_eng_concentration
+        - monotone_role_growth
+    expected_outputs:
+      diagnostic_state: ready_for_positioning
+      dominant_friction_type: scaling_strain
+      friction_score_band: [5, 12]
+      eligibility_gate: full
+      confidence: high
+      smart_match_hit: true
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: ghost_jobs_giant
+    n: 15
+    cf_eligible: true
+    tagline: Reqs evergreen reposteados sin contratar
+    demographics:
+      size_band: [5000, 15000]
+      geography_weights:
+        US-multi: 0.70
+        EU: 0.20
+        Other: 0.10
+      sectors:
+        Retail & Hospitality: 0.40
+        Professional Services: 0.30
+        Manufacturing & Industrial: 0.20
+        Other: 0.10
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 25
+      functional_area_mix:
+        operations: 0.30
+        sales: 0.20
+        engineering: 0.15
+        customer_success: 0.15
+        marketing: 0.10
+        other: 0.10
+      ttl_open_days: { p50: 180, p95: 400 }
+      repost_probability: 0.60
+      title_drift_probability: 0.10
+      evergreen_probability: 0.50
+    behavioral_pattern:
+      cohort: stagnant_high_volume
+      signal_density: moderate
+      noise_signals: high
+      friction_signatures:
+        - evergreen_long_ttl
+        - repost_cycles_3plus
+    expected_outputs:
+      diagnostic_state: broad_hiring_pattern_detected
+      dominant_friction_type: process_inefficiency
+      friction_score_band: [7, 15]
+      eligibility_gate: conditional
+      confidence: moderate
+      smart_match_hit: borderline
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: post_layoff_rehire
+    n: 20
+    cf_eligible: true
+    tagline: Cierre Q4, reapertura Q1 con titles junior-er
+    demographics:
+      size_band: [1000, 5000]
+      geography_weights:
+        US-multi: 0.65
+        EU: 0.25
+        Other: 0.10
+      sectors:
+        Software & SaaS: 0.50
+        Media & Entertainment: 0.30
+        Telco & Internet Infra: 0.10
+        Other: 0.10
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 8           # promedio anual; el cohort lo modula
+      functional_area_mix:
+        # 4 areas, eng dominant 0.40 → pain_clarity MOD + concentration MOD
+        # (share<0.5 keeps pain off HIGH so positioning stays ≤MOD)
+        # → specific_pain_emerging.
+        engineering: 0.40
+        product: 0.25
+        sales: 0.20
+        operations: 0.15
+      ttl_open_days: { p50: 45, p95: 110 }
+      repost_probability: 0.15
+      title_drift_probability: 0.40       # senior → mid después de reposts
+      evergreen_probability: 0.05
+    behavioral_pattern:
+      cohort: layoff_then_rehire
+      cohort_phases:
+        - phase: pre_layoff
+          window: [2025-04-01, 2025-09-30]
+          lambda_modifier: 1.0
+        - phase: layoff
+          window: [2025-10-01, 2025-12-31]
+          lambda_modifier: 0.0
+        - phase: rehire
+          window: [2026-01-01, 2026-04-01]
+          lambda_modifier: 2.5
+      signal_density: moderate
+      noise_signals: moderate
+      friction_signatures:
+        - title_downleveling
+        - q4_close_q1_reopen
+    expected_outputs:
+      diagnostic_state: specific_pain_emerging
+      dominant_friction_type: scaling_strain
+      friction_score_band: [3, 10]
+      eligibility_gate: conditional
+      confidence: moderate
+      smart_match_hit: true
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: hiring_freeze
+    n: 15
+    cf_eligible: false
+    tagline: 0 nuevos roles en 6 meses, solo critical
+    demographics:
+      size_band: [1000, 10000]
+      geography_weights:
+        US-multi: 0.50
+        LATAM: 0.30
+        Other: 0.20
+      sectors:
+        Manufacturing & Industrial: 0.35
+        Energy & Utilities: 0.25
+        Other: 0.25
+        Real Estate & Construction: 0.15
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 2
+      functional_area_mix:
+        engineering: 0.30
+        operations: 0.40
+        finance: 0.10
+        other: 0.20
+      ttl_open_days: { p50: 180, p95: 300 }
+      repost_probability: 0.20
+      title_drift_probability: 0.0
+      evergreen_probability: 0.70
+    behavioral_pattern:
+      cohort: frozen
+      signal_density: low
+      noise_signals: low
+      friction_signatures:
+        - critical_only_label
+        - flat_role_count
+    expected_outputs:
+      # Engine cannot reach insufficient_evidence with role rosters >0; the
+      # operational gate filters via entity_type/eligibility separately.
+      # Engine path here lands on broad_hiring_pattern_detected.
+      diagnostic_state: broad_hiring_pattern_detected
+      dominant_friction_type: null         # score < 5 → null permitido (D3)
+      friction_score_band: [0, 5]
+      eligibility_gate: blocked
+      confidence: low
+      smart_match_hit: false
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: aggressive_replacer
+    n: 15
+    cf_eligible: true
+    tagline: Turnover alto, abre+cierra en 14d, vuelve en 30d
+    demographics:
+      size_band: [200, 2000]
+      geography_weights:
+        US-NY: 0.45
+        UK: 0.30
+        EU: 0.15
+        Other: 0.10
+      sectors:
+        Fintech & Financial Services: 0.70
+        Professional Services: 0.20
+        Software & SaaS: 0.10
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 18
+      functional_area_mix:
+        # 4 areas, sales dominant 0.45 → pain MOD + concentration MOD
+        # → specific_pain_emerging (share<0.5 keeps pain off HIGH so positioning≠HIGH).
+        sales: 0.45
+        customer_success: 0.20
+        engineering: 0.20
+        operations: 0.15
+      ttl_open_days: { p50: 14, p95: 40 }
+      repost_probability: 0.50              # mismo rol vuelve pronto
+      title_drift_probability: 0.0
+      evergreen_probability: 0.0
+    behavioral_pattern:
+      cohort: oscillating
+      signal_density: high
+      noise_signals: low
+      friction_signatures:
+        - rapid_open_close_reopen
+        - sales_role_churn
+    expected_outputs:
+      # specific_pain_identified requires positioning_readiness != HIGH while
+      # pain_clarity == HIGH — only reachable when type/hiring is LOW. With
+      # current evidence the engine lands on specific_pain_emerging.
+      diagnostic_state: specific_pain_emerging
+      dominant_friction_type: tooling_inconsistency
+      friction_score_band: [5, 14]
+      eligibility_gate: full
+      confidence: high
+      smart_match_hit: true
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: lit_edu_cluster
+    n: 25
+    cf_eligible: true
+    tagline: VIP daughter cohort — editorial, EdTech, libros
+    demographics:
+      size_band: [10, 200]
+      geography_weights:
+        US-multi: 0.40
+        ES: 0.25
+        MX: 0.20
+        EU: 0.15
+      sectors:
+        Education: 0.45
+        Media & Entertainment: 0.45
+        Other: 0.10
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 4
+      functional_area_mix:
+        # 4 areas, editorial dominant 0.40 → pain MOD + concentration MOD
+        # → specific_pain_emerging.
+        editorial: 0.40
+        content: 0.30
+        marketing: 0.20
+        teaching: 0.10
+      ttl_open_days: { p50: 45, p95: 120 }
+      repost_probability: 0.10
+      title_drift_probability: 0.05
+      evergreen_probability: 0.10
+    behavioral_pattern:
+      cohort: stable_small
+      signal_density: moderate
+      noise_signals: low
+      friction_signatures:
+        - small_team_role_concentration
+        - editorial_content_imbalance
+    expected_outputs:
+      diagnostic_state: specific_pain_emerging
+      dominant_friction_type: reporting_fragmentation
+      friction_score_band: [3, 10]
+      eligibility_gate: conditional
+      confidence: moderate
+      smart_match_hit: true                 # caso Isabella
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: novawork_ideal
+    n: 20
+    cf_eligible: true
+    tagline: Perfil ready_for_positioning, full eligibility, alta confianza
+    demographics:
+      size_band: [100, 1000]
+      geography_weights:
+        US-CA: 0.50
+        US-NY: 0.30
+        EU: 0.15
+        Other: 0.05
+      sectors:
+        Software & SaaS: 0.70
+        AI & Machine Learning: 0.30
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 12
+      functional_area_mix:
+        # Tightened to 3 areas with eng dominant 0.65 →
+        # pain_clarity HIGH, concentration HIGH, positioning_readiness HIGH
+        # → ready_for_positioning.
+        engineering: 0.65
+        product: 0.20
+        data: 0.15
+      ttl_open_days: { p50: 30, p95: 60 }
+      repost_probability: 0.05
+      title_drift_probability: 0.0
+      evergreen_probability: 0.0
+    behavioral_pattern:
+      cohort: monotone_growth
+      signal_density: very_high
+      noise_signals: very_low
+      friction_signatures:
+        - clear_pain_signal_cluster
+        - high_eng_data_concentration
+    expected_outputs:
+      diagnostic_state: ready_for_positioning
+      dominant_friction_type: scaling_strain
+      friction_score_band: [7, 16]
+      eligibility_gate: full
+      confidence: high
+      smart_match_hit: true
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: noise_floor
+    n: 30
+    cf_eligible: false
+    tagline: Empresa sin fricción real, refleja el 63% de Other observado en seed
+    demographics:
+      size_band: [10, 500]
+      geography_weights:
+        US-multi: 0.40
+        EU: 0.20
+        LATAM: 0.15
+        APAC: 0.15
+        Other: 0.10
+      sectors:
+        Other: 0.70                         # refleja la DB real
+        Professional Services: 0.15
+        Real Estate & Construction: 0.10
+        Logistics & Transportation: 0.05
+      entity_type: operating_company
+    roles_generation:
+      poisson_lambda_quarter: 2
+      functional_area_mix:
+        operations: 0.25
+        sales: 0.20
+        engineering: 0.15
+        marketing: 0.15
+        finance: 0.10
+        other: 0.15
+      ttl_open_days: { p50: 60, p95: 150 }
+      repost_probability: 0.10
+      title_drift_probability: 0.0
+      evergreen_probability: 0.10
+    behavioral_pattern:
+      cohort: stable_small
+      signal_density: low
+      noise_signals: moderate
+      friction_signatures: []
+    expected_outputs:
+      # noise_floor still emits an auto open_positions signal whenever roles>0,
+      # so extraction_coverage rarely drops to LOW. Engine route lands on
+      # broad_hiring_pattern_detected.
+      diagnostic_state: broad_hiring_pattern_detected
+      dominant_friction_type: null
+      friction_score_band: [0, 5]
+      eligibility_gate: blocked
+      confidence: low
+      smart_match_hit: false
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: intermediary_trap
+    n: 10
+    cf_eligible: false
+    tagline: Job board / staffing — debe detectarse como NO operating
+    demographics:
+      size_band: [50, 2000]
+      geography_weights:
+        US-multi: 0.60
+        IN: 0.25
+        Other: 0.15
+      sectors:
+        Other: 0.50
+        Professional Services: 0.50
+      entity_type: job_market_intermediary   # clave: NO operating_company
+    roles_generation:
+      poisson_lambda_quarter: 30             # volumen disperso, baja señal
+      functional_area_mix:
+        # casi uniforme — clasifica todo
+        engineering: 0.18
+        sales: 0.15
+        operations: 0.15
+        marketing: 0.12
+        finance: 0.10
+        customer_success: 0.10
+        product: 0.08
+        data: 0.06
+        other: 0.06
+      ttl_open_days: { p50: 30, p95: 80 }
+      repost_probability: 0.0
+      title_drift_probability: 0.0
+      evergreen_probability: 0.0
+    behavioral_pattern:
+      cohort: high_volume_disperse
+      signal_density: low                    # company_type_confidence baja
+      noise_signals: high
+      friction_signatures:
+        - third_party_listing_pattern
+        - extreme_function_dispersion
+    expected_outputs:
+      # 122-role rosters keep extraction_coverage MOD/HIGH; the operational
+      # filter blocks intermediaries via entity_type, not via diagnostic_state.
+      # Engine path here: broad_hiring_pattern_detected (high volume, dispersed).
+      diagnostic_state: broad_hiring_pattern_detected
+      dominant_friction_type: null
+      friction_score_band: [0, 4]
+      eligibility_gate: blocked
+      confidence: low
+      smart_match_hit: false
+
+  # ─────────────────────────────────────────────────────────────────
+  - id: data_quality_chaos
+    n: 20
+    cf_eligible: false
+    tagline: Hereda de otro arquetipo + ruido adversarial intenso
+    inherits_from:
+      strategy: random_choice
+      candidates:
+        - scaling_startup
+        - ghost_jobs_giant
+        - post_layoff_rehire
+        - aggressive_replacer
+        - lit_edu_cluster
+        - novawork_ideal
+        - noise_floor
+      score_band_jitter: 5                  # ±15 sobre el band heredado
+    noise_injection:
+      transformations_per_company: [1, 3]
+      catalog:
+        - html_residual
+        - case_chaos
+        - lang_mix
+        - mojibake
+        - null_injection
+        - dup_partial
+        - location_garbage
+        - title_with_emoji
+        - empty_signals
+    expected_outputs:
+      inherits: true
+      score_band_jitter: 5
